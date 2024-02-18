@@ -136,12 +136,12 @@ session_start();
     <section  id="rooms-right">
         <div class="paras">
           <p class="sectionTag">A.C Delux Room</p>
-          <p class="sectionsubTag font">We have the best services provider in Room Management. with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 1100rs.</p>
+          <p class="sectionsubTag font">We provide the best services in Room Management with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 1100rs.</p>
           <p class="price">Price per room : 1100Rs/-</p>
-          <a href="room.php"><button class="price-btn" >Book A Room</button></a>
+          <a href="room.php"><button class="price-btn" >Book Room</button></a>
           </div>
           <div class="thumbnail">
-          <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+          <img src="img/acd.avif" alt="delux" class="imgFluid">
           </div>
     </section>
 
@@ -150,10 +150,10 @@ session_start();
           <p class="sectionTag">A.C. Room</p>
           <p class="sectionsubTag font">We have the best services provider in Room Management. with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 900rs.</p>
           <p class="price">Price per room : 900Rs/-</p>
-          <a href="room.php"><button class="price-btn">Book A Room</button></a>
+          <a href="room.php"><button class="price-btn">Book Room</button></a>
           </div>
           <div class="thumbnail">
-           <img src="img/ac4.jpg" alt="delux" class="imgFluidd">
+           <img src="img/acdeluxnew.avif" alt="delux">
           </div>
     </section>
 
@@ -162,10 +162,10 @@ session_start();
           <p class="sectionTag">Non A.C. Room</p>
           <p class="sectionsubTag font">We have the best services provider in Room Management. with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 700rs.</p>
           <p class="price">Price per room : 700Rs/-</p>
-            <a href="room.php"><button class="price-btn">Book A Room</button></a>
+            <a href="room.php"><button class="price-btn">Book Room</button></a>
           </div>
           <div class="thumbnail">
-          <img src="img/nonacroom.jpg" alt="delux" class="imgFluid">
+          <img src="img/nonacnew.avif" alt="delux">
           </div>
     </section>
 
@@ -174,42 +174,42 @@ session_start();
         <h1 class="food-header text-center">Our Speciality</h1>
         <div id="services">
             <div class="box">
-                <a href="food.php"><img src="img/manchu.png" alt="manchurion"></a>
-               <h2 class="h-secondary center">Chinese</h2>
-               <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident facere fugiat facilis qui saepe quia? Aut, repudiandae?
-                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. amet consectetur adipisicing elit. Quas nulla sit, perspiciatis temporibus unde
+                <a href="food.php"><img src="img/thali.avif" alt="manchurion"></a>
+               <h2 class="h-secondary center">Typical Nepali</h2>
+               <p class="center">
+               The Nepali staples consist primarily of rice, wheat, corn and lentils, in addition to fresh vegetables and meats. A typical Nepali everyday meal can be characterized by Dal (lentil soups), Bhat (steamed rice), and Tarkari (vegetable preparations), also known as “The Trinity,” supplemented by some meat preparation.
                </p>
             </div>
             <div class="box">
-                 <a href="food.php"><img src="img/pasta.png" alt="pasta"></a>
-                <h2 class="h-secondary center">Italian</h2>
-                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident facere fugiat facilis qui saepe quia? Aut, repudiandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla sit, perspiciatis temporibus unde </p>
+                 <a href="food.php"><img src="img/momo.avif" alt="pasta"></a>
+                <h2 class="h-secondary center">MOMOS</h2>
+                <p class="center"> 
+                Momos are a type of steamed filled dumpling in Tibetan and Nepali cuisine that is also popular in neighbouring Bhutan and India. Momos are usually served with a sauce known as achar influenced by the spices and herbs used within many South Asian cuisines.
+                 </p>
              </div>
              <div class="box">
-             <a href="food.php"><img src="img/mah.png" alt="maharshtrian"></a>
-                <h2 class="h-secondary center">Maharashtrian</h2>
-                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure mollitia aliquid labore illum ipsa aliquam ad, commodi voluptatum libero minima nesciunt autem quis minus nostrum.</p>
+             <a href="food.php"><img src="img/burger.avif" alt="maharshtrian"></a>
+                <h2 class="h-secondary center">Burger</h2>
+                <p class="center">Some common types of burgers include beef burgers, chicken burgers, lamb burgers, fish burgers, veggie burgers, and black bean burgers. Within these categories, there are numerous variations that can be made by using different types of meats, vegetables, and seasonings</p>
              </div>
         </div>
 
         <div id="services">
             <div class="box">
-            <a href="food.php"><img src="img/panner.png" alt="panner"></a>
-               <h2 class="h-secondary center">Punjabi</h2>
-               <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident facere fugiat facilis qui saepe quia? Aut, repudiandae?
-                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus reiciendis saepe error modi quo vel!
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <a href="food.php"><img src="img/drink.avif" alt="panner"></a>
+               <h2 class="h-secondary center">Drink</h2>
+               <p class="center">A drink or beverage is a liquid intended for human consumption. In addition to their basic function of satisfying thirst, drinks play important roles in human culture. Common types of drinks include plain drinking water, milk, juice, smoothies and soft drinks. Traditionally warm beverages include coffee, tea, and hot chocolate. Caffeinated drinks that contain the stimulant caffeine have a long history
                </p>
             </div>
             <div class="box">
-            <a href="food.php"><img src="img/dosa.png" alt="dosa"></a>
-                <h2 class="h-secondary center">South-Indian</h2>
-                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident facere fugiat facilis qui saepe quia? Aut, repudiandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla sit, perspiciatis temporibus unde </p>
+            <a href="food.php"><img src="img/desert.avif" alt="dosa"></a>
+                <h2 class="h-secondary center">Desert</h2>
+                <p class="center">The term dessert can apply to many sweets, such as biscuits, cakes, cookies, custards, gelatins, ice creams, pastries, pies, puddings, macaroons, sweet soups, tarts, and fruit salad (fruit is commonly found in dessert courses because of its naturally occurring sweetness)</p>
              </div>
              <div class="box">
-             <a href="food.php"><img src="img/faluda.png" alt="faluda"></a>
-                <h2 class="h-secondary center">Deserts</h2>
-                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure mollitia aliquid labore illum ipsa aliquam ad, commodi voluptatum libero minima nesciunt autem quis minus nostrum.</p>
+             <a href="food.php"><img src="img/chatpat.jpeg" alt="faluda"></a>
+                <h2 class="h-secondary center">Snack</h2>
+                <p class="center">A small amount of food that is eaten between meals, or a very small meal: I had a huge lunch, so I'll only need a snack for dinner. Fresh or dried fruit makes an ideal snack. Many snack foods are high in salt, sugar, and fat.</p>
              </div>
         </div>
        
@@ -218,20 +218,9 @@ session_start();
     
     <section id="booking-hall">
         <h1 class="h1">Party And Marriage Halls</h1>
-        <button id="book-btn"><a href="bookinghall.php"> Book hall now</a></button>
+        <button id="book-btn"><a href="bookinghall.php"> Book hall</a></button>
 
     </section>
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- -------------------------Footer ---------------------------- -->
 
@@ -240,7 +229,7 @@ session_start();
             <div class="footer-container">
                 <div class="footer-center">
                 <h3>ABOUT US</h3>
-                <p>The majority of independent <br> properties are losing out <br> on a lot of business for <br> one very simple reason: <br> their hotel websites are poorly <br> designed.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur obcaecati quae labore deleniti asperiores voluptatibus, unde vel quam placeat aperiam laboriosam itaque possimus perspiciatis quis eaque tempore, porro, nesciunt ipsum!</p>
                 </div>
                 <div class="footer-center">
                     <h3>USEFUL LINKS</h3>
@@ -252,37 +241,25 @@ session_start();
                 </div>
                 <div class="footer-center">
                     <h3>CONTACT INFO</h3>
-                    <p>South-Kondwa,Pune, <br>Maharashtra,Pin-414001 <br>+91 7821893289 <br>www.restaurentms.com</p>
+                    <p>Sudal-9,Bhaktapur <br>+977 --------<br>www.swiftstay.com</p>
                 </div>
                 <div class="footer-center">
                     <h3>OPENING HOURS</h3>
                     <div>
-                        <span>
-                            <i></i>
-                        </span>
-                        Monday: 7:AM - 12Pm
+                        
+                        Sun: 6AM-10PM
                     </div>
                   
                     <div>
-                        <span>
-                            <i></i>
-                        </span>
-                        Tue-Wed: 7:Am - 12Pm
+                       
+                       Mon-wed: 8AM-9PM
                     </div>
                     <div>
-                        <span>
-                            <i></i>
-                        </span>
-                        Thur-Fri: 7:Am - 12Pm
+                       Thu: 7AM-10PM
                     </div>
                     <div>
-                        <span>
-                            <i></i>
-                        </span>
-                        Sat-Sun: 7:Am - 12Pm
+                   Fri & Sat: 5AM-11PM
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -308,6 +285,5 @@ session_start();
             document.getElementById('forgot-popup').style.display="flex";
         }
     </script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
+     
 </html>

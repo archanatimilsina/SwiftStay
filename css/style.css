@@ -1,0 +1,580 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* navbar */
+.navbar{
+    width: 100%;
+    position: sticky;
+    height: 100px;
+    background-color: #fa9579;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      top: 0;
+   
+}
+.left-nav{
+    width: 20%;
+}
+.left-nav img{
+    height: 70px;
+    width: 100px;
+    border-radius: 50%;
+    padding-left: 25px;
+}
+.right-nav{
+    width: 80%;
+    margin-top: 13px;
+
+}
+.right-nav ul{
+  display: flex;
+}
+.right-nav ul li{
+   list-style: none;
+   
+}
+.right-nav ul li a{
+    text-decoration: none;
+    color: #222;
+    font-family: 'Baloo 2', cursive;
+    padding: 0px 10px;
+    font-size: 19px;
+    font-weight: 400;
+    position: relative;
+   
+    }
+.right-nav ul li a:hover{
+    color: black;
+    background: white;
+    border-radius: 30px;
+}
+.sign-in-up
+{
+    display: flex;
+    margin-top: -10px;
+    padding: 5px;
+    
+}
+.sign-in-up button{
+   margin-right: 6px;
+    height: 40px;
+    width: 90px;
+    font-size: 1.3rem;
+}
+.profile{
+    font-size: 1rem;
+    width: 150px;
+    height: 100px;
+   
+  }
+/* navbar */
+
+
+/* home */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+   justify-content: center;
+   align-items: center;
+   height: 600px;
+   margin-top: -20px;
+   
+}
+#home::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    background: url('../img/home.jpg.jpg') center center/cover no-repeat;
+
+}
+#home .h1{
+    color: white;
+    font-size: 3rem;
+    padding: 12px;
+    text-align: center;
+}
+#home .p{
+    color: #110606;
+    font-size: 2rem;
+    padding: 12px;
+}
+.span{
+    font-weight: bold;
+    font-size: 1.53rem;
+    color: rgb(223, 247, 11);
+}
+
+/*  Footer  */
+#footer
+{
+    margin-top: 50px;
+}
+.footer{
+    background-color: #222;
+    padding: 5rem 1rem;
+    line-height: 2rem;
+    margin-top: 600px;
+
+}
+
+.footer-center{
+    margin-right: 1rem;
+
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: #fff;
+}
+
+.footer-center a:link,
+.footer-center a:visited{
+    display: block;
+    color: #f1f1f1;
+    font-size: 1.4rem;
+    transition: 0.6s;
+}
+
+.footer-center a:hover{
+    color: #f60091;
+}
+.footer-center p{
+    font-size: 20px;
+}
+
+.footer-center div{
+    color: #f1f1f1;
+    font-size: 1.4rem;
+}
+
+.footer-center h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+/* footer */
+
+/* login */
+.popup-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.popup-container .popup{
+    background-color: #f0f0f0;
+    width: 350px;
+    border-radius: 5px;
+    padding: 20px 25px 30px 25px;
+}
+.popup-container .popup h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    color: #30475e;
+}
+.popup-container .popup h2{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    font-weight: 550;
+    color: #797775;
+}
+
+.popup-container .popup input{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #30475e;
+    border-radius: 0px;
+    padding: 5px 0;
+    font-weight: 550;
+    font-size: 14px;
+    outline: none;
+}
+.popup-container .popup .login-btn,.popup-container .register .register-btn , .popup-container .forgot button.reset-btn{
+    font-weight: 550;
+    font-size: 15px;
+    color: white;
+    background-color: #30475e;
+    
+    padding: 4px 10px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+}
+.popup-container .popup .forgot-btn{
+    text-align: right;
+}
+.popup-container .popup .forgot-btn button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-weight: 450;
+    cursor: pointer;
+}
+.popup-container .register{
+    background-color: #edeef7;
+}
+.popup-container .register h2 , .popup-container .forgot h2{
+    color: #fa9579;
+}
+.popup-container .register input , .popup-container .forgot input{
+    border-bottom-color: #fa9579;
+}
+.popup-container .register .register-btn , .popup-container .forgot button.reset-btn{
+    background-color: #fa9579;
+}
+/* login */
+
+
+
+/* home page */
+/*  section rooms */
+#rooms-right{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 90%;
+    margin:auto;
+    border: 1px solid black; 
+    margin-bottom: 100px; 
+}
+
+.paras{
+    padding: 0 40px;
+    
+}
+.paras form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3px;
+    
+}
+.paras form input{
+    margin-top: 6px;
+    padding: 4px;
+}
+#room-btn{
+    background-color: #fa9579;
+    color: white;
+    font-size: 15px;
+}
+
+#rooms-left{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 90%;
+    margin: auto;
+    border: 1px solid black;
+    flex-direction: row-reverse;
+    
+}
+.sectionTag{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.g{
+    /* color: green; */
+    font-weight: 700;
+}
+.r{
+    /* color: red; */
+    font-weight: 700;
+}
+.sectionsubTag{
+    padding-top: 10px;
+    font-size: 20px;
+}
+.font{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    color: rgb(130, 30, 245);
+}
+#rooms-left .thumbnail img{
+    width: 700px;
+}
+.price-btn{
+    width: 80%;
+    background-color: #e46262;
+    color: white;
+    margin-top: 20px;
+    padding: 6px 0;
+}
+.thumbnail img{
+    padding-right: 10px;
+    width: 700px;
+}
+.price{
+    color: green;
+    margin-top: 20px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+#booking-hall{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin-top: 10px; 
+    /* border: 1px solid red; */
+ }
+ #booking-hall::before{
+     position: absolute;
+     content: "";
+     height: 100%;
+     width: 100%;
+     z-index: -1;
+     opacity: 0.89;
+     background: url('../img/partyhallnew.avif') center center/cover no-repeat;
+     
+    }
+    #booking-hall .h1{
+        /* color: white; */
+        font-size: 2.8rem;
+        padding: 12px;
+        text-align: center;
+ }
+ #booking-hall .p{
+     color: white;
+     text-align: center;
+     font-size: 1.5rem;
+    }
+    .span{
+        font-weight: bold;
+        font-size: 1.53rem;
+        color: black;
+    }
+    #book-btn{
+        padding: 13px;
+        background-color: #e46262;
+        border-radius: 15%;
+      
+    }
+    #book-btn a{
+text-decoration: none;
+color:black;
+font-size: 20px;
+
+}
+
+/* food */
+.food-header{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Crete Round', serif;
+    text-align: center;
+    
+}
+.h-secondary{
+    font-size: 2.7rem;
+    padding: 12px;
+    font-family: 'Crete Round', serif;
+    text-align: center;
+}
+#services{
+    margin: 25px;
+    display: flex;
+    
+}
+
+#services .box{
+    border: 2px solid brown;
+    margin: 25px 6px;
+    padding: 34px;
+    border-radius: 28px;
+    background-color: #d68b79;
+    margin-bottom: 20px;
+}
+
+#services .box img{
+    height: 160px;
+    margin: auto;
+    display: block;
+
+}
+#services .box p{
+    font-family: 'Crete Round', serif;
+}
+
+/* home page */
+
+
+/* about page */
+#aboutContent
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+}
+.a
+{
+width: 1000px;
+margin: auto;
+/* border: solid 1px red; */
+margin-top: 40px;
+}
+.slider{
+    width: 100%;
+  height: 700px;
+  margin-top: 10px;
+}
+.branchTitle
+{
+    font-size: 2.6rem;
+    color: rgb(94, 69, 69);
+    margin-top: 30px;
+margin-bottom: -32px;
+margin-left: 30px;
+}
+
+.branches
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ height:400px; 
+    }
+.b{
+  width:30%;
+  border: solid black 1px;
+  height: 100%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  
+}
+.img1
+{ 
+height: 50%;
+width: 90%;
+top: 0px;
+margin: auto;
+/* border: 1px solid green; */
+}
+.img1 img{
+  border-radius: 3%;
+}
+.location{
+width: 100%;
+height: 8%;
+/* border: 1px solid rgb(19, 20, 19); */
+background-color: #fc8260;
+color: #0a0909;
+}
+.bname{
+    text-align: center;
+width: 100%;
+height: 8%;
+background-color: #fc8260;
+color: #0a0a0a;
+/* border: 1px solid rgb(5, 5, 5); */
+margin: 5px;
+
+}
+.detail1{
+width: 100%;
+height: 34%;
+margin-top:2px;
+font-size:19px;
+font-family: 'Baloo 2', cursive;
+text-align: center;
+color: #0a0a0a; 
+
+
+
+
+}
+.about{
+height: 700px;
+display: flex;
+flex-direction: column; 
+}
+.article
+{
+font-size: 2.6rem;
+    color: rgb(94, 69, 69);
+    margin-top: 50px;
+margin-bottom: -70px;
+margin-left: 30px;
+}
+.c{
+width: 100%;
+height: 45%;
+margin-top: 10px;
+display: flex;
+flex-direction: row;
+flex:wrap;
+/* border: 1px solid skyblue; */
+}
+.d{
+border: solid 1px rgb(10, 9, 10);
+width: 30%;
+margin: 20px;
+display: flex;
+flex-direction: column;
+}
+.d a button{
+margin-left:20%;
+width: 150px;
+height: 40px;
+margin-bottom: 8px;
+background-color: #fc8260;
+}
+.e{
+width:80%;
+margin: auto;
+height: 60%;
+/* border: 1px solid indigo; */
+
+}
+.writer{
+width: 100%;
+/* border: 1px solid green; */
+height: 13%;
+font-size:20px;
+font-family: 'Baloo 2', cursive;
+text-align: center;
+}
+.f
+{
+font-size:19px;
+font-family: 'Baloo 2', cursive;
+text-align: center;
+margin:0px;
+}
+.bname{
+    font-size: 1.5rem;
+}
+/* about page */
+

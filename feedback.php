@@ -19,8 +19,8 @@ include('connection.php');
            $name = $_POST['name'];
            $feedback=$_POST['feedback'];
 
-           $qry="INSERT INTO `feedback`(`id`, `name`, `feedback`) VALUES ('','$name','$feedback')";
-           $run=mysqli_query($sql,$qry);
+           $qry="INSERT INTO `feedbacks`(`name`, `feedback`) VALUES ('$name','$feedback')";
+           $run=mysqli_query($con,$qry);
            if($run==true)
            {
                ?>

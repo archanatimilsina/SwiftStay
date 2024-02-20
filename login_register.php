@@ -1,6 +1,4 @@
-<?php
-include('connection.php');
-session_start();
+
 //for login
 if(isset($_POST['login']))
 {
@@ -23,7 +21,9 @@ if(isset($_POST['login']))
                 <script>
                   alert('Incorrect Password');
                   window.location.href='index.php';
-                </script>";
+                </script>
+                
+                ";
             }
       }
       else{
@@ -31,7 +31,9 @@ if(isset($_POST['login']))
         <script>
           alert('Incorrect Email Or Username');
           window.location.href='index.php';
-        </script>";
+        </script>
+        
+        ";
       }
    }
    else{
@@ -39,7 +41,9 @@ if(isset($_POST['login']))
     <script>
       alert('Cannot run');
       window.location.href='index.php';
-    </script>";
+    </script>
+    
+    ";
    }
 }
 else{
@@ -62,7 +66,9 @@ if(isset($_POST['register']))
                  <script>
                     alert('$result_fetch[username] Username Already Taken');
                     window.location.href='index.php';
-                 </script>";
+                 </script>
+                
+                ";
             }
             else{
                 //email already taken
@@ -70,7 +76,9 @@ if(isset($_POST['register']))
                  <script>
                     alert('$result_fetch[email] E-mail Already Taken');
                     window.location.href='index.php';
-                 </script>";
+                 </script>
+                
+                ";
             }
         }
         else{ // it will be excuted if no one has taken username or email
@@ -83,7 +91,9 @@ if(isset($_POST['register']))
                    <script>
                       alert('Registeration Successfull');
                       window.location.href='index.php';
-                  </script>";
+                  </script>
+           
+               ";
 
             }
             else{
@@ -92,7 +102,9 @@ if(isset($_POST['register']))
                   <script>
                        alert('Cannot run');
                        window.location.href='index.php';
-                   </script>";
+                   </script>
+           
+                  ";
             }
         }
     }
@@ -101,7 +113,8 @@ if(isset($_POST['register']))
            <script>
              alert('Cannot run');
              window.location.href='index.php';
-           </script>";
+           </script>
+           
+           ";
     }
 }
-?>

@@ -67,9 +67,9 @@
                    $con_address=$_POST['address'];
                    $con_message=$_POST['message'];
 
-                   $qry="INSERT INTO `contact`(`id`, `name`, `email`, `mobile`, `address`, `message`) VALUES ('','$con_name','$con_email','$con_mobile','$con_address','$con_message')";
+                   $qry="INSERT INTO `contacts`(`name`, `email`, `mobile`, `address`, `message`) VALUES (,'$con_name','$con_email','$con_mobile','$con_address','$con_message')";
 
-                   $run=mysqli_query($sql,$qry);
+                   $run=mysqli_query($con,$qry);
                    if($run)
                    {
                        ?>

@@ -44,7 +44,7 @@ include("inc/header.php");?>
   <!-- Our Branches -->
 
   <!-- about -->
-  <p class="article">Our Thoughts</p>
+  <p class="article">About us</p>
   <div class="a about">
     <div class="c abox1">
 <div class="d box31">
@@ -52,7 +52,7 @@ include("inc/header.php");?>
 <img src="img/user1.avif" width="100%" height="100%" alt="">
 
 </div>
-<p class="writer">Director Naruto Uzumaki</p>
+<p class="writer">Director </p>
 <a href="articles/naruto.md"><button>Read Now</button></a>
 </div>
 <div class="d box32">
@@ -60,7 +60,7 @@ include("inc/header.php");?>
 <img src="img/user2.avif" width="100%" height="100%" alt="">
 
 </div>
-<p class="writer"> C.E.O Hatake Kakashi</p>
+<p class="writer">Manager</p>
 <a href=""><button>Read Now</button></a>
 </div>
 <div class="d box33">
@@ -68,7 +68,7 @@ include("inc/header.php");?>
 <img src="img/user3.avif" width="100%" height="100%" alt="">
 
 </div>
-<p class="writer">Roronoa Zoro</p>
+<p class="writer">Thomas</p>
 <a href=""><button>Read Now</button></a>
 </div>
     </div>
@@ -78,7 +78,7 @@ include("inc/header.php");?>
 <img src="img/user4.avif" width="100%" height="100%" alt="">
 
 </div>
-<p class="writer">Monkey D Luffy</p>
+<p class="writer">D Luffy</p>
 <a href=""><button>Read Now</button></a>
 </div>
 <div class="d box42">

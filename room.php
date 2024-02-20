@@ -22,7 +22,6 @@ include('inc/header.php') ?>
          <form action="room.php " method="GET"> 
          <table >
              <tr>
-                 
                 <th width="20%" height="50px" required>Check In Date</th>
                  <th width="20%" height="50px" required>Check Out Date</th>
                  <th width="20%" height="50px">Room</th>

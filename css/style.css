@@ -696,6 +696,7 @@ margin:0px;
    width: 38%;
   border-radius: 10px;
   padding: 10px;
+  font-family: 'Baloo 2', cursive;
 }
 #f1 form{
     /* margin-left: 50px; */
@@ -826,6 +827,51 @@ margin:0px;
 .form-group-con textarea{
     resize: none;
 }
+
+/* Feedback */
+
+#feedback::before{
+    position: absolute;
+    content: "";
+    height: 70%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    background: url('../img/feedback.jpg') center center/cover no-repeat;
+
+}
+
+#feedback-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 400px;
+    margin-bottom: 70px;
+    background-color: #fc8260;
+    width: 50%;
+    margin: auto;
+}
+
+#feedback-form input{
+    width: 70%;
+    margin: 10px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3px 0;
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+}
+#feedback-form .feedback_head
+{
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
 
 
 

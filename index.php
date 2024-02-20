@@ -22,23 +22,24 @@ session_start();
                 <li class="item"><a href="index.php">Home</a></li>
                 <li class="item"><a href="about.php">About</a></li>
                 <li class="item"><a href="room.php">Rooms</a></li>
-                <li class="item"><a href="food.php">Food</a></li>
+                <!-- <li class="item"><a href="food.php">Food</a></li> -->
                 <li class="item"><a href="contact.php">Contact</a></li>
-                <li class="item"><a href="cart.php">Cart</a></li>
+                <!-- <li class="item"><a href="cart.php">Cart</a></li> -->
                 <li class="item"><a href="admin.php">Admin</a></li>
-                <li class="item"><a href="bookinghall.php">Booking</a></li>
+                <!-- <li class="item"><a href="bookinghall.php">Booking</a></li> -->
                 <li class="item"><a href="feedback.php">Feedback</a></li>  
         <?php
             if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
             {
                ?>
-               <button class="login12"> <?php 
-               
-                   echo $_SESSION["username"].
-                 
-                   '-<a href="logout.php">Logout</a>';
-                  ?>
-                 </button>
+              <div class="paste-button">
+  <button class="button"><?php echo $_SESSION["username"]; ?>
+    &nbsp; ▼</button>
+  <div class="dropdown-content">
+     <a id="middle" href="logout.php">Logout</a>
+  </div>
+</div>
+
                <?php 
             }
             else{

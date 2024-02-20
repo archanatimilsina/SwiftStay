@@ -19,7 +19,7 @@ include("inc/header.php");?>
 <div class="img1">
   <img src="img/about11.avif" width="100%" height="100%" alt="">
 </div>
-<p class="f bname">Hada Cafe</p>
+<p class="f bname"></p>
 <p class="f location">Location: Suryabinayak, Bhaktapur</p>
 <p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
     </div>
@@ -27,19 +27,19 @@ include("inc/header.php");?>
     <div class="img1">
     <img src="img/about12.avif" width="100%" height="100%" alt="">
     </div> 
-    <p class="f bname">Luffy</p>
-    <p class="f location">Location: One_piece, Japan</p>
-<p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
+    <p class="f bname">Silver Oak Inn</p>
+    <p class="f location">Location: lakeside-27, Pokhara</p>
+    <p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
+
     </div>
     <div class="b box3">
     <div class="img1">
     <img src="img/about13.avif" width="100%" height="100%" alt="">
 
     </div>
-    <p class="f bname">Usopp</p>
-    <p class="f location">Location: One_piece, Japan</p>
-<p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
-    </div>
+    <p class="f bname">Hotel Shore</p>
+    <p class="f location">Location: , Japan</p>
+    <p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
   </div>
   <!-- Our Branches -->
 

@@ -13,33 +13,25 @@ $ci=$_GET['ci'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ac room form</title>
+    <title>AC ROOM FORM</title>
 </head>
 <style>
-    body{
-        background-color:orange;
-    }
-   #r1-container{
-     
-   }
-   #r1-container h1{
-       text-align:center;
-       margin-top: 30px;
-   }
    form{
        display: flex;
        justify-content:center;
        align-items: center;
-       
-       flex-direction:column;
-       
-
+     flex-direction:column;
+   }
+   form h1{
+    font-family: 'Baloo 2', cursive;
+    margin-top: -10px;
+    text-align:center;
    }
    table{
       width: 200px;
       height:150px;
       border:1px solid black;
-      background-color:red;
+      background-color: #fc8260;
       padding: 40px;
       border-radius:20px;
    }
@@ -52,17 +44,16 @@ $ci=$_GET['ci'];
 </style>
 <body>
     <div id="r1-container">
-    <h1>Please Fill Up The Form Given Below</h1>
 <form action="r2.php" method="post">
-<h1>BOOK NOW</h1>
+<h1>BOOK NOW (AC Room)</h1>
     <table>
         <tr>
             <td>Status</td>
-            <td><input type="text" name="status" title="status" placeholder="Availble"></td>
+            <td><input type="text" name="status" title="status" placeholder="Available"></td>
         </tr>
        
         <tr>
-            <td>name</td>
+            <td>Name</td>
             <td><input type="text" name="name" title="name" required></td>
         </tr>
         <tr>

@@ -32,8 +32,11 @@ $ci=$_GET['ci'];
        align-items: center;
        
        flex-direction:column;
-       
-
+   }
+   form h1{
+    font-family: 'Baloo 2', cursive;
+    margin-top: -10px;
+    text-align:center;
    }
    table{
       width: 200px;
@@ -106,7 +109,7 @@ $ci=$_GET['ci'];
     </table>
     <?php
         
-        
+    
         if(isset($_POST['submit']))
         {
             $name=$_POST['name'];

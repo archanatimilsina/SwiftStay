@@ -23,9 +23,7 @@ if(isset($_POST['login']))
                 <script>
                   alert('Incorrect Password');
                   window.location.href='index.php';
-                </script>
-                
-                ";
+                </script>";
             }
       }
       else{
@@ -33,9 +31,7 @@ if(isset($_POST['login']))
         <script>
           alert('Incorrect Email Or Username');
           window.location.href='index.php';
-        </script>
-        
-        ";
+        </script>";
       }
    }
    else{
@@ -43,9 +39,7 @@ if(isset($_POST['login']))
     <script>
       alert('Cannot run');
       window.location.href='index.php';
-    </script>
-    
-    ";
+    </script>";
    }
 }
 else{
@@ -59,7 +53,7 @@ if(isset($_POST['register']))
     $result=mysqli_query($con,$user_exist_query);
     if($result)
     {
-        if(mysqli_num_rows($result)>0){   // it will be executed if username or email is already taken
+        if(mysqli_num_rows($result)>0){   // itwill be executed if username or email is already taken
             $result_fetch=mysqli_fetch_assoc($result);
             //username already registered
             if($result_fetch['username']==$_POST['username'])
@@ -68,9 +62,7 @@ if(isset($_POST['register']))
                  <script>
                     alert('$result_fetch[username] Username Already Taken');
                     window.location.href='index.php';
-                 </script>
-                
-                ";
+                 </script>";
             }
             else{
                 //email already taken
@@ -78,25 +70,20 @@ if(isset($_POST['register']))
                  <script>
                     alert('$result_fetch[email] E-mail Already Taken');
                     window.location.href='index.php';
-                 </script>
-                
-                ";
+                 </script>";
             }
         }
         else{ // it will be excuted if no one has taken username or email
             $password=password_hash($_POST['password'],PASSWORD_BCRYPT);
-           
-            $qry="INSERT INTO `users`(`name`, `username`, `email`, `password`) VALUES ('$_POST[fullname]','$_POST[username]','$_POST[email]',$password)";
+            $qry="INSERT INTO `users`(`name`, `username`, `email`, `password`) VALUES ('$_POST[fullname]','$_POST[username]','$_POST[email]','$password')";
             if(mysqli_query($con,$qry))
             {
                 //if data insert successfully
                 echo"
                    <script>
-                      alert('Registration Successful');
+                      alert('Registeration Successfull');
                       window.location.href='index.php';
-                  </script>
-           
-               ";
+                  </script>";
 
             }
             else{
@@ -105,9 +92,7 @@ if(isset($_POST['register']))
                   <script>
                        alert('Cannot run');
                        window.location.href='index.php';
-                   </script>
-           
-                  ";
+                   </script>";
             }
         }
     }
@@ -116,9 +101,7 @@ if(isset($_POST['register']))
            <script>
              alert('Cannot run');
              window.location.href='index.php';
-           </script>
-           
-           ";
+           </script>";
     }
 }
 ?>

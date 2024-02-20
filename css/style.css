@@ -892,6 +892,40 @@ table tr td input{
  color: white;   
  padding: 3px 0;
 }
-
+/* room.php */
+.room-h2{
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#f1 form table{
+    margin-left: 50px;
+    border: 1px solid red;
+   display: flex;
+   justify-content: center;
+   width: 38%;
+  border-radius: 10px;
+  padding: 10px;
+}
+#f1 form{
+    /* margin-left: 50px; */
+    margin-top: 20px;
+    
+}
+#f1 form table tr th{
+    font-size: 20px;
+    font-weight: 700;
+}
+#f1 form table tr td input{
+    font-size: 16px;
+    font-weight: 700;
+}
+#check-btn{
+    padding: 4px;
+    background-color: crimson;
+    color: white;
+    margin-left: 20px;
+    border-radius: 2px;
+}
 
 

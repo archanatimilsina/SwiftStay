@@ -3,7 +3,7 @@
             <div class="footer-container">
                 <div class="footer-center">
                 <h3>ABOUT US</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur obcaecati quae labore deleniti asperiores voluptatibus, unde vel quam placeat aperiam laboriosam itaque possimus perspiciatis quis eaque tempore, porro, nesciunt ipsum!</p>
+                <p>The majority of independent <br> properties are losing out <br> on a lot of business for <br> one very simple reason: <br> their hotel websites are poorly <br> designed.</p>
                 </div>
                 <div class="footer-center">
                     <h3>USEFUL LINKS</h3>
@@ -15,7 +15,7 @@
                 </div>
                 <div class="footer-center">
                     <h3>CONTACT INFO</h3>
-                    <p>Sudal-9,Bhaktapur <br>+977 --------<br>www.swiftstay.com</p>
+                    <p>Sudal-9,Bhaktapur <br>+9806531378<br>www.swiftstay.com</p>
                 </div>
                 <div class="footer-center">
                     <h3>OPENING HOURS</h3>

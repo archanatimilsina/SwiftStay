@@ -22,11 +22,8 @@ session_start();
                 <li class="item"><a href="index.php">Home</a></li>
                 <li class="item"><a href="about.php">About</a></li>
                 <li class="item"><a href="room.php">Rooms</a></li>
-                <!-- <li class="item"><a href="food.php">Food</a></li> -->
                 <li class="item"><a href="contact.php">Contact</a></li>
-                <!-- <li class="item"><a href="cart.php">Cart</a></li> -->
                 <li class="item"><a href="admin.php">Admin</a></li>
-                <!-- <li class="item"><a href="bookinghall.php">Booking</a></li> -->
                 <li class="item"><a href="feedback.php">Feedback</a></li>  
         <?php
             if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
@@ -219,7 +216,6 @@ session_start();
     
     <section id="booking-hall">
         <h1 class="h1">Party And Marriage Halls</h1>
-        <button id="book-btn"><a href="bookinghall.php"> Book hall</a></button>
 
     </section>
 
@@ -230,7 +226,7 @@ session_start();
             <div class="footer-container">
                 <div class="footer-center">
                 <h3>ABOUT US</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur obcaecati quae labore deleniti asperiores voluptatibus, unde vel quam placeat aperiam laboriosam itaque possimus perspiciatis quis eaque tempore, porro, nesciunt ipsum!</p>
+                <p>The majority of independent <br> properties are losing out <br> on a lot of business for <br> one very simple reason: <br> their hotel websites are poorly <br> designed.</p>
                 </div>
                 <div class="footer-center">
                     <h3>USEFUL LINKS</h3>
@@ -242,7 +238,7 @@ session_start();
                 </div>
                 <div class="footer-center">
                     <h3>CONTACT INFO</h3>
-                    <p>Sudal-9,Bhaktapur <br>+977 --------<br>www.swiftstay.com</p>
+                    <p>Sudal-9,Bhaktapur <br>9806531378<br>www.swiftstay.com</p>
                 </div>
                 <div class="footer-center">
                     <h3>OPENING HOURS</h3>

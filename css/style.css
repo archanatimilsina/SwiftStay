@@ -400,7 +400,7 @@
     font-size: 19px;
     font-weight: 600;
 }
-
+/*hall*/
 #booking-hall{
     display: flex;
     flex-direction: column;
@@ -418,7 +418,7 @@
      width: 100%;
      z-index: -1;
      opacity: 0.89;
-     background: url('../img/partyhallnew.avif') center center/cover no-repeat;
+     background: url('../img/bookhall2.png') center center/cover no-repeat;
      
     }
     #booking-hall .h1{
@@ -437,18 +437,7 @@
         font-size: 1.53rem;
         color: black;
     }
-    #book-btn{
-        padding: 13px;
-        background-color: #e46262;
-        border-radius: 15%;
-      
-    }
-    #book-btn a{
-text-decoration: none;
-color:black;
-font-size: 20px;
-
-}
+    
 
 /* food */
 .food-header{
@@ -728,3 +717,7 @@ margin:0px;
     margin-left: 20px;
     border-radius: 2px;
 }
+
+
+
+

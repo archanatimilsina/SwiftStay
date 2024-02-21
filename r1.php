@@ -33,11 +33,6 @@ $ci=$_GET['ci'];
        
        flex-direction:column;
    }
-   form h1{
-    font-family: 'Baloo 2', cursive;
-    margin-top: -10px;
-    text-align:center;
-   }
    table{
       width: 200px;
       height:150px;

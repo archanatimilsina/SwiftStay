@@ -20,30 +20,30 @@ include("inc/header.php");?>
   <img src="img/about11.avif" width="100%" height="100%" alt="">
 </div>
 <p class="f bname">Hada Cafe</p>
-<p class="f location1">Location: Suryabinayak, Bhaktapur</p>
+<p class="f location">Location: Suryabinayak, Bhaktapur</p>
 <p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
     </div>
     <div class="b box2">
     <div class="img1">
     <img src="img/about12.avif" width="100%" height="100%" alt="">
     </div> 
-    <p class="f bname">Suprema Lodge</p>
-    <p class="f location1">Location: kalanki, Kathmandu</p>
+    <p class="f bname">Luffy</p>
+    <p class="f location">Location: One_piece, Japan</p>
 <p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
     </div>
     <div class="b box3">
     <div class="img1">
     <img src="img/about13.avif" width="100%" height="100%" alt="">
     </div>
-    <p class="f bname">Aloha Hotel</p>
-    <p class="f location1">Location: Banepa, Kavre</p>
+    <p class="f bname">Usopp</p>
+    <p class="f location">Location: One_piece, Japan</p>
 <p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
     </div>
   </div>
   <!-- Our Branches -->
 
   <!-- about -->
-  <p class="article">About us</p>
+  <p class="article">Our Thoughts</p>
   <div class="a about">
     <div class="c abox1">
 <div class="d box31">
@@ -51,7 +51,7 @@ include("inc/header.php");?>
 <img src="img/user1.avif" width="100%" height="100%" alt="">
 
 </div>
-<p class="writer">Director </p>
+<p class="writer">Director Naruto Uzumaki</p>
 <a href="articles/naruto.md"><button>Read Now</button></a>
 </div>
 <div class="d box32">
@@ -59,7 +59,7 @@ include("inc/header.php");?>
 <img src="img/user2.avif" width="100%" height="100%" alt="">
 
 </div>
-<p class="writer">Manager</p>
+<p class="writer"> C.E.O Hatake Kakashi</p>
 <a href=""><button>Read Now</button></a>
 </div>
 <div class="d box33">
@@ -67,7 +67,7 @@ include("inc/header.php");?>
 <img src="img/user3.avif" width="100%" height="100%" alt="">
 
 </div>
-<p class="writer">Thomas</p>
+<p class="writer">Roronoa Zoro</p>
 <a href=""><button>Read Now</button></a>
 </div>
     </div>
@@ -77,7 +77,7 @@ include("inc/header.php");?>
 <img src="img/user4.avif" width="100%" height="100%" alt="">
 
 </div>
-<p class="writer">D Luffy</p>
+<p class="writer">Monkey D Luffy</p>
 <a href=""><button>Read Now</button></a>
 </div>
 <div class="d box42">

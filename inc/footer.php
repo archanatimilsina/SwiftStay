@@ -9,8 +9,8 @@
                     <h3>USEFUL LINKS</h3>
                     <a href="room.php">Rooms</a>
                     <a href="contact.php">Contact Us</a>
-                    <a href="food.php">Food</a>
-                    <a href="booking.php">Booking</a>
+                    <a href="feedback.php">Feedback</a>
+                    <a href="room.php">Booking</a>
                     <a href="index.php">Home</a>
                 </div>
                 <div class="footer-center">

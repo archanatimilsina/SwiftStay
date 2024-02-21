@@ -9,20 +9,6 @@
         <div class="book-h1">
             <h1>BOOK YOUR <br> HOTEL TODAY</h1>
         </div>
-        <div class="book-p">
-            <p>Hotels.com Customer Care Number, Contact Address, Email Id. Hotels.com is an <br> Indian Most Popular Online Hotel Booking Platforms. Many Indian’s looking for the contact.</p>
-        </div>
-        
-        <div class="location">
-        <i class="fas fa-map-marker-alt"></i> <br>
-            21 JACKSON BLVD 120 <br> LOS ANGELES
-        </div>
-        <div class="facebook">
-           <i class="fab fa-facebook"></i>
-           <i class="fab fa-instagram"></i>
-           <i class="fab fa-twitter-square"></i>
-           <i class="fab fa-youtube"></i>
-        </div>
         <div class="website">
             <p>www.swiftstay.com</p>
         </div>
@@ -74,7 +60,7 @@
                    {
                        ?>
                        <script>
-                           alert ("Thanks For Contacting Us");
+                           alert("Thanks For Contacting Us");
                        </script>
                        <?php
                    }

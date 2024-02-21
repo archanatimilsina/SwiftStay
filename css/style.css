@@ -724,49 +724,32 @@ text-align: center;
 /* contact page */
 .contact-container{
     display: flex;
-   height: 800px;
+   height: 730px;
     width: 100%;
+    background-color: black;
+    
 }
 
 .contact1{
-    background: url('../img/ptryhal.jpg') center center/cover no-repeat;
-    height: 700px;
-    width:70%;
+    background: url('../img/adminhotel2.jpg') center center/cover no-repeat;
+    height: 90%;
+    width: 75%;
     position: absolute;
-    border-radius: 20px;
+    border: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-bottom: 120px;
     flex-basis: 75%;
-    z-index: -1;
 
 }
 .book-h1{
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Rubik', sans-serif;
     
 }
-.book-p{
-    font-size: 14px;
 
-}
-.location i{
-    text-align: center;
-    margin-left: 60px;
-}
-.location {
-    margin-top: 54px;
-}
-.facebook{
-    margin-top: 40px;
-    padding: 8px;
-}
-.facebook i{
-    padding-left: 6px;
-    font-size: 20px;
-}
 .website{
     margin-top: 30px;
 
@@ -792,13 +775,12 @@ text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: -1;
     
 }
 .contact-box form{
     margin-left:-90px ;
     height: 450px;
-    width: 600px;
+    width: 300px;
     background-color: rgb(48, 39, 39);
     display: flex;
     flex-direction: column;
@@ -874,6 +856,78 @@ text-align: center;
     font-size: 50px;
 }
 
-
+/* admin login page */
+.adminlogin{
+    height: 700px;
+    background-color: cornflowerblue;
+   
+}
+.admin-box{
+    height: 400px;
+    width: 600px;
+    background-color: crimson;
+    position: relative;
+    top: 150px;
+    left: 450px;
+}
+.admin-text{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+table tr td input{
+    border: none;
+    outline: none;
+   
+}
+#username , #password{
+    border-radius: 10px;
+    padding: 3px 0;
+    background-color: darkcyan;
+    width: 100%;
+    
+}
+#btn{
+ width: 30%;
+ border-radius: 6px;
+ background-color: black;
+ color: white;   
+ padding: 3px 0;
+}
+/* room.php */
+.room-h2{
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#f1 form table{
+    margin-left: 50px;
+    border: 1px solid red;
+   display: flex;
+   justify-content: center;
+   width: 38%;
+  border-radius: 10px;
+  padding: 10px;
+}
+#f1 form{
+    /* margin-left: 50px; */
+    margin-top: 20px;
+    
+}
+#f1 form table tr th{
+    font-size: 20px;
+    font-weight: 700;
+}
+#f1 form table tr td input{
+    font-size: 16px;
+    font-weight: 700;
+}
+#check-btn{
+    padding: 4px;
+    background-color: crimson;
+    color: white;
+    margin-left: 20px;
+    border-radius: 2px;
+}
 
 

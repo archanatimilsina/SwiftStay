@@ -1,4 +1,5 @@
-
+<?php
+include("connection.php");
 //for login
 if(isset($_POST['login']))
 {

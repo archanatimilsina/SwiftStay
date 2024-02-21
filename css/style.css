@@ -523,7 +523,7 @@ margin-left: 30px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  overflow: hidden;
+
   
 }
 .img1
@@ -537,8 +537,8 @@ margin: auto;
 .img1 img{
   border-radius: 3%;
 }
-.location{
-    margin-top: -40px;
+.location1{
+   
 width: 100%;
 height: 8%;
 /* border: 1px solid rgb(19, 20, 19); */
@@ -563,7 +563,7 @@ font-size:19px;
 font-family: 'Baloo 2', cursive;
 text-align: center;
 color: #0a0a0a; 
-
+border: 1px solid rgb(5, 5, 5);
 }
 .about{
 height: 700px;
@@ -621,7 +621,7 @@ text-align: center;
 font-size:19px;
 font-family: 'Baloo 2', cursive;
 text-align: center;
-margin:0px;
+
 }
 .bname{
     font-size: 1.5rem;

@@ -135,21 +135,21 @@ include('../connection.php'); ?>
                      <th width="25%" height="50px">Option</th>
              </tr>
              <?php
-                $qry="SELECT * FROM `deluxacroom`";
-                $run=mysqli_query($sql,$qry);
+                $qry="SELECT * FROM `deluxac_room`";
+                $run=mysqli_query($con,$qry);
                 while( $row=mysqli_fetch_assoc($run))
                 {
-                    $rno=$row['roomno'];
-                    $rtype=$row['roomtype'];
+                    $rno=$row['room_no'];
+                    $rtype=$row['room_type'];
                     $price=$row['price'];
                     $status=$row['status'];
 
                     ?>
                     <tr>
-                    <td width="25%" height="50px"><center><?php echo $rno ?></center></td>
-                     <td width="25%" height="50px"><center><?php echo $rtype ?></center></td>
-                     <td width="25%" height="50px"><center><?php echo $price ?></center></td>
-                     <td width="25%" height="50px"><center><?php echo $status ?></center></td>
+                    <td width="25%" height="50px"><?php echo $rno ?></td>
+                     <td width="25%" height="50px"><?php echo $rtype ?></td>
+                     <td width="25%" height="50px"><?php echo $price ?></td>
+                     <td width="25%" height="50px"><?php echo $status ?></td>
                      <td><a style="color:blue;" href="co.php? rno=<?php echo $rno; ?>">Check Out</a></td>
                     </tr>
                     <?php
@@ -169,12 +169,12 @@ include('../connection.php'); ?>
                      <th width="25%" height="50px">Option</th>
              </tr>
              <?php
-                $qry="SELECT * FROM `acroom`";
-                $run=mysqli_query($sql,$qry);
+                $qry="SELECT * FROM `ac_room`";
+                $run=mysqli_query($con,$qry);
                 while( $row=mysqli_fetch_assoc($run))
                 {
-                    $rno=$row['roomno'];
-                    $rtype=$row['roomtype'];
+                    $rno=$row['room_no'];
+                    $rtype=$row['room_type'];
                     $price=$row['price'];
                     $status=$row['status'];
 
@@ -202,12 +202,12 @@ include('../connection.php'); ?>
                      <th width="25%" height="50px">Option</th>
              </tr>
              <?php
-                $qry="SELECT * FROM `nonac`";
-                $run=mysqli_query($sql,$qry);
+                $qry="SELECT * FROM `nonac_room`";
+                $run=mysqli_query($con,$qry);
                 while( $row=mysqli_fetch_assoc($run))
                 {
-                    $rno=$row['roomno'];
-                    $rtype=$row['roomtype'];
+                    $rno=$row['room_no'];
+                    $rtype=$row['room_type'];
                     $price=$row['price'];
                     $status=$row['status'];
 

@@ -15,8 +15,6 @@ include('../connection.php'); ?>
     margin: 0;
     box-sizing: border-box;
 }
-
-/* navbar */
 .navbar{
     width: 100%;
     position: sticky;
@@ -128,7 +126,6 @@ include('../connection.php'); ?>
     }
     img{
         width: 350px;
-        /* margin-left: 100px; */
     }
   </style>
 </head>
@@ -152,8 +149,8 @@ include('../connection.php'); ?>
     
     <h1 >Delux AC Rooms insert Section</h1>
     <div class="imgg">
-    <img src="../img/acroom2.jpg" alt="delux ac">
-    <img src="../img/acroom2.jpg" alt="delux ac">
+    <img src="../img/about13.avif" alt="delux ac">
+    <img src="../img/about12.avif" alt="delux ac">
     </div>
    
 <div class="delux-insert">
@@ -189,8 +186,8 @@ include('../connection.php'); ?>
           $rtype=$_POST['type'];
           $price=$_POST['price'];
          
-          $qry="INSERT INTO `deluxacroom`(`id`, `roomno`, `roomtype`, `price`) VALUES ('','$rno','$rtype','$price')";
-          $run=mysqli_query($sql,$qry);
+          $qry="INSERT INTO 'deluxac_room'('room_no', 'room_type', 'price') VALUES ('$rno','$rtype','$price')";
+          $run=mysqli_query($con,$qry);
           if($run==true)
           {
             ?>

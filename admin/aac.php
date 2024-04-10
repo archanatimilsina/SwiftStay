@@ -154,8 +154,8 @@ include('../connection.php'); ?>
      
     <h1 > AC Rooms insert Section</h1>
     <div class="imgg">
-    <img src="../img/acroom2.jpg" alt="delux ac">
-    <img src="../img/acroom2.jpg" alt="delux ac">
+    <img src="../img/about.avif" alt="delux ac">
+    <img src="../img/about1.avif" alt="delux ac">
     </div>
 
 <div class="delux-insert">
@@ -190,8 +190,8 @@ include('../connection.php'); ?>
           $rtype=$_POST['type'];
           $price=$_POST['price'];
          
-          $qry="INSERT INTO `acroom`(`id`, `roomno`, `roomtype`, `price`) VALUES ('','$rno','$rtype','$price')";
-          $run=mysqli_query($sql,$qry);
+          $qry="INSERT INTO `ac_room`(`room_no`, `room_type`, `price`) VALUES ('$rno','$rtype','$price')";
+          $run=mysqli_query($con,$qry);
           if($run==true)
           {
             ?>

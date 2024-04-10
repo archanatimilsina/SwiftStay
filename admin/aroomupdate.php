@@ -98,9 +98,16 @@ include('../connection.php'); ?>
                 <li class="item"><a href="roomdetails.php">Details</a></li>
                  <li class="item"><a href="booking.php">Status</a></li>
                  <li class="item"><a href="../admin.php">Admin Panel</a></li>
+                
+
       
           </ul>
         </div>
     </nav>
+    <div>
+    <a href="aac.php">AC</a><br>
+                 <a href="anonac.php">NON AC</a><br>
+                 <a href="adelux.php">DELUX AC</a>
+    </div>
     </body>
  </html>

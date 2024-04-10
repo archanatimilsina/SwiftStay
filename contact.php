@@ -22,19 +22,19 @@
        <form action="contact.php" method="post">
                 <div class="form-group-con">
                     <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" placeholder="Enyer Your name">
+                    <input type="text" name="name" id="name" placeholder="Enter Your name">
                 </div>
                 <div class="form-group-con">
                     <label for="name">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="Enyer Your Email">
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
                 </div>
                 <div class="form-group-con">
                     <label for="name">Mobile:</label>
-                    <input type="phone" name="phone" id="phone" placeholder="Enyer Your phone">
+                    <input type="phone" name="phone" id="phone" placeholder="Enter Your phone">
                 </div>
                 <div class="form-group-con">
                     <label for="name">Address:</label>
-                    <input type="phone" name="address" id="phone" placeholder="Enyer Your Address">
+                    <input type="phone" name="address" id="phone" placeholder="Enter Your Address">
                 </div>
                 <div class="form-group-con">
                     <label for="name">message:</label>

@@ -96,7 +96,7 @@ include('../connection.php'); ?>
                 <li class="item"><a href="aroom.php">Home</a></li>
                 <li class="item"><a href="aroomupdate.php">Update</a></li>
                 <li class="item"><a href="roomdetails.php">Details</a></li>
-                 <li class="item"><a href="booking.php">Status</a></li>
+                 <li class="item"><a href="roomstatus.php">Status</a></li>
                  <li class="item"><a href="../admin.php">Admin Panel</a></li>
       
           </ul>

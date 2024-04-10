@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+include("connection1.php");
 //for login
 if(isset($_POST['login']))
 {

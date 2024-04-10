@@ -6,6 +6,7 @@ include('inc/header.php')
     .room-status{
         display: none;
     }
+  
 </style>
 
 <div id="room-home">
@@ -21,7 +22,7 @@ include('inc/header.php')
 <div id="f1">
     <h2 class="room-h2"><i class="fas fa-hotel"></i>SEARCH YOUR ROOMS HERE</h2>
          <form action="room.php " method="GET"> 
-         <center><table >
+         <table >
              <tr>
                 <th width="20%" height="50px" required>Check In Date</th>
                  <th width="20%" height="50px" required>Check Out Date</th>
@@ -30,20 +31,20 @@ include('inc/header.php')
              </tr>
              <tr>
                 
-                <td width="20%" height="50px"><center><input type="date" name="ci" required></center></td>
-                 <td width="20%" height="50px"><center><input type="date" name="co" required></center></td>
+                <td width="20%" height="50px"><input type="date" name="ci" required></td>
+                 <td width="20%" height="50px"><input type="date" name="co" required></td>
                  <td width="20%" height="50px">
-                    <center><select name="room">
+                  <select name="room">
                          <option >1</option>
                          <option >2</option>
                          <option >3</option>
                          <option >4</option>
                          <option >5</option>
-                     </select></center>
+                     </select>
             </form>
                  </td>
              </tr>
-         </table></center>
+         </table>
 
          <?php 
          if(isset($_GET['sub']))

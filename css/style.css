@@ -701,8 +701,7 @@ text-align: center;
   
     margin-top: 20px;
     z-index: -1;
-   
-    
+ 
 }
 #f1 form table tr th{
     font-size: 20px;
@@ -733,7 +732,7 @@ text-align: center;
 .contact1{
     background: url('../img/adminhotel2.jpg') center center/cover no-repeat;
     height: 90%;
-    width: 75%;
+    width: 70%;
     position: absolute;
     border: 20px;
     display: flex;
@@ -742,6 +741,7 @@ text-align: center;
     align-items: center;
     padding-bottom: 120px;
     flex-basis: 75%;
+
 
 }
 .book-h1{
@@ -857,7 +857,7 @@ text-align: center;
 }
 
 /* admin login page */
-.adminlogin{
+/* .adminlogin{
     height: 700px;
     background-color: cornflowerblue;
    
@@ -893,7 +893,7 @@ table tr td input{
  background-color: black;
  color: white;   
  padding: 3px 0;
-}
+} */
 /* room.php */
 .room-h2{
     margin-top: 24px;
@@ -930,4 +930,13 @@ table tr td input{
     border-radius: 2px;
 }
 
+/* admin login */
+.admin_login
+{
+    height: 200px;
+    width: 70%;
+    margin: auto;
+    background-color: #d68b79;
+    border: black solid 1px;
+}
 

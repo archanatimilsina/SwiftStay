@@ -66,6 +66,21 @@ include('../connection.php'); ?>
     background: white;
     border-radius: 30px;
 }
+.right-nav ul .paste-button li{
+    text-decoration: none;
+    color: #222;
+    font-family: 'Baloo 2', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    position: relative;
+   
+    }
+.right-nav ul .paste-button li:hover{
+    color: black;
+    background: white;
+    border-radius: 30px;
+}
+             
 .paste-button {
     position: relative;
     display: inline-block;
@@ -73,16 +88,50 @@ include('../connection.php'); ?>
   }
   
   .button {
-    background-color:  #fa9579;
-    color: #212121;
-    padding: 10px 15px;
+    background-color: #fa9579;
+    color: black;
     font-size: 15px;
-    font-weight: bold;
     border: 2px solid transparent;
     border-radius: 15px;
     cursor: pointer;
   }
   
+  .dropdown-content {
+    display: none;
+    font-size: 13px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #222;
+    font-family: 'Baloo 2', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    text-decoration: none;
+    display: block;
+   width: 180px;
+   height: 45px;
+   border-radius: 5px;
+  border: black solid 1px;
+  text-align: center;
+  background-color:white ;
+  
+  }
+  
+  .dropdown-content a:hover {
+   background-color:#fa9579;
+ 
+  }
+  
+  .paste-button:hover button {
+    background-color:white ;
+  }
+  
+  .paste-button:hover .dropdown-content {
+    display: block;
+  }
+  /* navbar */
   </style>
 </head>
 
@@ -94,20 +143,20 @@ include('../connection.php'); ?>
         <div class="right-nav mt-4">
             <ul>
                 <li class="item"><a href="aroom.php">Home</a></li>
-                <li class="item"><a href="aroomupdate.php">Update</a></li>
+         <div class="paste-button"> <li class="item">update </li>
+          <div class="dropdown-content">
+        <a id="first" href="adelux.php">Delux AC</a>
+        <a id="second" href="aac.php">AC</a>
+        <a id="third" href="anonac.php">Non AC</a>
+      </div>
+   </div>
+ 
                 <li class="item"><a href="roomdetails.php">Details</a></li>
-                 <li class="item"><a href="booking.php">Status</a></li>
+                 <li class="item"><a href="roomstatus.php">Status</a></li>
                  <li class="item"><a href="../admin.php">Admin Panel</a></li>
-                
-
-      
           </ul>
         </div>
     </nav>
-    <div>
-    <a href="aac.php">AC</a><br>
-                 <a href="anonac.php">NON AC</a><br>
-                 <a href="adelux.php">DELUX AC</a>
-    </div>
+    
     </body>
  </html>

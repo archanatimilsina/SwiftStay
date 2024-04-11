@@ -13,7 +13,7 @@ $ci=$_GET['ci'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Non ac room form</title>
+    <title> Non AC Room form</title>
 </head>
 <style>
     body{
@@ -60,7 +60,7 @@ $ci=$_GET['ci'];
     <table>
         <tr>
             <td>Status</td>
-            <td><input type="text" name="status" title="status" placeholder="Availble"></td>
+            <td><input type="text" name="status" title="status" placeholder="Available"></td>
         </tr>
        
         <tr>
@@ -122,16 +122,12 @@ $ci=$_GET['ci'];
         $roomtype=$_POST['roomtype'];
         $noofroom=$_POST['noofroom'];
 
-        $qryy="SELECT * FROM `nonac_room` WHERE `status`='un book'";
-        $run=mysqli_query($sql,$qryy);
+        $qryy="SELECT * FROM 'nonac_room' WHERE 'status'='un book'";
+        $run=mysqli_query($con,$qryy);
         // $rno=$ow['roomno'];
         $row=mysqli_fetch_assoc($run);
-        $rno=$row['roomno'];
-
-        
-        
-
-            $qry="INSERT INTO `room_booking` (`id`, `name`, `address`, `state`, `city`, `email`, `cin`, `cout`, `members`, `roomtype`, `no of rooms`) VALUES (NULL, '$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
+        $rno=$row['room_no'];
+            $qry="INSERT INTO `room_booking` (`name`, `address`, `state`, `city`, `email`, `cin`, `cout`, `members`, `roomtype`, `no of rooms`) VALUES ('$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
            
             $run=mysqli_query($sql,$qry);
             
@@ -139,7 +135,7 @@ $ci=$_GET['ci'];
            
             if($run==true)
             {
-                mysqli_query($sql,"UPDATE `nonac_room` SET `status`='book' WHERE `roomno`='$rno' ");
+                mysqli_query($con,"UPDATE `nonac_room` SET `status`='booked' WHERE `room_no`='$rno' ");
                 header('location:cartpayment2.php');
                 ?>
                 <script>

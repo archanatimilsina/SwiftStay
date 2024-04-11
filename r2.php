@@ -120,7 +120,7 @@ $ci=$_GET['ci'];
         
         
 
-            $qry="INSERT INTO `room_booking` (`id`, `name`, `address`, `state`, `city`, `email`, `cin`, `cout`, `members`, `roomtype`, `no of rooms`) VALUES (NULL, '$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
+            $qry="INSERT INTO 'room_booking' ('name', 'address', 'state', 'city', 'email', 'cin', 'cout', 'members', 'roomtype', 'no of rooms') VALUES ('$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
            
             $run=mysqli_query($con,$qry);
             
@@ -128,7 +128,7 @@ $ci=$_GET['ci'];
            
             if($run==true)
             {
-                mysqli_query($con,"UPDATE `ac_room` SET `status`='book' WHERE `roomno`='$rno' ");
+                mysqli_query($con,"UPDATE 'ac_room' SET 'status'='booked' WHERE 'room_no'='$rno' ");
                 header('location:cartpayment2.php');
                 ?>
                 <script>

@@ -50,13 +50,13 @@ $ci=$_GET['ci'];
 </style>
 <body>
     <div id="r1-container">
-    <h1>Please Fill Up The Form Given Below</h1>
+    <h1>Please Fill Up The Form First</h1>
 <form action="r1.php" method="post">
 <h1>BOOK NOW</h1>
     <table>
         <tr>
             <td>Status</td>
-            <td><input type="text" name="status" title="status" placeholder="Availble"></td>
+            <td><input type="text" name="status" title="status" placeholder="Available"></td>
         </tr>
        
         <tr>
@@ -122,12 +122,8 @@ $ci=$_GET['ci'];
         $run=mysqli_query($con,$qryy);
         // $rno=$ow['roomno'];
         $row=mysqli_fetch_assoc($run);
-        $rno=$row['roomno'];
-
-        
-        
-
-            $qry="INSERT INTO `room_booking` (`id`, `name`, `address`, `state`, `city`, `email`, `cin`, `cout`, `members`, `roomtype`, `no of rooms`) VALUES (NULL, '$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
+        $rno=$row['room_no'];
+            $qry="INSERT INTO 'room_booking' ('name', 'address', 'state', 'city', 'email', 'cin', 'cout', 'members', 'roomtype', 'no of rooms') VALUES ('$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
            
             $run=mysqli_query($con,$qry);
             
@@ -135,11 +131,11 @@ $ci=$_GET['ci'];
            
             if($run==true)
             {
-                mysqli_query($con,"UPDATE `deluxac_room` SET `status`='book' WHERE `roomno`='$rno'");
+                mysqli_query($con,"UPDATE 'deluxac_room' SET 'status'='Booked' WHERE 'roomno'='$rno'");
                 header('location:cartpayment2.php');
                 ?>
                 <script>
-                    alert("room book Successfully");
+                    alert("Room Booked Successfully");
                 </script>
                 <?php
             }

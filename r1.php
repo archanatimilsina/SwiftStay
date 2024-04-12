@@ -118,17 +118,13 @@ $ci=$_GET['ci'];
         $roomtype=$_POST['roomtype'];
         $noofroom=$_POST['noofroom'];
 
-        $qryy="SELECT * FROM `deluxac_room` WHERE `status`='un book'";
+        $qryy="SELECT * FROM `deluxac_room` WHERE `status`='available'";
         $run=mysqli_query($con,$qryy);
         // $rno=$ow['roomno'];
         $row=mysqli_fetch_assoc($run);
         $rno=$row['room_no'];
             $qry="INSERT INTO 'room_booking' ('name', 'address', 'state', 'city', 'email', 'cin', 'cout', 'members', 'roomtype', 'no of rooms') VALUES ('$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
-           
             $run=mysqli_query($con,$qry);
-            
-           
-           
             if($run==true)
             {
                 mysqli_query($con,"UPDATE 'deluxac_room' SET 'status'='Booked' WHERE 'roomno'='$rno'");
@@ -140,7 +136,7 @@ $ci=$_GET['ci'];
                 <?php
             }
             else{
-
+echo "try again";
             }
         }
     ?>

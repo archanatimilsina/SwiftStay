@@ -394,7 +394,7 @@ include('../connection.php'); ?>
              <!---------------------------------   ac--------------------- -->
 
              <?php
-               $qryy="SELECT * FROM `ac_room` WHERE `status`='un book'";
+               $qryy="SELECT * FROM `ac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
             //    $rno=$row['room_no'];

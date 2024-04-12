@@ -57,12 +57,12 @@ include('inc/header.php')
 
          <!---------------------------------  delux ac--------------------- -->
          <?php
-               $qryy="SELECT * FROM `deluxac_room` WHERE `status`='un book'";
+               $qryy="SELECT * FROM `deluxac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-               $rno=$row['roomno'];
+               $rno=$row['room_no'];
 
-               $qry="SELECT * FROM `deluxac_room` WHERE `status`='un book'";
+               $qry="SELECT * FROM `deluxac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qry);
                $row=mysqli_num_rows($run);
                if($r <= $row)
@@ -109,12 +109,12 @@ include('inc/header.php')
              <!---------------------------------   ac--------------------- -->
 
              <?php
-               $qryy="SELECT * FROM `ac_room` WHERE `status`='un book'";
+               $qryy="SELECT * FROM `ac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-               $rno=$row['roomno'];
+               $rno=$row['roomn_o'];
 
-               $qry="SELECT * FROM `ac_room` WHERE `status`='un book'";
+               $qry="SELECT * FROM `ac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qry);
                $row=mysqli_num_rows($run);
                if($r <= $row)
@@ -160,12 +160,12 @@ include('inc/header.php')
             
              <!---------------------------------  non ac--------------------- -->
              <?php
-               $qryy="SELECT * FROM `nonac_room` WHERE `status`='un book'";
+               $qryy="SELECT * FROM `nonac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-               $rno=$row['roomno'];
+               $rno=$row['room_no'];
 
-               $qry="SELECT * FROM `nonac_room` WHERE `status`='un book'";
+               $qry="SELECT * FROM `nonac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qry);
                $row=mysqli_num_rows($run);
                if($r <= $row)

@@ -101,8 +101,10 @@ $ci=$_GET['ci'];
         </tr>
     </table>
     <?php
-        
-    
+        $n=1;
+        while($n<=$nr)
+        {
+
         if(isset($_POST['submit']))
         {
             $name=$_POST['name'];
@@ -137,6 +139,7 @@ $ci=$_GET['ci'];
 echo "try again";
             }
         }
+    }
     ?>
 </form> 
 </div>

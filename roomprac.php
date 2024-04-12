@@ -8,100 +8,149 @@ include('connection.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
- <link rel="stylesheet" href="css/roomstyle.css">
+    <style>
+#room-home{
+    overflow: hidden;
+}
+#room-home figure{
+     position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite; 
+   
+}
+#room-home figure img{
+     width: 20%;
+    float: left; 
+    height: 550px;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+
+  .room-check
+  {
+    border: 1px solid black ;
+    border-radius: 20px;
+   width: 40%;
+    height: 150px;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .room-check form{
+width: 100%;
+  }
+  .room-check form table{
+    width: 100%;
+  }
+  #check-btn{
+    width: 80px;
+    height: 35px;
+    margin-top: 75%;
+    background-color:  #fa9579;
+  }
+  #room-option{
+    margin-left: 35px;
+  }
+  #cin
+  {
+    margin:0px 7px;
+  }
+  #cout
+  {
+    margin:0px 7px;
+  }
+  .dac-available
+  {
+    width: 70%;
+    margin: auto;
+    height: 350px;
+    border: black dotted 3px;
+
+  }
+  #book-btn
+  {
+    background-color: #fa9579 ;
+  }
+    .room-status{
+        display: none;
+    }
+    
+#rooms-right{
+  margin-top: 100px;
+} 
+
+.room-h2{
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+}
+#f1 form table{
+    margin-left: 50px;
+    border: 1px solid  #fc8260;
+   display: flex;
+   justify-content: center;
+   width: 38%;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Baloo 2', cursive;
+  margin: auto;
+}
+#f1 form{
+  
+    margin-top: 20px;
+    z-index: -1;
+ 
+}
+#f1 form table tr th{
+    font-size: 20px;
+    font-weight: 700;
+}
+#f1 form table tr td input{
+    font-size: 16px;
+    font-weight: 700;
+}
+#check-btn{
+    padding: 4px;
+     background-color: #fc8260; 
+    color: black;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+
+
+  
+</style>
 </head>
 <body>
-    
-<nav class="navbar">
-        <div class="left-nav">
-            <img src="img/logo1.png" alt="logo">
-        </div>
-        <div class="right-nav mt-4">
-            <ul>
-                <li class="item"><a href="index.php">Home</a></li>
-                <li class="item"><a href="about.php">About</a></li>
-                <li class="item"><a href="room.php">Rooms</a></li>
-                <!-- <li class="item"><a href="food.php">Food</a></li> -->
-                <li class="item"><a href="contact.php">Contact</a></li>
-                <!-- <li class="item"><a href="cart.php">Cart</a></li> -->
-                <li class="item"><a href="admin.php">Admin</a></li>
-                <!-- <li class="item"><a href="bookinghall.php">Booking</a></li> -->
-                <li class="item"><a href="feedback.php">Feedback</a></li>  
-        <?php
-            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
-            {
-               ?>
-               <button class="login12"> <?php 
-               
-                   echo $_SESSION["username"].
-                 
-                   '-<a href="logout.php">Logout</a>';
-                  ?>
-                 </button>
-               <?php 
-            }
-            else{
-                echo "
-                <div class='sign-in-up'>
-                <button type='button' onclick=\"popup('login-popup')\">Login</button>
-                <button type='button' onclick=\"popup('register-popup')\">Register</button>
-                </div>
-                ";
-            }
-        ?>
-          </ul>
-        </div>
-    </nav>
-
-
-    <div class="popup-container" id="login-popup">
-        <div class=" popup">
-            <form action="login_register.php" method="POST">
-                <h2>
-                    <span>User Login</span>
-                    <button type="reset" onclick="popup('login-popup')">X</button>
-                </h2>
-                <input type="text" placeholder="E-mail or Username" name="email_username" required>
-                <input type="password" placeholder="Password" name="password" required>
-                <button type="submit" class="login-btn" name="login">Login</button>
-            </form>
-            <div class="forgot-btn">
-                <button type="button" onclick="forgotPopup()">Forgot Password</button>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="popup-container" id="register-popup">
-        <div class="register popup">
-            <form action="login_register.php" method="POST">
-                <h2>
-                    <span>User REGISTER</span>
-                    <button type="reset" onclick="popup('register-popup')">X</button>
-                </h2>
-                <input type="text" placeholder="FULL NAME"  name="fullname" required>
-                <input type="text" placeholder="User Name" name="username" required>
-                <input type="email" placeholder="E-Mail"  name="email" required>
-                <input type="password" placeholder="Password"  name="password" required>
-                <button type="submit" class="register-btn" name="register">Register</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="popup-container" id="forgot-popup">
-        <div class="forgot popup">
-            <form action="forgotpassword.php" method="POST">
-                <h2>
-                    <span>Reset Password</span>
-                    <button type="reset" onclick="popup('forgot-popup')">X</button>
-                </h2>
-                <input type="email" placeholder="E-mail" name="email">
-                
-                <button type="submit" class="reset-btn" name="send-reset-link">Send Link</button>
-            </form>
-            
-        </div>
-    </div>
     
 <div id="room-home">
      <figure>
@@ -113,48 +162,53 @@ include('connection.php');
      </figure>
 </div>
 
-<div id="f1">
-    <h2 class="room-h2"><i class="fas fa-hotel"></i>SEARCH YOUR ROOMS HERE</h2>
-         <form action="room.php " method="GET"> 
-         <table >
-             <tr>
-                <th width="20%" height="50px" required>Check In Date</th>
-                 <th width="20%" height="50px" required>Check Out Date</th>
-                 <th width="20%" height="50px">Room</th>
-                 <td rowspan="2"><input type="submit" name="sub" id="check-btn" value="Check"></td>
-             </tr>
-             <tr>
-                
-                <td width="20%" height="50px"><input type="date" id="ci-input" name="ci" required></td>
-                 <td width="20%" height="50px"><input type="date" id="co-input" name="co" required></td>
-                 <td width="20%" height="50px">
-                 <select name="room">
-                         <option >1</option>
-                         <option >2</option>
-                         <option >3</option>
-                         <option >4</option>
-                         <option >5</option>
-                         <option >6</option>
-                         <option >7</option>
-                         <option >8</option>
-                         <option >9</option>
-                         <option >10</option>
-                         <option >11</option>
-                         <option >12</option>
-                        
-                     </select>
-            </form>
-                 </td>
-             </tr>
-         </table>
-</div>
-         <?php 
+<div class="room-check">
+            <form action="room.php" method="get">
+            <table>
+                <thead>
+                    <tr height="70px">
+                        <th width="26%">Check in date</th>
+                        <th width="30%">Check out date</th>
+                        <th width="25%">No. of rooms</th>
+                        <th width="19%" rowspan="2"><input type="button" name="check" id="check-btn" value="Check"></th>
+                        </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <input type="date" name="cin" id="cin" required>
+                    </td>
+                    <td>
+                        <input type="date" name="cout" id="cout" required>
+                    </td>
+                    <td>
+                        <select name="room" id="room-option" required>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                    </form>
+                    </td>
+                </tr>
+            </table>
+        
+
+        <?php 
+        
          if(isset($_GET['sub']))
          {
                 $r = $_GET['room'];
                  $ci=$_GET['ci'];
                $co=$_GET['co'];
-         
+         }
          ?>
 
          <!---------------------------------  delux ac--------------------- -->
@@ -175,7 +229,7 @@ include('connection.php');
                      <p class="sectionTag">Delux A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
                      <p class="sectionsubTag ">Price per room : 1100 Rs</p>
-                     <form action="r1.php" method="get">
+                     <form action="r1prac.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
                      <input type="text" name="rt" value="Delux AC" required>
@@ -183,7 +237,7 @@ include('connection.php');
                      <input type="submit" name="submit" id="room-btn">
                      </form>
                      <br>
-                     
+                     <!-- <a href="r1.php">Book A Room</a> -->
                      </div>
                      <div class="thumbnail">
                          <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
@@ -200,7 +254,9 @@ include('connection.php');
                <p class="sectionsubTag r">Status :not Available </p>
                <p class="sectionsubTag r">Sorry :Please come another day</p>
             </div>
-           
+            <!-- <div class="thumbnail">
+                <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+            </div> -->
         </section>
          <?php
                }
@@ -233,7 +289,7 @@ include('connection.php');
                      <input type="submit" id="room-btn">
                      </form>
                      <br>
-                     
+                     <!-- <a href="r1.php">Book A Room</a> -->
                      </div>
                      <div class="thumbnail">
                          <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
@@ -250,7 +306,9 @@ include('connection.php');
                <p class="sectionsubTag r">Status :not Available </p>
                <p class="sectionsubTag r">Sorry :Please come another day</p>
             </div>
-           
+            <!-- <div class="thumbnail">
+                <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+            </div> -->
         </section>
          <?php
                }
@@ -282,7 +340,7 @@ include('connection.php');
                      <input type="submit" id="room-btn">
                      </form>
                      <br>
-                     
+                     <!-- <a href="r1.php">Book A Room</a> -->
                      </div>
                      <div class="thumbnail">
                          <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
@@ -299,21 +357,31 @@ include('connection.php');
                <p class="sectionsubTag r">Status :not Available </p>
                <p class="sectionsubTag r">Sorry :Please come another day</p>
             </div>
-          
+            <!-- <div class="thumbnail">
+                <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+            </div> -->
         </section>
          <?php
                }
-          
-        }
-?>
-     
+            ?>
+        
 
-  <?php
-  include('inc/footer.php')
-  ?>
+     </div>
+
+    <div class="room-status">
+
+     <section id="rooms-right">
+        
+    </section>
+    <section id="rooms-right">
+       
+    </section>
+    <section id="rooms-right">
+        
+    </section>
+    </div>
+    
 </body>
 </html>
 
 
-    
-   

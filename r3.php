@@ -136,10 +136,10 @@ $ci=$_GET['ci'];
             if($run==true)
             {
                 mysqli_query($con,"UPDATE nonac_room SET status='booked' WHERE `room_no`='$rno' ");
-                header('location:cartpayment2.php');
+                header('location:roomdetails.php');
                 ?>
                 <script>
-                    alert("room book Successfully");
+                    alert("Room booked Successfully");
                 </script>
                 <?php
             }

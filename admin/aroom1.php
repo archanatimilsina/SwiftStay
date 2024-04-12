@@ -1,16 +1,16 @@
 <?php
-include('../connection.php');?>
+include('../connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIFT STAY</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>SWIFTSTAY</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
     <style>
-         *{
+      *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -117,7 +117,7 @@ include('../connection.php');?>
    border-radius: 5px;
   border: black solid 1px;
   text-align: center;
-  background-color:white;
+  background-color:white ;
   
   }
   
@@ -133,68 +133,162 @@ include('../connection.php');?>
   .paste-button:hover .dropdown-content {
     display: block;
   }
-  /* navbar */
-  .room-check
-  {
-    border: 1px solid black ;
-    border-radius: 20px;
-   width: 40%;
-    height: 150px;
-    display: flex;
+ 
+.room-h2{
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#f1
+{
+    width: 500px;
+  height: 150px;
     margin: auto;
-    margin-top: 20px;
-  }
-  .room-check form{
-width: 100%;
-  }
-  .room-check form table{
+    margin-bottom: 80px;
+    
+}
+#f1 form table{
+    
+   display: flex;
+   justify-content: center;
+   width: 100%;
+  border-radius: 10px;
+  height: 150px;
+  border: 1px solid red;
+}
+#f1 form{
+ 
     width: 100%;
-  }
-  #check-btn{
-    width: 80px;
-    height: 35px;
-    margin-top: 75%;
-    background-color:  #fa9579;
-  }
-  #room-option{
-    margin-left: 35px;
-  }
-  #cin
-  {
-    margin:0px 7px;
-  }
-  #cout
-  {
-    margin:0px 7px;
-  }
-  .dac-available
-  {
-    width: 70%;
-    margin: auto;
-    height: 350px;
-    border: black dotted 3px;
+    margin-top: 20px;
+    
+}
+#f1 form table tr th{
+    font-size: 17px;
+    font-weight: 700;
+}
+#f1 form table tr td input{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0px 15px;
+}
 
-  }
-  #book-btn
-  {
-    background-color: #fa9579 ;
-  }
-    </style>
+#check-btn{
+    padding: 4px;
+    background-color: crimson;
+    color: white;
+   border-radius: 2px;
+}
+
+#rooms-right{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   width: 100%;
+    margin:auto;
+    border: 1px solid green; 
+    margin-bottom: 100px; 
+}
+
+.paras{
+    padding: 0 40px;
+    
+}
+.paras form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3px;
+    
+}
+.paras form input{
+    margin-top: 6px;
+    padding: 4px;
+}
+#room-btn{
+    background-color: #fa9579;
+    color: white;
+    font-size: 15px;
+}
+
+#rooms-left{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 90%;
+    margin: auto;
+    border: 1px solid black;
+    flex-direction: row-reverse;
+    
+}
+.sectionTag{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.g{
+    /* color: green; */
+    font-weight: 700;
+}
+.r{
+    /* color: red; */
+    font-weight: 700;
+}
+.sectionsubTag{
+    padding-top: 10px;
+    font-size: 20px;
+}
+.font{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    color: rgb(130, 30, 245);
+}
+#rooms-left .thumbnail img{
+    width: 700px;
+}
+.price-btn{
+    width: 80%;
+    background-color: #e46262;
+    color: white;
+    margin-top: 20px;
+    padding: 6px 0;
+}
+.thumbnail img{
+    padding-right: 10px;
+    width: 700px;
+}
+.price{
+    color: green;
+    margin-top: 20px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+  </style>
 </head>
 
 <body>
-    <nav class="navbar">
+<nav class="navbar">
     <div class="left-nav">
             <p>Room</p>
         </div>
         <div class="right-nav mt-4">
             <ul>
                 <li class="item"><a href="aroom.php">Home</a></li>
-                <li class="item"><a href="aroomupdate.php">Update</a></li>
+         <div class="paste-button"> <li class="item">update </li>
+          <div class="dropdown-content">
+        <a id="first" href="adelux.php">Delux AC</a>
+        <a id="second" href="aac.php">AC</a>
+        <a id="third" href="anonac.php">Non AC</a>
+      </div>
+   </div>
+ 
                 <li class="item"><a href="roomdetails.php">Details</a></li>
-                 <li class="item"><a href="booking.php">Status</a></li>
+                 <li class="item"><a href="roomstatus.php">Status</a></li>
                  <li class="item"><a href="../admin.php">Admin Panel</a></li>
-      
           </ul>
         </div>
     </nav>
@@ -202,179 +296,212 @@ width: 100%;
     <section>
         <div class="img">
         <img src="../img/acdeluxnew.avif" alt="#" width="100%" height="500px"></div>
-
-        <div class="room-check">
-            <form action="room.php" method="get">
-            <table>
-                <thead>
-                    <tr height="70px">
-                        <th width="26%">Check in date</th>
-                        <th width="30%">Check out date</th>
-                        <th width="25%">No. of rooms</th>
-                        <th width="19%" rowspan="2"><input type="button" name="check" id="check-btn" value="Check"></th>
-                        </tr>
-                </thead>
-                <tr>
-                    <td>
-                        <input type="date" name="cin" id="cin" required>
-                    </td>
-                    <td>
-                        <input type="date" name="cout" id="cout" required>
-                    </td>
-                    <td>
-                        <select name="room" id="room-option" required>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>12</option>
-                        </select>
-                    </form>
-                    </td>
-                </tr>
-            </table>
         
-
-        <?php 
+<div id="f1">
+    <h2 class="room-h2"><i class="fas fa-hotel"></i> SEARCH YOUR ROOMS HERE</h2>
+         <form action="aroom1.php " method="get"> 
+         <table >
+             <tr>
+                 
+                <th width="22%" height="50px" id="cin" required>Check In Date</th>
+                 <th width="40%" height="50px" id="cout" required>Check Out Date</th>
+                 <th width="21%" height="50px">Room</th>
+                 <td rowspan="2" width="17%"><input type="submit" name="sub" id="check-btn" value="Check"  ></td>
+             </tr>
+             <tr>
+                <td width="26%" height="50px"><input type="date" name="ci" required></td>
+                 <td width="30%" height="50px"><input type="date" name="co" required></td>
+                 <td width="25%" height="50px">
+                     <select name="room">
+                         <option >1</option>
+                         <option >2</option>
+                         <option >3</option>
+                         <option >4</option>
+                         <option >5</option>
+                         <option >6</option>
+                         <option >7</option>
+                         <option >8</option>
+                         <option >9</option>
+                         <option >10</option>
+                         <option >11</option>
+                         <option >12</option>
+                        
+                     </select>
+            </form>
+           
+                 </td>
+             </tr>
+         </table> </div>
+         <?php
         
+         if(isset($_GET['sub']))
+         {
+                $r = $_GET['room'];
+                 $ci=$_GET['ci'];
+               $co=$_GET['co'];
+         
+         ?>
 
-    $cin=$_GET['cin'];
-    $cout=$_GET['cout'];
-    $r=$_GET['room'];
-    ?>
-    <section class="result">
-    <?php
+         <!---------------------------------  delux ac--------------------- -->
+         <?php
+               $qryy="SELECT * FROM `deluxac_room` WHERE status='available'";
+               $run=mysqli_query($con,$qryy);
+               $row=mysqli_fetch_assoc($run);
+               $rno=$row['room_no'];
 
-    // delux ac room 
-    $query1="SELECT * FROM deluxac_room  WHERE 'status'='available'";
-    $result1=mysqli_query($con,$query1);
-    $data1=mysqli_fetch_assoc($result1);
-    $rno=$data1['room_no'];
+               $qry="SELECT * FROM `deluxac_room` WHERE status='available'";
+               $run=mysqli_query($con,$qry);
+               $row=mysqli_num_rows($run);
 
-    $query2="SELECT * FROM deluxac_room  WHERE 'status'='available'";
-    $result2=mysqli_query($con,$query2);
-    $data2=mysqli_num_rows($result2);
-    
-    if($r<=$data2)
-    {
-        ?>
-<div class="dac-available">
-    <h1>Deluc AC Room</h1>
-    <p>STATUS : Available</p>
-    <form action="r1.php" method="GET">
+               if($r <= $row)
+               {
+                   ?>
+                   <section id="rooms-right">
+                   <div class="paras">
+                     <p class="sectionTag">Delux A.C. Room</p>
+                     <p class="sectionsubTag g">Status :Available </p>
+                     <p class="sectionsubTag ">Price per room : 1100 Rs</p>
+                     <form action="r1.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
                      <input type="text" name="rt" value="Delux AC" required>
                      <input type="text" name="nr" value="<?php echo $r; ?>" required>
+                     <input type="submit" name="submit" id="room-btn">
+                     </form>
+                     <br>
+                   
+                     </div>
+                     <div class="thumbnail">
+                         <img src="../img/delux2.jpg" alt="delux" class="imgFluid">
+                     </div>
+               </section>
+                   <?php
+
+               }
+               else{
+                ?>
+                <section id="rooms-right">
+            <div class="paras">
+               <p class="sectionTag">Delux Ac Room</p>
+               <p class="sectionsubTag r">Status :not Available </p>
+               <p class="sectionsubTag r">Sorry :Please come another day</p>
+            </div>
+            <!-- <div class="thumbnail">
+                <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+            </div> -->
+        </section>
+         <?php
+               }
+            ?>
+            
+             <!---------------------------------   ac--------------------- -->
+
+             <?php
+               $qryy="SELECT * FROM `ac_room` WHERE `status`='available'";
+               $run=mysqli_query($con,$qryy);
+               $row=mysqli_fetch_assoc($run);
+               $rno=$row['room_no'];
+
+               $qry="SELECT * FROM `ac_room` WHERE `status`='available'";
+               $run=mysqli_query($con,$qry);
+               $row=mysqli_num_rows($run);
+               if($r <= $row)
+               {
+                   ?>
+                   <section id="rooms-right">
+                   <div class="paras">
+                     <p class="sectionTag"> A.C. Room</p>
+                     <p class="sectionsubTag g">Status :Available </p>
+                     <p class="sectionsubTag ">Price per room : 900 Rs</p>
+                     <form action="r2.php" method="get">
+                     <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
+                     <input type="date" name="co"  value="<?php echo $co; ?>" required>
+                     <input type="text" name="rt" value="A.C. Room" required>
+                     <input type="text" name="nr" value="<?php echo $r; ?>" required>
                      <input type="submit" id="room-btn">
                      </form>
-</div>
-        <?php
-    }
-    else
-    {
-        ?>
-        <div class="dac-available">
-    <h1>Deluc AC Room</h1>
-    <p>SORRY NOT AVAILABlE</p>
-    <p>TOTAL ROOM AVAILABLE= <?php echo $data2; ?></p>
-</div>
-<?php 
-    }
-     // delux ac room
-     
+                     <br>
+                     <!-- <a href="r1.php">Book A Room</a> -->
+                     </div>
+                     <div class="thumbnail">
+                         <img src="../img/delux2.jpg" alt="delux" class="imgFluid">
+                     </div>
+               </section>
+                   <?php
 
-    //  ac room
-    $query5="SELECT * FROM ac_room  WHERE 'status'='available'";
-    $result5=mysqli_query($con,$query5);
-    $data5=mysqli_fetch_assoc($result5);
-    $rno=$data5['room_no'];
-    
-    $query6="SELECT * FROM ac_room  WHERE 'status'='available'";
-     $result6=mysqli_query($con,$query6);
-     $data6=mysqli_num_rows($result6);
-     
-     if($r<=$data6)
-     {
-         ?>
- <div class="dac-available">
-     <h1>Deluc AC Room</h1>
-     <p>STATUS : Available</p>
-     <form action="r1.php" method="GET">
-         <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
-                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
-                      <input type="text" name="rt" value="Delux AC" required>
-                      <input type="text" name="nr" value="<?php echo $r; ?>" required>
-                      <input type="submit" id="room-btn" value="BOOk HERE">
-                    </form>
-                </div>
-                <?php
-     }
-     else
-     {
-         ?>
-         <div class="dac-available">
-     <h1>AC Room</h1>
-     <p>SORRY NOT AVAILABlE</p>
-     <p>TOTAL ROOM AVAILABLE= <?php echo $data6; ?></p>
-    </div>
-    <?php 
-     }
-     //  ac room
-     
-     
-     //  non ac room 
-     $query3="SELECT * FROM nonac_room  WHERE 'status'='available'";
-     $result3=mysqli_query($con,$query3);
-     $data3=mysqli_fetch_assoc($result3);
-     $rno=$data3['room_no'];
-     
-     $query4="SELECT * FROM nonac_room  WHERE 'status'='available'";
-     $result4=mysqli_query($con,$query4);
-     $data4=mysqli_num_rows($result4);
-     
-     if($r<=$data4)
-     {
-         ?>
-<div class="dac-available">
-    <h1>NON AC Room</h1>
-    <p>STATUS : Available</p>
-    <form action="r2.php" method="GET">
-        <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
-        <input type="date" name="co"  value="<?php echo $co; ?>" required>
-        <input type="text" name="rt" value="Delux AC" required>
-        <input type="text" name="nr" value="<?php echo $r; ?>" required>
-        <input type="submit" id="room-btn">
-    </form>
-</div>
-<?php
-    }
-    else
-    {
-        ?>
-        <div class="dac-available">
-            <h1> NON AC Room</h1>
-            <p>SORRY NOT AVAILABlE</p>
-            <p>TOTAL ROOM AVAILABLE= <?php echo $data2; ?></p>
-        </div>
-        <?php 
-    }
-    //  non ac room 
-
-
-        ?>
-      
+               }
+               else{
+                ?>
+                <section id="rooms-right">
+            <div class="paras">
+               <p class="sectionTag"> Ac Room</p>
+               <p class="sectionsubTag r">Status :not Available </p>
+               <p class="sectionsubTag r">Sorry :Please come another day</p>
+            </div>
+            <!-- <div class="thumbnail">
+                <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+            </div> -->
         </section>
-          </div>
-    </section>
+         <?php
+               }
+            ?>
+            
+             <!---------------------------------  non ac--------------------- -->
+             <?php
+               $qryy="SELECT * FROM `nonac_room` WHERE `status`='available'";
+               $run=mysqli_query($con,$qryy);
+               $row=mysqli_fetch_assoc($run);
+               $rno=$row['room_no'];
+
+               $qry="SELECT * FROM `nonac_room` WHERE `status`='available'";
+               $run=mysqli_query($con,$qry);
+               $row=mysqli_num_rows($run);
+               if($r <= $row)
+               {
+                   ?>
+                   <section id="rooms-right">
+                   <div class="paras">
+                     <p class="sectionTag">Non A.C. Room</p>
+                     <p class="sectionsubTag g">Status :Available </p>
+                     <p class="sectionsubTag ">Price per room : 700 Rs</p>
+                     <form action="r3.php" method="get">
+                     <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
+                     <input type="date" name="co"  value="<?php echo $co; ?>" required>
+                     <input type="text" name="rt" value="Non AC" required>
+                     <input type="text" name="nr" value="<?php echo $r; ?>" required>
+                     <input type="submit" id="room-btn">
+                     </form>
+                     <br>
+                     <!-- <a href="r1.php">Book A Room</a> -->
+                     </div>
+                     <div class="thumbnail">
+                         <img src="../img/about.avif" alt="delux" class="imgFluid">
+                     </div>
+               </section>
+                   <?php
+
+               }
+               else{
+                ?>
+                <section id="rooms-right">
+            <div class="paras">
+               <p class="sectionTag">Non Ac Room</p>
+               <p class="sectionsubTag r">Status :not Available </p>
+               <p class="sectionsubTag r">Sorry :Please come another day</p>
+            </div>
+            <!-- <div class="thumbnail">
+                <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+            </div> -->
+        </section>
+         <?php
+               }
+            ?>
+        
 
     
+
+   <?php
+  }
+  ?>
 </body>
 </html>

@@ -13,25 +13,28 @@ $ci=$_GET['ci'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AC ROOM FORM</title>
+    <title>ac room form</title>
 </head>
 <style>
+    body{
+        background-color: white;
+    }
+   
+   #r1-container h1{
+       text-align:center;
+       margin-top: 30px;
+   }
    form{
        display: flex;
        justify-content:center;
        align-items: center;
-     flex-direction:column;
-   }
-   form h1{
-    font-family: 'Baloo 2', cursive;
-    margin-top: -10px;
-    text-align:center;
+       flex-direction:column;
    }
    table{
       width: 200px;
       height:150px;
       border:1px solid black;
-      background-color: #fc8260;
+      background-color:red;
       padding: 40px;
       border-radius:20px;
    }
@@ -44,8 +47,9 @@ $ci=$_GET['ci'];
 </style>
 <body>
     <div id="r1-container">
-<form action="r2.php" method="post">
-<h1>BOOK NOW (AC Room)</h1>
+    <h1>Please Fill Up The Form First</h1>
+<form action="r1.php" method="post">
+<h1>BOOK NOW</h1>
     <table>
         <tr>
             <td>Status</td>
@@ -75,6 +79,7 @@ $ci=$_GET['ci'];
         <tr>
             <td>Check in Date</td>
             <td><input type="date" name="cin" title="cindate" value="<?php echo $ci; ?>"> </td>
+
             <td>Check out Date</td>
             <td><input type="date" name="cout" title="coutdate" value="<?php echo $co; ?>"></td>
         </tr>
@@ -96,8 +101,12 @@ $ci=$_GET['ci'];
         </tr>
     </table>
     <?php
+        $n=1;
+        while($n<=$nr)
+        {
+
         
-        
+    
         if(isset($_POST['submit']))
         {
             $name=$_POST['name'];
@@ -111,35 +120,28 @@ $ci=$_GET['ci'];
         $roomtype=$_POST['roomtype'];
         $noofroom=$_POST['noofroom'];
 
-        $qryy="SELECT * FROM ac_room WHERE status='available'";
+        $qryy="SELECT * FROM `deluxac_room` WHERE status='available'";
         $run=mysqli_query($con,$qryy);
         // $rno=$ow['roomno'];
         $row=mysqli_fetch_assoc($run);
         $rno=$row['room_no'];
-
-        
-        
-
-            $qry="INSERT INTO room_booking ('name', 'address', 'state', 'city', 'email', 'cin', 'cout', 'members', 'roomtype', 'no of rooms') VALUES ('$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
-           
+            $qry="INSERT INTO 'room_booking' ('name', 'address', 'state', 'city', 'email', 'cin', 'cout', 'members', 'roomtype', 'no of rooms') VALUES ('$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
             $run=mysqli_query($con,$qry);
-            
-           
-           
             if($run==true)
             {
-                mysqli_query($con,"UPDATE ac_room SET status='booked' WHERE 'room_no'='$rno'");
-                header('location:cartpayment2.php');
+                mysqli_query($con,"UPDATE 'deluxac_room' SET status='Booked' WHERE 'room_no'='$rno'");
+               
                 ?>
                 <script>
-                    alert("room book Successfully");
+                    alert("Room Booked Successfully");
                 </script>
                 <?php
             }
             else{
-
+echo "try again";
             }
         }
+    }
     ?>
 </form> 
 </div>

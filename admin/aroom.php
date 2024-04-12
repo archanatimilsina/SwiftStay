@@ -133,7 +133,7 @@ include('../connection.php'); ?>
   .paste-button:hover .dropdown-content {
     display: block;
   }
-  /* navbar */
+ 
 .room-h2{
     margin-top: 24px;
     text-align: center;
@@ -144,6 +144,7 @@ include('../connection.php'); ?>
     width: 500px;
   height: 150px;
     margin: auto;
+    margin-bottom: 80px;
     
 }
 #f1 form table{
@@ -178,19 +179,20 @@ include('../connection.php'); ?>
    border-radius: 2px;
 }
 
-
-
 #rooms-right{
     height: 500px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: auto;
-    border: 1px solid black;
-    
+   width: 90%;
+    margin:auto;
+    border: 1px solid black; 
+    margin-bottom: 100px; 
 }
+
 .paras{
-    padding: 0 65px;
+    padding: 0 40px;
+    
 }
 .paras form{
     display: flex;
@@ -204,7 +206,7 @@ include('../connection.php'); ?>
     padding: 4px;
 }
 #room-btn{
-    background-color: crimson;
+    background-color: #fa9579;
     color: white;
     font-size: 15px;
 }
@@ -214,8 +216,9 @@ include('../connection.php'); ?>
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 80%;
+    max-width: 90%;
     margin: auto;
+    border: 1px solid black;
     flex-direction: row-reverse;
     
 }
@@ -226,11 +229,11 @@ include('../connection.php'); ?>
     margin-bottom: 10px;
 }
 .g{
-    color: green;
+    /* color: green; */
     font-weight: 700;
 }
 .r{
-    color: red;
+    /* color: red; */
     font-weight: 700;
 }
 .sectionsubTag{
@@ -238,7 +241,7 @@ include('../connection.php'); ?>
     font-size: 20px;
 }
 .font{
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     color: rgb(130, 30, 245);
 }
@@ -247,7 +250,7 @@ include('../connection.php'); ?>
 }
 .price-btn{
     width: 80%;
-    background-color: crimson;
+    background-color: #e46262;
     color: white;
     margin-top: 20px;
     padding: 6px 0;
@@ -262,7 +265,6 @@ include('../connection.php'); ?>
     font-size: 19px;
     font-weight: 600;
 }
-
 
 
   </style>
@@ -297,7 +299,7 @@ include('../connection.php'); ?>
         
 <div id="f1">
     <h2 class="room-h2"><i class="fas fa-hotel"></i> SEARCH YOUR ROOMS HERE</h2>
-         <form action="aroom.php " method="get"> 
+         <form action="aroom1.php " method="get"> 
          <table >
              <tr>
                  
@@ -329,27 +331,28 @@ include('../connection.php'); ?>
            
                  </td>
              </tr>
-         </table>
+         </table> </div>
          <?php
+        
          if(isset($_GET['sub']))
          {
-
-        
-               $r = $_GET['room'];
-               $ci=$_GET['ci'];
+                $r = $_GET['room'];
+                 $ci=$_GET['ci'];
                $co=$_GET['co'];
+         
          ?>
+
          <!---------------------------------  delux ac--------------------- -->
-        
          <?php
-               $qryy="SELECT * FROM `deluxac_room` WHERE `status`='un book'";
+               $qryy="SELECT * FROM `deluxac_room` WHERE status='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-            //    $rno=$row['room_no'];
+               $rno=$row['room_no'];
 
-               $qry="SELECT * FROM `deluxac_room` WHERE `status`='un book'";
+               $qry="SELECT * FROM `deluxac_room` WHERE status='available'";
                $run=mysqli_query($con,$qry);
                $row=mysqli_num_rows($run);
+
                if($r <= $row)
                {
                    ?>
@@ -363,13 +366,13 @@ include('../connection.php'); ?>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
                      <input type="text" name="rt" value="Delux AC" required>
                      <input type="text" name="nr" value="<?php echo $r; ?>" required>
-                     <input type="submit" id="room-btn">
+                     <input type="submit" name="submit" id="room-btn">
                      </form>
                      <br>
-                     <!-- <a href="r1.php">Book A Room</a> -->
+                   
                      </div>
                      <div class="thumbnail">
-                         <img src="../img/acdeluxnew.avif" alt="delux" class="imgFluid">
+                         <img src="../img/delux2.jpg" alt="delux" class="imgFluid">
                      </div>
                </section>
                    <?php
@@ -381,7 +384,7 @@ include('../connection.php'); ?>
             <div class="paras">
                <p class="sectionTag">Delux Ac Room</p>
                <p class="sectionsubTag r">Status :not Available </p>
-               <p class="sectionsubTag r">Sorry : Please come another day</p>
+               <p class="sectionsubTag r">Sorry :Please come another day</p>
             </div>
             <!-- <div class="thumbnail">
                 <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
@@ -397,9 +400,9 @@ include('../connection.php'); ?>
                $qryy="SELECT * FROM `ac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-            //    $rno=$row['room_no'];
+               $rno=$row['room_no'];
 
-               $qry="SELECT * FROM `ac_room` WHERE `status`='un book'";
+               $qry="SELECT * FROM `ac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qry);
                $row=mysqli_num_rows($run);
                if($r <= $row)
@@ -421,7 +424,7 @@ include('../connection.php'); ?>
                      <!-- <a href="r1.php">Book A Room</a> -->
                      </div>
                      <div class="thumbnail">
-                         <img src="../img/acdeluxnew.avif" alt="delux" class="imgFluid">
+                         <img src="../img/delux2.jpg" alt="delux" class="imgFluid">
                      </div>
                </section>
                    <?php
@@ -433,7 +436,7 @@ include('../connection.php'); ?>
             <div class="paras">
                <p class="sectionTag"> Ac Room</p>
                <p class="sectionsubTag r">Status :not Available </p>
-               <p class="sectionsubTag r">Sorry : Please come another day</p>
+               <p class="sectionsubTag r">Sorry :Please come another day</p>
             </div>
             <!-- <div class="thumbnail">
                 <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
@@ -445,12 +448,12 @@ include('../connection.php'); ?>
             
              <!---------------------------------  non ac--------------------- -->
              <?php
-               $qryy="SELECT * FROM `nonac_room` WHERE `status`='un book'";
+               $qryy="SELECT * FROM `nonac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-            //    $rno=$row['room_no'];
+               $rno=$row['room_no'];
 
-               $qry="SELECT * FROM `nonac_room` WHERE `status`='un book'";
+               $qry="SELECT * FROM `nonac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qry);
                $row=mysqli_num_rows($run);
                if($r <= $row)
@@ -472,7 +475,7 @@ include('../connection.php'); ?>
                      <!-- <a href="r1.php">Book A Room</a> -->
                      </div>
                      <div class="thumbnail">
-                         <img src="../img/non ac.avif" alt="delux" class="imgFluid">
+                         <img src="../img/about.avif" alt="delux" class="imgFluid">
                      </div>
                </section>
                    <?php
@@ -484,7 +487,7 @@ include('../connection.php'); ?>
             <div class="paras">
                <p class="sectionTag">Non Ac Room</p>
                <p class="sectionsubTag r">Status :not Available </p>
-               <p class="sectionsubTag r">Sorry : Please come another day</p>
+               <p class="sectionsubTag r">Sorry :Please come another day</p>
             </div>
             <!-- <div class="thumbnail">
                 <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
@@ -492,11 +495,13 @@ include('../connection.php'); ?>
         </section>
          <?php
                }
-           
-             }
- ?>
+            ?>
+        
 
-     </div>
-         
+    
+
+   <?php
+  }
+  ?>
 </body>
 </html>

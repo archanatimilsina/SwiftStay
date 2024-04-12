@@ -17,11 +17,9 @@ $ci=$_GET['ci'];
 </head>
 <style>
     body{
-        background-color:orange;
+        background-color: white;
     }
-   #r1-container{
-     
-   }
+   
    #r1-container h1{
        text-align:center;
        margin-top: 30px;
@@ -30,7 +28,6 @@ $ci=$_GET['ci'];
        display: flex;
        justify-content:center;
        align-items: center;
-       
        flex-direction:column;
    }
    table{
@@ -60,7 +57,7 @@ $ci=$_GET['ci'];
         </tr>
        
         <tr>
-            <td>name</td>
+            <td>Name</td>
             <td><input type="text" name="name" title="name" required></td>
         </tr>
         <tr>
@@ -82,6 +79,7 @@ $ci=$_GET['ci'];
         <tr>
             <td>Check in Date</td>
             <td><input type="date" name="cin" title="cindate" value="<?php echo $ci; ?>"> </td>
+
             <td>Check out Date</td>
             <td><input type="date" name="cout" title="coutdate" value="<?php echo $co; ?>"></td>
         </tr>
@@ -118,7 +116,7 @@ $ci=$_GET['ci'];
         $roomtype=$_POST['roomtype'];
         $noofroom=$_POST['noofroom'];
 
-        $qryy="SELECT * FROM `deluxac_room` WHERE `status`='available'";
+        $qryy="SELECT * FROM `deluxac_room` WHERE status='available'";
         $run=mysqli_query($con,$qryy);
         // $rno=$ow['roomno'];
         $row=mysqli_fetch_assoc($run);
@@ -127,7 +125,7 @@ $ci=$_GET['ci'];
             $run=mysqli_query($con,$qry);
             if($run==true)
             {
-                mysqli_query($con,"UPDATE 'deluxac_room' SET 'status'='Booked' WHERE 'roomno'='$rno'");
+                mysqli_query($con,"UPDATE 'deluxac_room' SET status='Booked' WHERE 'room_no'='$rno'");
                 header('location:cartpayment2.php');
                 ?>
                 <script>

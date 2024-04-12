@@ -122,12 +122,12 @@ $ci=$_GET['ci'];
         $roomtype=$_POST['roomtype'];
         $noofroom=$_POST['noofroom'];
 
-        $qryy="SELECT * FROM 'nonac_room' WHERE 'status'='un book'";
+        $qryy="SELECT * FROM 'nonac_room' WHERE status='available'";
         $run=mysqli_query($con,$qryy);
         // $rno=$ow['roomno'];
         $row=mysqli_fetch_assoc($run);
         $rno=$row['room_no'];
-            $qry="INSERT INTO `room_booking` (`name`, `address`, `state`, `city`, `email`, `cin`, `cout`, `members`, `roomtype`, `no of rooms`) VALUES ('$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
+            $qry="INSERT INTO room_booking (`name`, `address`, `state`, `city`, `email`, `cin`, `cout`, `members`, `roomtype`, `no of rooms`) VALUES ('$name', '$address', '$state', '$city', '$email', '$ci', '$co', '$members', '$roomtype', '$noofroom');";
            
             $run=mysqli_query($sql,$qry);
             
@@ -135,7 +135,7 @@ $ci=$_GET['ci'];
            
             if($run==true)
             {
-                mysqli_query($con,"UPDATE `nonac_room` SET `status`='booked' WHERE `room_no`='$rno' ");
+                mysqli_query($con,"UPDATE nonac_room SET status='booked' WHERE `room_no`='$rno' ");
                 header('location:cartpayment2.php');
                 ?>
                 <script>

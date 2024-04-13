@@ -254,19 +254,19 @@ session_start();
 
         <div id="services">
             <div class="box">
-            <a href="food.php"><img src="img/drink.avif" alt="panner"></a>
-               <h2 class="h-secondary center">Drink</h2>
+            <a href="food.php"><img src="img/drink.jpg" alt="panner"></a>
+               <h2 class="h-secondary center">Drinks</h2>
                <p class="center">A drink or beverage is a liquid intended for human consumption. In addition to their basic function of satisfying thirst, drinks play important roles in human culture. Common types of drinks include plain drinking water, milk, juice, smoothies and soft drinks. Traditionally warm beverages include coffee, tea, and hot chocolate. Caffeinated drinks that contain the stimulant caffeine have a long history
                </p>
             </div>
             <div class="box">
-            <a href="food.php"><img src="img/desert.avif" alt="dosa"></a>
-                <h2 class="h-secondary center">Desert</h2>
+            <a href="food.php"><img src="img/cake.jpg" alt="dosa"></a>
+                <h2 class="h-secondary center">Dessert</h2>
                 <p class="center">The term dessert can apply to many sweets, such as biscuits, cakes, cookies, custards, gelatins, ice creams, pastries, pies, puddings, macaroons, sweet soups, tarts, and fruit salad (fruit is commonly found in dessert courses because of its naturally occurring sweetness)</p>
              </div>
              <div class="box">
-             <a href="food.php"><img src="img/chatpat.jpeg" alt="faluda"></a>
-                <h2 class="h-secondary center">Snack</h2>
+             <a href="food.php"><img src="img/spa.jpg" alt="faluda"></a>
+                <h2 class="h-secondary center">Snacks</h2>
                 <p class="center">A small amount of food that is eaten between meals, or a very small meal: I had a huge lunch, so I'll only need a snack for dinner. Fresh or dried fruit makes an ideal snack. Many snack foods are high in salt, sugar, and fat.</p>
              </div>
         </div>

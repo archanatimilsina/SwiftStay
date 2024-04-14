@@ -1,9 +1,9 @@
 <?php
 include('connection.php');
-$ci=$_GET['ci'];
- $co=$_GET['co'];
- $rt=$_GET['rt'];
- $nr=$_GET['nr'];
+// $ci=$_GET['ci'];
+//  $co=$_GET['co'];
+//  $rt=$_GET['rt'];
+//  $nr=$_GET['nr'];
 
 ?>
 

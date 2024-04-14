@@ -151,9 +151,9 @@
 #home::before{
     position: absolute;
     content: "";
-    height: 100%;
+height: 100%;
     width: 100%;
-    z-index: -1;
+z-index: -1;
     opacity: 0.89;
     background: url('../img/home.jpg.jpg') center center/cover no-repeat;
 

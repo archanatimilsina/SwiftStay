@@ -1,4 +1,7 @@
-<?php include("inc/header.php"); ?>
+<?php 
+    include("inc/header.php");
+    include('connection.php');
+ ?>
 
 <div class="contact-container">
    
@@ -74,4 +77,3 @@
     </div>
     
 </div>
-<?php include("inc/footer.php");?>

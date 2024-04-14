@@ -32,9 +32,3 @@ include('connection.php');
        }
     ?>
 </section>
-
-
-<?php 
-include("inc/script.php");
-include("inc/footertag.php");
-?>

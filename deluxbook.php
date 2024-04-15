@@ -1,5 +1,6 @@
 <?php 
 include('connection.php');
+$x=0;
 // $nr=$_GET['nr'];
 // $ci=$_GET['ci'];
 // $co=$_GET['co'];
@@ -10,7 +11,7 @@ include('connection.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Non AC Room Book</title>
     <style>
         .head{
             text-align: center;
@@ -72,7 +73,7 @@ include('connection.php');
     <h1 class="head">Please fill up the form first</h1>
 <section id="delux-book">
     <h1 class="box-head">
-Delux AC Room
+Non AC Room
     </h1>
     
     <div class="user-data">
@@ -80,11 +81,11 @@ Delux AC Room
             <table>
                 <tr>
                     <td>Status</td>
-                    <td><input type="text" placeholder="Available"></td>
+                    <td><input type="text" value="Available"></td>
                 </tr>
                 <tr>
                     <td>Roomtype</td>
-                    <td><input type="text" value="Delux Ac" name="rt"></td>
+                    <td><input type="text" value="Non-Ac Room" name="rt"></td>
                 </tr>
                 <tr>
                     <td>Name</td>
@@ -146,35 +147,44 @@ if(isset($_POST['book']))
     $rt=$_POST['rt'];
     $members=$_POST['members'];
     $nr=$_POST['nr'];
-
+   $n=1;
+  while($n<=$nr)
+    { 
     $query="SELECT * FROM deluxac_room WHERE status='available'";
-    $result=mysqli_query($con,$query);
-    $data=mysqli_fetch_assoc($result);
-    
-    
+    $result1=mysqli_query($con,$query);
+    $data=mysqli_fetch_assoc($result1);
     $rno=$data['room_no'];
-
-
 $query1="INSERT INTO room_booking (name,room_no,address,city,phone,email,cin,cout,members,room_type,no_of_room) VALUES ('$name','$rno','$address','$city','$phoneno','$email','$cin','$cout','$members','$rt','$nr')";
 $result=mysqli_query($con,$query1);
 
 if($result==true)
 {
 $query2="UPDATE deluxac_room SET status='booked' WHERE room_no='$rno'";
-$result=mysqli_query($con,$query2);
-?>
-<script>
- alert("Room Booked Successfully");
-</script>
+$result1=mysqli_query($con,$query2);
 
+} 
+else{
+    ?>
+    <script>
+    alert("Error! Try Again");
+   </script>
+   <?php
+} 
+$n++;
+}
+
+if($result1==true)
+{
+
+    ?>
+    <script>
+ alert("Room Booked Successfully");
+ 
+</script>
 <?php
 }
-else{
-   echo "ERROR OCCUR TRY AGAIN";
-}
 }
 
 ?>
-
 </body>
 </html>

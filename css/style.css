@@ -459,11 +459,11 @@ z-index: -1;
 }
 
 #services .box{
-    border: 2px solid brown;
+    border: 2px solid white;
     margin: 25px 6px;
     padding: 34px;
     border-radius: 28px;
-    background-color: #d68b79;
+    background-color:#FA9759;
     margin-bottom: 20px;
 }
 

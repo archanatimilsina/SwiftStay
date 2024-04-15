@@ -160,7 +160,7 @@ include('connection.php');
                $qryy="SELECT * FROM `deluxac_room` WHERE status='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-               $rno=$row['room_no'];
+            //    $rno=$row['room_no'];
 
                $qry="SELECT * FROM `deluxac_room` WHERE status='available'";
                $run=mysqli_query($con,$qry);
@@ -173,7 +173,7 @@ include('connection.php');
                      <p class="sectionTag">Delux A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
                      <p class="sectionsubTag ">Price per room : 1100 Rs</p>
-                     <form action="r1.php" method="get">
+                     <form action="deluxbook.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
                      <input type="text" name="rt" value="Delux AC" required>
@@ -210,7 +210,7 @@ include('connection.php');
                $qryy="SELECT * FROM `ac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-               $rno=$row['room_no'];
+            //    $rno=$row['room_no'];
 
                $qry="SELECT * FROM `ac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qry);
@@ -223,7 +223,7 @@ include('connection.php');
                      <p class="sectionTag"> A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
                      <p class="sectionsubTag ">Price per room : 900 Rs</p>
-                     <form action="r2.php" method="get">
+                     <form action="acbook.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
                      <input type="text" name="rt" value="A.C. Room" required>
@@ -259,7 +259,7 @@ include('connection.php');
                $qryy="SELECT * FROM `nonac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-               $rno=$row['room_no'];
+            //    $rno=$row['room_no'];
 
                $qry="SELECT * FROM `nonac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qry);
@@ -272,7 +272,7 @@ include('connection.php');
                      <p class="sectionTag">Non A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
                      <p class="sectionsubTag ">Price per room : 700 Rs</p>
-                     <form action="r3.php" method="get">
+                     <form action="nonacbook.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
                      <input type="text" name="rt" value="Non AC" required>

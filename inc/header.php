@@ -20,10 +20,10 @@ session_start();
         <div class="right-nav mt-4">
             <ul>
                 <li class="item"><a href="index.php">Home</a></li>
-                <li class="item"><a href="about.php">About</a></li>
+                <li class="item"><a href="about.php">About Us</a></li>
                 <li class="item"><a href="room.php">Rooms</a></li>
                 <!-- <li class="item"><a href="food.php">Food</a></li> -->
-                <li class="item"><a href="contact.php">Contact</a></li>
+                <li class="item"><a href="contact.php">Contact Us</a></li>
                 <!-- <li class="item"><a href="cart.php">Cart</a></li> -->
                 <li class="item"><a href="admin.php">Admin</a></li>
                 <!-- <li class="item"><a href="bookinghall.php">Booking</a></li> -->

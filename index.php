@@ -84,9 +84,9 @@ session_start();
         <div class="right-nav mt-4">
             <ul>
                 <li class="item"><a href="index.php">Home</a></li>
-                <li class="item"><a href="about.php">About</a></li>
+                <li class="item"><a href="about.php">About Us</a></li>
                 <li class="item"><a href="room.php">Rooms</a></li>
-                <li class="item"><a href="contact.php">Contact</a></li>
+                <li class="item"><a href="contact.php">Contact US</a></li>
                 <li class="item"><a href="admin.php">Admin</a></li>
                 <li class="item"><a href="feedback.php">Feedback</a></li>  
         <?php

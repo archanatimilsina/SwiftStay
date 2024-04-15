@@ -1,17 +1,17 @@
 <?php 
 include('connection.php');
 $x=0;
-// $nr=$_GET['nr'];
-// $ci=$_GET['ci'];
-// $co=$_GET['co'];
-// $rt=$_GET['rt'];
-// ?>
+ $nr=$_GET['nr'];
+ $ci=$_GET['ci'];
+ $co=$_GET['co'];
+ $rt=$_GET['rt'];
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Non AC Room Book</title>
+    <title>Delux AC Room Book</title>
     <style>
         .head{
             text-align: center;
@@ -85,7 +85,7 @@ Non AC Room
                 </tr>
                 <tr>
                     <td>Roomtype</td>
-                    <td><input type="text" value="Non-Ac Room" name="rt"></td>
+                    <td><input type="text"  name="rt" value="<?php echo $rt;?>"></td>
                 </tr>
                 <tr>
                     <td>Name</td>
@@ -109,11 +109,11 @@ Non AC Room
                 </tr>
                 <tr>
                     <td>Check In Date</td>
-                    <td><input type="date" name="cin" required></td>
+                    <td><input type="date" name="cin" value="<?php echo $ci; ?>" required></td>
                 </tr>
                 <tr>
                     <td>Chech Out Date</td>
-                    <td><input type="date" name="cout" required><td>
+                    <td><input type="date" name="cout" value="<?php echo $co; ?>" required><td>
                 </tr>
                 <tr>
                     <td>Members</td>
@@ -121,7 +121,7 @@ Non AC Room
                 </tr>
                 <tr>
                     <td>No Of Room</td>
-                    <td><input type="text" name="nr" value="" required></td>
+                    <td><input type="text" name="nr" value="<?php echo $nr; ?>" required></td>
                 </tr>
                 <tr>
               <td colspan="2">
@@ -175,7 +175,6 @@ $n++;
 
 if($result1==true)
 {
-
     ?>
     <script>
  alert("Room Booked Successfully");

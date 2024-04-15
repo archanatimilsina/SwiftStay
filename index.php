@@ -290,11 +290,11 @@ session_start();
                 </div>
                 <div class="footer-center">
                     <h3>USEFUL LINKS</h3>
+                    <a href="index.php">Home</a>
                     <a href="room.php">Rooms</a>
                     <a href="contact.php">Contact Us</a>
                     <a href="feedback.php">Feedback</a>
-                    <a href="room.php">Booking</a>
-                    <a href="index.php">Home</a>
+
                 </div>
                 <div class="footer-center">
                     <h3>CONTACT INFO</h3>

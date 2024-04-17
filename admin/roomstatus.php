@@ -134,6 +134,40 @@ include('../connection.php'); ?>
     display: block;
   }
   /* navbar */
+  #book-section
+  {
+    width: 100%;
+  }
+#book-head
+{
+  text-align: center;
+  margin: 30px;
+  font-size: 30px;
+}
+  .book-table
+  {
+    width: 100%;
+    
+  }
+  .book-table table th{
+    font-size=19px;
+  }
+  table,
+        th,
+        td {
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+.book-table table tr{
+  height: 90px;
+
+}
+.book-table table tr td{
+text-align: center;
+font-size: 17px;
+
+}
   </style>
 </head>
 
@@ -152,11 +186,69 @@ include('../connection.php'); ?>
         <a id="third" href="anonac.php">Non AC</a>
       </div>
    </div>
-                <li class="item"><a href="roomdetails.php">Details</a></li>
+                <!-- <li class="item"><a href="roomdetails.php">Rooms</a></li> -->
+                <div class="paste-button"> <li class="item">Rooms</li>
+          <div class="dropdown-content">
+          <a id="first" href="deluxacdata.php">Delux AC</a>
+        <a id="second" href="acdata.php">AC</a>
+        <a id="third" href="nonacdata.php">Non AC</a>
+      </div>
+   </div>
                  <li class="item"><a href="roomstatus.php">Status</a></li>
                  <li class="item"><a href="../admin.php">Admin Panel</a></li>
           </ul>
         </div>
     </nav>
+   <section id="book-section">
+    <h1 id="book-head">ROOM BOOK DETAILS</h1>
+    <div class="book-table">
+<table>
+  <thead>
+<tr>
+  <th scope="col">S.N</th>
+  <th scope="col">Room no.</th>
+  <th scope="col">Name</th>
+  <th scope="col">Address</th>
+  <th scope="col">City</th>
+  <th scope="col">Phone</th>
+  <th scope="col">Email</th>
+  <th scope="col">CheckIn Date</th>
+  <th scope="col">CheckOut Date</th>
+  <th scope="col">Members</th>
+  <th scope="col">Room Type</th>
+  <th scope="col">No. Of Room</th>
+  <th scope="col">Booked Datetime</th>
+</tr>
+  </thead>
+  <tbody>
+<?php 
+$query="SELECT * FROM room_booking";
+$result=mysqli_query($con,$query);
+$i=0;
+while($data=mysqli_fetch_array($result))
+{
+?>
+<tr>
+  <td scope="row"><?php echo $i++; ?></td>
+  <td scope="row"><?php echo $data['room_no']; ?></td>
+  <td scope="row"><?php echo $data['name']; ?></td>
+  <td scope="row"><?php echo $data['address']; ?></td>
+  <td scope="row"><?php echo $data['city']; ?></td>
+  <td scope="row"><?php echo $data['phone']; ?></td>
+  <td scope="row"><?php echo $data['email']; ?></td>
+  <td scope="row"><?php echo $data['cin']; ?></td>
+  <td scope="row"><?php echo $data['cout']; ?></td>
+  <td scope="row"><?php echo $data['members']; ?></td>
+  <td scope="row"><?php echo $data['room_type']; ?></td>
+  <td scope="row"><?php echo $data['no_of_room']; ?></td>
+  <td scope="row"><?php echo $data['time']; ?></td>
+</tr>
+<?php
+}
+?>
+  </tbody>
+</table>
+</div>
+   </section>
     </body>
  </html>

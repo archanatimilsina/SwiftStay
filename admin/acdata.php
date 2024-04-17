@@ -1,16 +1,12 @@
-<?php
-include('../connection.php'); ?>
+<?php include('../connection.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIFTSTAY</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <title>AC room details</title>
     <style>
-     *{
+              *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -134,56 +130,54 @@ include('../connection.php'); ?>
     display: block;
   }
   /* navbar */
-  body{
-        background-color:pink;
-    }
-   
-    h1{
-        text-align:center;
-        margin-top: 20px;
-    }
-    .delux-insert{
-        height: 200px;
-        width: 400px;
-        border-radius:10px;
-        background-color:crimson;
-        margin-top: -10px;
-        margin-left: 38%;
-        
-    }
-    .delux-insert form{
-          display: flex;
-          flex-direction:column;
-          align-items:center;
-          justify-content:center;
-          padding-top: 30px;
-    }
-    .delux-insert form table tr td input{
-       padding:4px 0;
-       margin-bottom: 10px;
-       border-radius:8px;
-       padding-left: 10px;
-    }
-    .delux-insert form table tr td{
-        font-size:20px;
-    }
-    #delux-btn{
-        width:80%;
-        background-color:blue;
-        font-size:16px;
-    }
-    .imgg{
-        display: flex;
-        justify-content:space-evenly;
-        margin-top: 10px;
-    }
-    img{
-        width: 350px;
-        /* margin-left: 100px; */
-    }
-  </style>
-</head>
+  #detail-head
+  {
+    text-align: center;
+    font-size: 29px;
+    margin: 35px;
+  }
+.detail-table{
+  width: 100%;
 
+}
+.detail-table table{
+width: 80%;
+margin: auto;
+}
+.detail-table table th{
+font-size: 25px;
+}
+.detail-table table tr{
+  height: 90px;
+
+}
+.detail-table table tr td{
+text-align: center;
+font-size: 19px;
+
+}
+
+#checkout-btn
+{
+  width: 80px;
+  height: 35px;
+  border: black solid 1px;
+   background-color: red; 
+  color: Black;
+}
+table,
+        th,
+        td {
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+/*  
+        tr:nth-child(even) {
+            background-color: #fa9579;
+        } */
+    </style>
+</head>
 <body>
 <nav class="navbar">
     <div class="left-nav">
@@ -199,76 +193,59 @@ include('../connection.php'); ?>
         <a id="third" href="anonac.php">Non AC</a>
       </div>
    </div>
- 
-                <!-- <li class="item"><a href="roomdetails.php">Details</a></li> -->
+                <!-- <li class="item"><a href="roomdetails.php">Rooms</a></li> -->
                 <div class="paste-button"> <li class="item">Rooms</li>
           <div class="dropdown-content">
-          <a id="first" href="deluxacdata.php">Delux AC</a>
+        <a id="first" href="deluxacdata.php">Delux AC</a>
         <a id="second" href="acdata.php">AC</a>
         <a id="third" href="nonacdata.php">Non AC</a>
       </div>
    </div>
-                 <li class="item"><a href="roomstatus.php">Status</a></li>
+                 <li class="item"><a href="roomstatus.php">Booked</a></li>
                  <li class="item"><a href="../admin.php">Admin Panel</a></li>
           </ul>
         </div>
     </nav>
- 
-    <h1 >Non-AC Rooms insert Section</h1>
-    <div class="imgg">
-    <img src="../img/about2.avif" alt="delux ac">
-    <img src="../img/about11.avif" alt="delux ac">
-    </div>
-
-<div class="delux-insert">
-    <form action="anonac.php" method="post">
-             <table>
-                
-                <tr>
-                   <td>Room No</td>
-                   <td><input type="text" name="rno" placeholder="Enter Room No" title="Enter Room No" required></td>
-                  
-                </tr>
-                <tr>
-                    <td>Room Type</td>
-                    <td><input type="text" name="type" placeholder="Enter Room Type " title="Room Type" required> </td>
-                </tr>
-                <tr>
-                    <td>Room Price</td>
-                    <td><input type="text" name="price" placeholder="Enter Room Price " title="Room Price" required> </td>
-                </tr>
-                
-                
-                
-                <td>
-                    <td><input type="submit" id="delux-btn" name="submit" value=submit></td>
-                </td>
-            </table>
-    </form>
-    <?php
-      if(isset($_POST['submit']))
-      {
-          $rno=$_POST['rno'];
-          $rtype=$_POST['type'];
-          $price=$_POST['price'];
-         
-          $qry="INSERT INTO 'nonac_room'('room_no', 'room_type', 'price') VALUES ('$rno','$rtype','$price')";
-          $run=mysqli_query($con,$qry);
-          if($run==true)
-          {
-            ?>
-            <script>
-                alert('Data Inserted Successfully');
-            </script>
+    
+    <section>
+      <h1 id="detail-head">Ac Room</h1>
+      <div class="detail-table">
+        <table>
+          <thead>
+            <tr>
+            <th scope="col">Room No</th>
+            <th scope="col">Room Type</th>
+            <th scope="col">Price</th>
+            <th scope="col">Status</th>
+            <th scope="col">checkout</th>
+</tr>
+          </thead>
+          <tbody>
             <?php
-          }
-          else{
-              echo "Not Inserted";
-          }
+            $query="SELECT * FROM ac_room";
+            $result=mysqli_query($con,$query);
+            $i=1;
+            while($data=mysqli_fetch_assoc($result))
+            {
+              ?>
+              <tr>
+                <td><?php echo $data['room_no']; ?></td>
+                
+                <td><?php echo $data['room_type']; ?></td>
+                <td><?php echo $data['price']; ?></td>
+                <td><?php echo $data['status']; ?></td>
+                <td>
+                  <a href="co.php"><button value="CheckOut" id="checkout-btn">CheckOut</button></a>
+                </td>
+              </tr>
+              <?php
+            }
+            ?>
+          </tbody>
+        </table>
 
-      }
-    ?>
-</div>
-        
-    </body>
- </html>
+
+      </div>
+    </section>
+</body>
+</html>

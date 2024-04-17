@@ -181,6 +181,7 @@ if($result1==true)
  
 </script>
 <?php
+header('location:room.php');
 }
 }
 

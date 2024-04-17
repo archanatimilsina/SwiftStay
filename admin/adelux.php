@@ -199,7 +199,14 @@ include('../connection.php'); ?>
       </div>
    </div>
  
-                <li class="item"><a href="roomdetails.php">Details</a></li>
+                <!-- <li class="item"><a href="roomdetails.php">Details</a></li> -->
+                <div class="paste-button"> <li class="item">Rooms</li>
+          <div class="dropdown-content">
+          <a id="first" href="deluxacdata.php">Delux AC</a>
+        <a id="second" href="acdata.php">AC</a>
+        <a id="third" href="nonacdata.php">Non AC</a>
+      </div>
+   </div>
                  <li class="item"><a href="roomstatus.php">Status</a></li>
                  <li class="item"><a href="../admin.php">Admin Panel</a></li>
           </ul>

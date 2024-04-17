@@ -176,12 +176,14 @@ $n++;
 }
 if($result1==true)
 {
+//     header('location:room.php');
     ?>
     <script>
  alert("Room Booked Successfully");
- 
+
 </script>
 <?php
+
 }
 }
 

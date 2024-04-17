@@ -177,9 +177,9 @@ if($result1==true)
     ?>
     <script>
  alert("Room Booked Successfully");
- 
 </script>
 <?php
+header('location:room.php');
 }
 }
 ?>

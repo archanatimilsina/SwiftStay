@@ -138,51 +138,106 @@ margin-bottom: 6px;
      font-family: 'Baloo 2', cursive;
      font-size: 19px;
 }
+button.user{
+    padding:20px;
+    border: none;
+    background-color: #fa9579;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+button:hover {
+    color: white;
+    background-color: grey;
+}
+button:active {
+    background-color: white;
+}
+#username{
+    font-size: larger;
+    padding: 25px;
+}
+#icon{
+    margin: 10px 10px;
+}
+dialog{
+    border-radius: 20px;
+    margin: auto;
+}
+#dialogbox{
+    padding: 5px 20px;
+}
 
-
+#userdetail{
+    background-color: white;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 35px;
+}
 /* navbar */
 </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="left-nav">
-            <P>Admin Panel</P>
-        </div>
-        <div class="right-nav mt-4">
-            <ul>
-                <!-- onclick="AdminBox()" -->
-                <li class="item"><a href="admin/aroom.php">Room</a></li>
-                <li class="item"><a href="admin/afood.php">Food</a></li>
-                <li class="item"><a href="index.php">Contact</a></li>
-                <li class="item"><a href="index.php">Feedback</a></li>
-                <li class="item"><a href="index.php">User</a>
-               <li class="item">
-                    <div id="user-icon"><i class="fa-solid fa-user" onclick="AdminBox('admin-box')"></i>
-                    </div></li>
-                <div id="admin-box">
-<div id="profile-pic">
+  <nav class="navbar">
+    <div class="left-nav">
+      <P>Admin Panel</P>
+    </div>
+    <div class="right-nav mt-4">
+      <ul>
+        <!-- onclick="AdminBox()" -->
+        <li class="item"><a href="admin/aroom.php">Room</a></li>
+        <li class="item"><a href="admin/afood.php">Food</a></li>
+        <li class="item"><a href="index.php">Contact</a></li>
+        <li class="item"><a href="index.php">Feedback</a></li>
+        <li class="item "><a href="index.php">User</a>
+        <!-- <li class="item">
+           <div id="user-icon">
+            <i class="fa-solid fa-user" ></i>
+          </div> -->
+        
+        </li>
+        <!-- <div id="admin-box">
+          <div id="profile-pic"></div>
+          <h1 id="admin-username">Lorem ipsum</h1>
+          <button id="logout-button"><a href="admin/alogout.php">LogOut</a></button>
+          <hr>
+          <button id="naccount-button"><a href="alogout.php">Create New Account</a></button>
+        </div> -->
 
-</div>
-<h1 id="admin-username">Lorem ipsum</h1>
-<button id="logout-button"><a href="admin/alogout.php">LogOut</a></button><hr>
-<button id="naccount-button"><a href="alogout.php">Create New Account</a></button>
-                </div>
-              
-          </ul>
+      </ul>
+    </div>
+    <div id="userdetail"><span style="font-size:24px ;padding-right:20px;">Username</span><button class="user" data-open-modal ><i class="fa-solid fa-user fa-2xl" ></i></button></div>
+  </nav>
+
+  <dialog data-modal>
+        <div id="dialogbox">
+            <button data-close-modal id="icon"><i class="fa-solid fa-xmark"></i></button>
+            <div id="userinfo">
+                <div id="username" >Username here</div>
+                <button id="logout-button"><a href="admin/alogout.php">Logout</a></button>
+            </div>
         </div>
-    </nav>
-    <script>
-                        function AdminBox('admin-box')
-                        {
-                            x=document.getElementById('admin-box');
-                            if(x.style.display=="flex")
-                            {
-                                x.style.display=="none";
-                            }
-                            else{
-                                x.style.display=="flex";
-                            }
-                        }
-                    </script> 
-                    </body>
+    </dialog>
+
+
+  <script>
+    const openButton = document.querySelector("[data-open-modal]")
+    const closeButton = document.querySelector("[data-close-modal]")
+    const modal = document.querySelector("[data-modal]")
+
+    openButton.addEventListener("click",() => {
+        modal.showModal()
+    })
+    closeButton.addEventListener("click",() => {
+        modal.close()
+    })
+    /* function AdminBox('admin-box') {
+      x = document.getElementById('admin-box');
+      if (x.style.display == "flex") {
+        x.style.display == "none";
+      } else {
+        x.style.display == "flex";
+      }
+    } */
+  </script>
+</body>
 </html>

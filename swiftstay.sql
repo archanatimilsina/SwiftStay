@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2024 at 07:09 AM
+-- Generation Time: Apr 18, 2024 at 07:56 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,9 +40,27 @@ CREATE TABLE `ac_room` (
 --
 
 INSERT INTO `ac_room` (`ac_id`, `room_no`, `room_type`, `price`, `status`) VALUES
-(1, '2001', 'double bed', 3000, ''),
-(2, '2001', 'single bed', 7000, ''),
-(3, '2001', 'single bed', 7000, '');
+(4, '2000', 'ac', 1800, 'booked'),
+(5, '2001', 'ac', 1800, 'booked'),
+(6, '2002', 'ac', 1800, 'booked'),
+(7, '2003', 'ac', 1800, 'booked'),
+(8, '2004', 'ac', 1800, 'booked'),
+(9, '2005', 'ac', 1800, 'booked'),
+(10, '2006', 'ac', 1800, 'booked'),
+(11, '2007', 'ac', 1800, 'booked'),
+(12, '2008', 'ac', 1800, 'booked'),
+(13, '2009', 'ac', 1800, 'booked'),
+(14, '2010', 'ac', 1800, 'booked'),
+(15, '2011', 'ac', 1800, 'booked'),
+(16, '2012', 'ac', 1800, 'booked'),
+(17, '2013', 'ac', 1800, 'booked'),
+(18, '2014', 'ac', 1800, 'booked'),
+(19, '2015', 'ac', 1800, 'booked'),
+(20, '2016', 'ac', 1800, 'booked'),
+(21, '2017', 'ac', 1800, 'booked'),
+(22, '2018', 'ac', 1800, 'booked'),
+(23, '2019', 'ac', 1800, 'available'),
+(24, '2020', 'ac', 1800, 'available');
 
 -- --------------------------------------------------------
 
@@ -90,11 +108,26 @@ CREATE TABLE `deluxac_room` (
 --
 
 INSERT INTO `deluxac_room` (`deluxac_id`, `room_no`, `room_type`, `price`, `status`) VALUES
-(1, '2000', 'delux', 7000, 'Available'),
-(2, '2001', 'delux', 7000, 'Available'),
-(3, '2001', 'delux', 7000, 'Available'),
-(4, '2001', 'delux', 7000, 'Available'),
-(5, '4000', 'double bed', 5000, '');
+(13, '1000', 'delux', 2000, 'booked'),
+(14, '1001', 'delux', 2000, 'booked'),
+(15, '1002', 'delux', 2000, 'booked'),
+(16, '1003', 'delux', 2000, 'booked'),
+(17, '1004', 'delux', 2000, 'booked'),
+(18, '1005', 'delux', 2000, 'booked'),
+(19, '1006', 'delux', 2000, 'booked'),
+(20, '1007', 'delux', 2000, 'booked'),
+(21, '1008', 'delux', 2000, 'booked'),
+(22, '1010', 'delux', 2000, 'booked'),
+(23, '1011', 'delux', 2000, 'booked'),
+(24, '1012', 'delux', 2000, 'booked'),
+(25, '1013', 'delux', 2000, 'booked'),
+(26, '1014', 'delux', 2000, 'booked'),
+(27, '1015', 'delux', 2000, 'booked'),
+(28, '1016', 'delux', 2000, 'booked'),
+(29, '1017', 'delux', 2000, 'booked'),
+(30, '1018', 'delux', 2000, 'booked'),
+(31, '1019', 'delux', 2000, 'booked'),
+(32, '1020', 'delux', 2000, 'booked');
 
 -- --------------------------------------------------------
 
@@ -114,7 +147,8 @@ CREATE TABLE `feedbacks` (
 
 INSERT INTO `feedbacks` (`f_id`, `name`, `feedback`) VALUES
 (1, 'Hillary Burt', 'Temporibus vitae pro'),
-(2, 'Ria Sampson', 'Minim ut rem accusam');
+(2, 'Ria Sampson', 'Minim ut rem accusam'),
+(3, 'Felicia Chavez', 'Unde sit voluptate f');
 
 -- --------------------------------------------------------
 
@@ -182,7 +216,27 @@ CREATE TABLE `nonac_room` (
 --
 
 INSERT INTO `nonac_room` (`nonac_id`, `room_no`, `room_type`, `price`, `status`) VALUES
-(1, '3000', 'double bed', 8000, 'Available');
+(2, '3000', 'non ac', 1500, 'booked'),
+(3, '3001', 'non ac', 1500, 'booked'),
+(4, '3002', 'non ac', 1500, 'booked'),
+(5, '3003', 'non ac', 1500, 'booked'),
+(6, '3004', 'non ac', 1500, 'booked'),
+(7, '3005', 'non ac', 1500, 'booked'),
+(8, '3006', 'non ac', 1500, 'booked'),
+(9, '3007', 'non ac', 1500, 'available'),
+(10, '3008', 'non ac', 1500, 'available'),
+(11, '3009', 'non ac', 1500, 'available'),
+(12, '3010', 'non ac', 1500, 'available'),
+(13, '3011', 'non ac', 1500, 'available'),
+(14, '3012', 'non ac', 1500, 'available'),
+(15, '3013', 'non ac', 1500, 'available'),
+(16, '3014', 'non ac', 1500, 'available'),
+(17, '3015', 'non ac', 1500, 'available'),
+(18, '3016', 'non ac', 1500, 'available'),
+(19, '3017', 'non ac', 1500, 'available'),
+(20, '3018', 'non ac', 1500, 'available'),
+(21, '3019', 'non ac', 1500, 'available'),
+(22, '3020', 'non ac', 1500, 'available');
 
 -- --------------------------------------------------------
 
@@ -191,18 +245,71 @@ INSERT INTO `nonac_room` (`nonac_id`, `room_no`, `room_type`, `price`, `status`)
 --
 
 CREATE TABLE `room_booking` (
-  `b_id` int(255) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `address` varchar(50) NOT NULL,
-  `city` varchar(10) NOT NULL,
-  `phone` int(20) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `cin` datetime NOT NULL,
-  `cout` datetime NOT NULL,
-  `members` int(10) NOT NULL,
-  `room_type` varchar(50) NOT NULL,
-  `no_of_room` int(10) NOT NULL
+  `b_id` int(200) NOT NULL,
+  `room_no` int(10) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `address` varchar(30) NOT NULL,
+  `city` varchar(30) NOT NULL,
+  `phone` int(15) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `cin` date NOT NULL,
+  `cout` date NOT NULL,
+  `members` int(3) NOT NULL,
+  `room_type` varchar(10) NOT NULL,
+  `no_of_room` int(3) NOT NULL,
+  `time` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `room_booking`
+--
+
+INSERT INTO `room_booking` (`b_id`, `room_no`, `name`, `address`, `city`, `phone`, `email`, `cin`, `cout`, `members`, `room_type`, `no_of_room`, `time`) VALUES
+(1, 1003, 'Chhabilal Timilsina', 'Sudal -9', 'Bhaktapur', 2147483647, 'Chhabilal@gmail.com', '2024-04-17', '2024-04-18', 8, 'Delux AC', 4, '2024-04-15 11:32:56'),
+(2, 1004, 'Chhabilal Timilsina', 'Sudal -9', 'Bhaktapur', 2147483647, 'Chhabilal@gmail.com', '2024-04-17', '2024-04-18', 8, 'Delux AC', 4, '2024-04-15 11:32:57'),
+(3, 1005, 'Chhabilal Timilsina', 'Sudal -9', 'Bhaktapur', 2147483647, 'Chhabilal@gmail.com', '2024-04-17', '2024-04-18', 8, 'Delux AC', 4, '2024-04-15 11:32:57'),
+(4, 1006, 'Chhabilal Timilsina', 'Sudal -9', 'Bhaktapur', 2147483647, 'Chhabilal@gmail.com', '2024-04-17', '2024-04-18', 8, 'Delux AC', 4, '2024-04-15 11:32:57'),
+(5, 2000, 'Parbati Timilsina', 'Sudal -9', 'Bhaktapur', 28237634, 'parbati@gmail.com', '2024-04-17', '2024-04-18', 8, 'A.C. Room', 4, '2024-04-15 11:34:30'),
+(6, 2001, 'Parbati Timilsina', 'Sudal -9', 'Bhaktapur', 28237634, 'parbati@gmail.com', '2024-04-17', '2024-04-18', 8, 'A.C. Room', 4, '2024-04-15 11:34:30'),
+(7, 2002, 'Parbati Timilsina', 'Sudal -9', 'Bhaktapur', 28237634, 'parbati@gmail.com', '2024-04-17', '2024-04-18', 8, 'A.C. Room', 4, '2024-04-15 11:34:30'),
+(8, 2003, 'Parbati Timilsina', 'Sudal -9', 'Bhaktapur', 28237634, 'parbati@gmail.com', '2024-04-17', '2024-04-18', 8, 'A.C. Room', 4, '2024-04-15 11:34:30'),
+(9, 3000, 'Ganesh Kumar Timilsina', 'Sudal-9', 'Bhaktapur', 2147483647, 'ganesh@gmail.com', '2024-04-17', '2024-04-18', 6, 'Non AC', 4, '2024-04-15 11:35:17'),
+(10, 3001, 'Ganesh Kumar Timilsina', 'Sudal-9', 'Bhaktapur', 2147483647, 'ganesh@gmail.com', '2024-04-17', '2024-04-18', 6, 'Non AC', 4, '2024-04-15 11:35:18'),
+(11, 3002, 'Ganesh Kumar Timilsina', 'Sudal-9', 'Bhaktapur', 2147483647, 'ganesh@gmail.com', '2024-04-17', '2024-04-18', 6, 'Non AC', 4, '2024-04-15 11:35:18'),
+(12, 3003, 'Ganesh Kumar Timilsina', 'Sudal-9', 'Bhaktapur', 2147483647, 'ganesh@gmail.com', '2024-04-17', '2024-04-18', 6, 'Non AC', 4, '2024-04-15 11:35:18'),
+(13, 1007, 'apshara', 'sudal-9', 'bhaktapur', 2147483647, 'apsara@gmail.com', '2024-04-18', '2024-04-19', 6, 'Delux AC', 3, '2024-04-15 11:37:28'),
+(14, 1008, 'apshara', 'sudal-9', 'bhaktapur', 2147483647, 'apsara@gmail.com', '2024-04-18', '2024-04-19', 6, 'Delux AC', 3, '2024-04-15 11:37:29'),
+(15, 1010, 'apshara', 'sudal-9', 'bhaktapur', 2147483647, 'apsara@gmail.com', '2024-04-18', '2024-04-19', 6, 'Delux AC', 3, '2024-04-15 11:37:29'),
+(16, 3004, 'hello', 'hello-9', 'bhak', 2147483647, 'hello@gmail.com', '2024-04-18', '2024-04-19', 3, 'Non AC', 3, '2024-04-15 11:38:23'),
+(17, 3005, 'hello', 'hello-9', 'bhak', 2147483647, 'hello@gmail.com', '2024-04-18', '2024-04-19', 3, 'Non AC', 3, '2024-04-15 11:38:24'),
+(18, 3006, 'hello', 'hello-9', 'bhak', 2147483647, 'hello@gmail.com', '2024-04-18', '2024-04-19', 3, 'Non AC', 3, '2024-04-15 11:38:24'),
+(19, 1011, 'agae', 'aeeart', 'awtaet', 0, 'aertret@gmail.com', '2024-04-19', '2024-04-20', 9, 'Delux AC', 1, '2024-04-15 16:05:23'),
+(20, 1012, 'agae', 'aeeart', 'awtaet', 0, 'aertret@gmail.com', '2024-04-19', '2024-04-20', 9, 'Delux AC', 1, '2024-04-15 16:06:04'),
+(21, 1013, 'agae', 'aeeart', 'awtaet', 0, 'aertret@gmail.com', '2024-04-19', '2024-04-20', 9, 'Delux AC', 1, '2024-04-15 16:07:40'),
+(22, 1014, 'Heather Osborn', 'Rerum magna molestia', 'Itaque velit est iu', 1, 'wihixypumu@mailinator.com', '1972-11-25', '1992-03-24', 0, 'delux ac', 3, '2024-04-15 16:08:01'),
+(23, 1015, 'Heather Osborn', 'Rerum magna molestia', 'Itaque velit est iu', 1, 'wihixypumu@mailinator.com', '1972-11-25', '1992-03-24', 0, 'delux ac', 3, '2024-04-15 16:08:03'),
+(24, 1016, 'Heather Osborn', 'Rerum magna molestia', 'Itaque velit est iu', 1, 'wihixypumu@mailinator.com', '1972-11-25', '1992-03-24', 0, 'delux ac', 3, '2024-04-15 16:08:05'),
+(25, 1017, 'Heather Osborn', 'Rerum magna molestia', 'Itaque velit est iu', 1, 'wihixypumu@mailinator.com', '1972-11-25', '1992-03-24', 0, 'delux ac', 3, '2024-04-15 16:08:34'),
+(26, 1018, 'Heather Osborn', 'Rerum magna molestia', 'Itaque velit est iu', 1, 'wihixypumu@mailinator.com', '1972-11-25', '1992-03-24', 0, 'delux ac', 3, '2024-04-15 16:08:34'),
+(27, 1019, 'Heather Osborn', 'Rerum magna molestia', 'Itaque velit est iu', 1, 'wihixypumu@mailinator.com', '1972-11-25', '1992-03-24', 0, 'delux ac', 3, '2024-04-15 16:08:34'),
+(28, 1020, 'Heather Osborn', 'Rerum magna molestia', 'Itaque velit est iu', 1, 'wihixypumu@mailinator.com', '1972-11-25', '1992-03-24', 0, 'delux ac', 3, '2024-04-15 16:10:06'),
+(29, 0, 'Heather Osborn', 'Rerum magna molestia', 'Itaque velit est iu', 1, 'wihixypumu@mailinator.com', '1972-11-25', '1992-03-24', 0, 'delux ac', 3, '2024-04-15 16:10:06'),
+(30, 0, 'Heather Osborn', 'Rerum magna molestia', 'Itaque velit est iu', 1, 'wihixypumu@mailinator.com', '1972-11-25', '1992-03-24', 0, 'delux ac', 3, '2024-04-15 16:10:06'),
+(31, 2004, 'sdhfsfe', 'sdg', 'grearga', 0, 'aeferg', '2024-04-09', '2024-04-12', 0, 'A.C. Room', 1, '2024-04-16 06:31:11'),
+(32, 2005, 'Archana timilsina', 'erfwf', 'werw', 0, 'wregwrg', '2024-04-12', '2024-04-13', 0, 'A.C. Room', 2, '2024-04-16 11:44:01'),
+(33, 2006, 'Archana timilsina', 'erfwf', 'werw', 0, 'wregwrg', '2024-04-12', '2024-04-13', 0, 'A.C. Room', 2, '2024-04-16 11:44:01'),
+(34, 2007, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:14:56'),
+(35, 2008, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:14:56'),
+(36, 2009, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:15:06'),
+(37, 2010, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:15:06'),
+(38, 2011, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:16:26'),
+(39, 2012, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:16:27'),
+(40, 2013, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:16:35'),
+(41, 2014, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:16:35'),
+(42, 2015, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:19:04'),
+(43, 2016, 'yash', 'india', 'paka', 9876565, 'atrcca@gmail.com', '2024-04-18', '2024-04-19', 5, 'A.C. Room', 2, '2024-04-17 13:19:04'),
+(44, 2017, 'yryryu', 'jhyiuyi', 'kjhuiyi', 2147483647, 'gdd@gmail.com', '2024-04-19', '2024-04-20', 3, 'A.C. Room', 1, '2024-04-18 11:26:24'),
+(45, 2018, 'adasdas', 'aslksajfid', 'safsd', 0, 'agadg@gmail.com', '2024-04-19', '2024-04-20', 6, 'A.C. Room', 1, '2024-04-18 11:35:15');
 
 -- --------------------------------------------------------
 
@@ -310,7 +417,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `ac_room`
 --
 ALTER TABLE `ac_room`
-  MODIFY `ac_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ac_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `admins`
@@ -328,13 +435,13 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `deluxac_room`
 --
 ALTER TABLE `deluxac_room`
-  MODIFY `deluxac_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `deluxac_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `feedbacks`
 --
 ALTER TABLE `feedbacks`
-  MODIFY `f_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `f_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `food_order`
@@ -358,13 +465,13 @@ ALTER TABLE `hall_book`
 -- AUTO_INCREMENT for table `nonac_room`
 --
 ALTER TABLE `nonac_room`
-  MODIFY `nonac_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `nonac_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `room_booking`
 --
 ALTER TABLE `room_booking`
-  MODIFY `b_id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `b_id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `users`

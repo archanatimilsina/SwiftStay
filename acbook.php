@@ -180,7 +180,7 @@ if($result1==true)
     ?>
     <script>
  alert("Room Booked Successfully");
- window.location.href='index.php';
+ document.location.href='index.php';
 </script>
 <?php
 

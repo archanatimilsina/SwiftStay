@@ -11,6 +11,7 @@ session_start();
     <title>SWIFTSTAY</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c5a4938a4c.js" crossorigin="anonymous"></script>
 <style>
 *{
     padding: 0;
@@ -28,6 +29,7 @@ session_start();
     align-items: center;
     justify-content: center;
       top: 0;
+    
    
 }
 .left-nav{
@@ -68,172 +70,77 @@ session_start();
     background: white;
     border-radius: 30px;
 }
-.paste-button {
+#user-icon
+{
+
+    padding: 10px;
     position: relative;
     display: inline-block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .button {
-    background-color:  #fa9579;
-    color: #212121;
-    padding: 10px 15px;
-    font-size: 15px;
-    font-weight: bold;
-    border: 2px solid transparent;
-    border-radius: 15px;
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    display: none;
-    font-size: 13px;
+
+}
+#admin-box
+{
     position: absolute;
     z-index: 1;
-    min-width: 200px;
-    background-color: #212121;
-    border: 2px solid #fa9579;
-    border-radius: 0px 15px 15px 15px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  }
-  
-  .dropdown-content a {
-    color: #fa9579;
-    padding: 8px 10px;
-    text-decoration: none;
-    display: block;
-    transition: 0.1s;
-  }
-  
-  .dropdown-content a:hover {
-    background-color:#fa9579;
-    color: #212121;
-  }
-  
-  .dropdown-content a:focus {
-    background-color: #212121;
-    color:#fa9579;
-  }
-  
-  .dropdown-content #top:hover {
-    border-radius: 0px 13px 0px 0px;
-  }
-  
-  .dropdown-content #bottom:hover {
-    border-radius: 0px 0px 13px 13px;
-  }
-  
-  .paste-button:hover button {
-    border-radius: 15px 15px 0px 0px;
-  }
-  
-  .paste-button:hover .dropdown-content {
-    display: block;
-  }
-  
-.sign-in-up
-{
-    display: flex;
-    /* margin-top: px; */
-    margin-top: 10px;
-    padding: 5px;
-    
-}
-.sign-in-up button{
-  margin: 0px 40px;
-    height: 40px;
-    width: 90px;
-    font-size: 1.3rem;
-}
-
-/* navbar */
-
-/* login */
-.popup-container{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    width: 250px;
+    height: 250px;
+    top: 80px;
+    background-color: white;
+    font-family: 'Baloo 2', cursive;
+    border: solid 2px black;
+    right: 10px;
     display: none;
 }
-.popup-container .popup{
-    background-color: #f0f0f0;
-    width: 350px;
-    border-radius: 5px;
-    padding: 20px 25px 30px 25px;
+#profile-pic
+{
+    height: 90px;
+    width: 40%;
+    border: 0.1px solid black;
+    border-radius: 50%;
+    margin: auto;
+  margin-top: 20px;
+ 
 }
-.popup-container .popup h2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    color: #fa9579;
-}
-.popup-container .popup h2{
-    border: none;
-    background-color: transparent;
-    outline: none;
-    font-size: 18px;
-    font-weight: 550;
-    color: #797775;
-}
+#admin-username
+{
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 300;
 
-.popup-container .popup input{
-    width: 100%;
-    margin-bottom: 20px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #fa9579;
-    border-radius: 0px;
-    padding: 5px 0;
-    font-weight: 550;
-    font-size: 14px;
-    outline: none;
 }
-.popup-container .popup .login-btn,.popup-container .register .register-btn , .popup-container .forgot button.reset-btn{
-    font-weight: 550;
-    font-size: 15px;
-    color: white;
-    background-color:#fa9579;
-    
-    padding: 4px 10px;
-    border: none;
-    outline: none;
-    margin-top: 5px;
-}
-.popup-container .popup .forgot-btn{
-    text-align: right;
-}
-.popup-container .popup .forgot-btn button{
-    outline: none;
-    background-color: transparent;
-    border: none;
-    font-weight: 450;
-    cursor: pointer;
-}
-.popup-container .register{
-    background-color: #edeef7;
-}
-.popup-container .register h2 , .popup-container .forgot h2{
-    color: #fa9579;
-}
-.popup-container .register input , .popup-container .forgot input{
-    border-bottom-color: #fa9579;
-}
-.popup-container .register .register-btn , .popup-container .forgot button.reset-btn{
+#logout-button
+{
+ margin-left: 29%;
     background-color: #fa9579;
+    color: black;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 100;
+    font-size: 18px;
+width: 100px;
+margin-bottom: 6px;
 }
-/* login */
+#logout-button a{
+    text-decoration: none;
+    color: black;
+     font-family: 'Baloo 2', cursive;
+}
+#naccount-button
+{height: 30px;
+    width: 80%;
+    background-color: green;
+    color: black; 
+     margin-left: 10%;
+     margin-top: 10px;
+}
+#naccount-button a{
+    text-decoration: none;
+    color: black;
+     font-family: 'Baloo 2', cursive;
+     font-size: 19px;
+}
 
 
-
+/* navbar */
 </style>
 </head>
 <body>
@@ -243,15 +150,39 @@ session_start();
         </div>
         <div class="right-nav mt-4">
             <ul>
-                
+                <!-- onclick="AdminBox()" -->
                 <li class="item"><a href="admin/aroom.php">Room</a></li>
                 <li class="item"><a href="admin/afood.php">Food</a></li>
                 <li class="item"><a href="index.php">Contact</a></li>
                 <li class="item"><a href="index.php">Feedback</a></li>
-                <li class="item"><a href="index.php">User</a></li>
-                <li class="item"></li>
+                <li class="item"><a href="index.php">User</a>
+               <li class="item">
+                    <div id="user-icon"><i class="fa-solid fa-user" onclick="AdminBox('admin-box')"></i>
+                    </div></li>
+                <div id="admin-box">
+<div id="profile-pic">
+
+</div>
+<h1 id="admin-username">Lorem ipsum</h1>
+<button id="logout-button"><a href="admin/alogout.php">LogOut</a></button><hr>
+<button id="naccount-button"><a href="alogout.php">Create New Account</a></button>
+                </div>
+              
           </ul>
         </div>
     </nav>
-
+    <script>
+                        function AdminBox('admin-box')
+                        {
+                            x=document.getElementById('admin-box');
+                            if(x.style.display=="flex")
+                            {
+                                x.style.display=="none";
+                            }
+                            else{
+                                x.style.display=="flex";
+                            }
+                        }
+                    </script> 
+                    </body>
 </html>

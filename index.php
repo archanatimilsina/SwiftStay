@@ -21,12 +21,18 @@ session_start();
   .button {
     background-color:  #fa9579;
     color: #212121;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
     font-size: 15px;
     font-weight: bold;
     border: 2px solid transparent;
     border-radius: 15px;
-    cursor: pointer;
+    /* cursor: pointer; */
+    height: 28px;
+  }
+  .button:hover{
+    color: black;
+    background-color: white;
+    border-radius: 30px;
   }
   
   .dropdown-content {
@@ -35,29 +41,32 @@ session_start();
     position: absolute;
     z-index: 1;
     min-width: 200px;
-    background-color: #212121;
-    border: 2px solid #4CAF50;
+    background-color: white;
+    border: 2px solid black;
     border-radius: 0px 15px 15px 15px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   
   }
   
   .dropdown-content a {
     color: #222;
-    padding: 8px 10px;
+    /* padding: 8px 10px; */
     text-decoration: none;
     display: block;
     transition: 0.1s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .dropdown-content a:hover {
-    background-color: #4CAF50;
-    color: #212121;
+    background-color:#fa9579;
+    color:black;
+    border-radius: 0px 15px 15px 15px;
   }
-  
+/*   
   .dropdown-content a:focus {
     background-color: #212121;
     color: #4CAF50;
-  }
+  } */
   
   .dropdown-content #top:hover {
     border-radius: 0px 13px 0px 0px;
@@ -86,15 +95,17 @@ session_start();
                 <li class="item"><a href="index.php">Home</a></li>
                 <li class="item"><a href="about.php">About Us</a></li>
                 <li class="item"><a href="room.php">Rooms</a></li>
+                <li class="item"><a href="food.php">Food</a></li>
                 <li class="item"><a href="contact.php">Contact Us</a></li>
                 <li class="item"><a href="admin.php">Admin</a></li>
-                <li class="item"><a href="feedback.php">Feedback</a></li>  
+                <li class="item"><a href="feedback.php">Feedback</a></li> 
+                <li class="item">
         <?php
             if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
             {
                ?>
               <div class="paste-button">
-      <button class="button"> <?php echo $_SESSION["username"]; ?>&nbsp; ▼</button>
+      <button class="button"> <?php echo $_SESSION['username']; ?>&nbsp; ▼</button>
           <div class="dropdown-content">
         <a id="middle" href="logout.php">Logout</a>
       </div>
@@ -108,7 +119,7 @@ session_start();
                 <button type='button' onclick=\"popup('register-popup')\">Register</button>
                 </div>";
             }
-        ?>
+        ?></li> 
           </ul>
         </div>
     </nav>
@@ -138,7 +149,7 @@ session_start();
 
     <div class="popup-container" id="login-popup">
         <div class=" popup">
-            <form action="login_register.php" method="POST">
+            <form action="login.php" method="POST">
                 <h2>
                     <span>User Login</span>
                     <button type="reset" onclick="popup('login-popup')">X</button>
@@ -155,14 +166,14 @@ session_start();
 
     <div class="popup-container" id="register-popup">
         <div class="register popup">
-            <form action="login_register.php" method="POST">
+            <form action="register.php" method="POST">
                 <h2>
                     <span>User REGISTER</span>
                     <button type="reset" onclick="popup('register-popup')">X</button>
                 </h2>
                 <input type="text" placeholder="FULL NAME"  name="fullname" required>
                 <input type="text" placeholder="User Name" name="username" required>
-                <input type="email" placeholder="E-Mail"  name="email" required>
+                <input type="email" placeholder="E-mail"  name="email" required>
                 <input type="password" placeholder="Password"  name="password" required>
                 <button type="submit" class="register-btn" name="register">Register</button>
             </form>

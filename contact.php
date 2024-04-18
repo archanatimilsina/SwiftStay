@@ -50,14 +50,20 @@
             <?php
                if(isset($_POST['con-btn']))
                {
-                   $con_name=$_POST['name'];
-                   $con_email=$_POST['email'];
-                   $con_mobile=$_POST['phone'];
-                   $con_address=$_POST['address'];
-                   $con_message=$_POST['message'];
+                   $name=$_POST['name'];
+                   $email=$_POST['email'];
+                   $phone=$_POST['phone'];
+                   $address=$_POST['address'];
+                   $message=$_POST['message'];
 
-                   $qry="INSERT INTO `contacts`(`name`, `email`, `mobile`, `address`, `message`) VALUES (,'$con_name','$con_email','$con_mobile','$con_address','$con_message')";
-
+                   $query="SELECT * FROM contacts WHERE email='$email'";
+                   $result=mysqli_query($con,$query);
+                   $data=mysqli_fetch_assoc($result);
+                   if($result)
+                   {
+if($data['email']!=$email)
+{      
+            $qry="INSERT INTO contacts(name, email, phone, address, message) VALUES ('$name','$email','$mobile','$address','$message')";
                    $run=mysqli_query($con,$qry);
                    if($run)
                    {
@@ -67,11 +73,22 @@
                        </script>
                        <?php
                    }
-                   else{
-
-                   }
-                  
+        
+                  }
+                  else{
+                    echo "<script>
+                    alert('You can contact only one time through website! please call');
+                    window.location.href='contact.php';
+                    </script>";
+                  }
                }
+               else{
+                echo "<script>
+                alert('cannot Run');
+                window.location.href='contact.php';
+                </script>";
+              }
+            }
             ?>
        </div>
     </div>

@@ -1,19 +1,13 @@
-<?php
-include('connection.php');
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIFTSTAY</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <title>FEEDBACK</title>
     <script src="https://kit.fontawesome.com/c5a4938a4c.js" crossorigin="anonymous"></script>
+</head>
 <style>
-*{
+    *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -143,57 +137,21 @@ margin-bottom: 6px;
      font-size: 19px;
 }
 
-/* button.user{
-    padding:20px;
-    border: none;
-    background-color: #fa9579;
-    border-radius: 50%;
-    margin-right: 30px;
-}
-button:hover {
-    color: white;
-    background-color: grey;
-}
-button:active {
-    background-color: white;
-}
-#username{
-    font-size: larger;
-    padding: 25px;
-}
-#icon{
-    margin: 10px 10px;
-}
-dialog{
-    border-radius: 20px;
-    margin: auto;
-}
-#dialogbox{
-    padding: 5px 20px;
-}
-
-#userdetail{
-    background-color: white;
-    padding: 10px;
-    padding-left: 30px;
-    border-radius: 35px;
-} */
 /* navbar */
 </style>
-</head>
 <body>
-  <nav class="navbar">
+<nav class="navbar">
     <div class="left-nav">
       <P>Admin Panel</P>
     </div>
     <div class="right-nav mt-4">
       <ul>
-        <!-- onclick="AdminBox()" -->
-        <li class="item"><a href="admin/aroom.php">Room</a></li>
-        <li class="item"><a href="admin/afood.php">Food</a></li>
-        <li class="item"><a href="admin/acontact.php">Contact</a></li>
-        <li class="item"><a href="admin/afeedback.php">Feedback</a></li>
-        <li class="item "><a href="index.php">User</a>
+        
+        <li class="item"><a href="aroom.php">Room</a></li>
+        <li class="item"><a href="afood.php">Food</a></li>
+        <li class="item"><a href="acontact.php">Contact</a></li>
+        <li class="item"><a href="afeedback.php">Feedback</a></li>
+        <li class="item "><a href="../index.php">User</a>
         <li class="item">
            <div id="user-icon">
             <i class="fa-solid fa-user" onclick="AdminBox()"></i>
@@ -212,41 +170,3 @@ dialog{
 
       </ul>
     </div></nav>
-    <!-- <div id="userdetail"><span style="font-size:24px ;padding-right:20px;">Username</span><button class="user" data-open-modal ><i class="fa-solid fa-user fa-2xl" ></i></button></div>
-  
-
-  <dialog data-modal>
-        <div id="dialogbox">
-            <button data-close-modal id="icon"><i class="fa-solid fa-xmark"></i></button>
-            <div id="userinfo">
-                <div id="username" >Username here</div>
-                <button id="logout-button"><a href="admin/alogout.php">Logout</a></button>
-            </div>
-        </div>
-    </dialog>
-
-
-
-    const openButton = document.querySelector("[data-open-modal]")
-    const closeButton = document.querySelector("[data-close-modal]")
-    const modal = document.querySelector("[data-modal]")
-
-    openButton.addEventListener("click",() => {
-        modal.showModal()
-    })
-    closeButton.addEventListener("click",() => {
-        modal.close()
-    }) -->
-
-     <script>
-    function AdminBox() {
-      let x = document.getElementById('admin-box');
-      if (x.style.display=="none") {
-        x.style.display="flex";
-      } else {
-        x.style.display="none";
-      }
-    } 
-  </script>
-</body>
-</html>

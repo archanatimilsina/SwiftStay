@@ -9,7 +9,8 @@ include('connection.php');
 <section id="feedback-form">
     <p class="feedback_head">Write Your Feedback</p>
     <form action="feedback.php" method="post">
-       <input type="text" name="name" placeholder="Enter Name">
+       <input type="text" name="name" placeholder="Enter Name" required>
+       <input type="email" name="email" placeholder="Enter email" required>
        <input type="text" name="feedback" placeholder="Enter Feedback">
        <input type="submit" name="submit">
     </form>
@@ -17,18 +18,41 @@ include('connection.php');
        if(isset($_POST['submit']))
        {
            $name = $_POST['name'];
+           $email = $_POST['email'];
            $feedback=$_POST['feedback'];
 
-           $qry="INSERT INTO `feedbacks`(`name`, `feedback`) VALUES ('$name','$feedback')";
+           $query="SELECT * FROM feedbacks WHERE email='$email'";
+           $result=mysqli_query($con,$query);
+           $data=mysqli_fetch_assoc($result);
+           if($result)
+           {
+if($data['email']!=$email)
+{      
+           $qry="INSERT INTO feedbacks(name,email,feedback ) VALUES ('$name','$email','$feedback')";
            $run=mysqli_query($con,$qry);
            if($run==true)
            {
                ?>
                <script>
-                   alert("Feedback Save Perfectly");
+                   alert("Thank You For Your Feedback");
                </script>
                <?php
            }
+           
+        }
+        else{
+          echo "<script>
+          alert('Sorry! You can give feedback only once');
+          window.location.href='feedback.php';
+          </script>";
+        }
+     }
+     else{
+      echo "<script>
+      alert('cannot Run');
+      window.location.href='contact.php';
+      </script>";
+    }
        }
     ?>
 </section>

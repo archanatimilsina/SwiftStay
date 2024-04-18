@@ -27,7 +27,7 @@ if(password_verify($password,$data['password']))
 $_SESSION['username']=$data['username'];
 ?>
 <script>
-window.location.href:'index.php';
+window.location.href='index.php'; 
 </script>
 <?php
 }

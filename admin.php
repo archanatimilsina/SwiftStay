@@ -89,7 +89,10 @@ session_start();
     font-family: 'Baloo 2', cursive;
     border: solid 2px black;
     right: 10px;
-    display: none;
+     display: none; 
+     flex-direction: column;
+     padding-bottom: 20px;
+     cursor:pointer;
 }
 #profile-pic
 {
@@ -101,6 +104,7 @@ session_start();
   margin-top: 20px;
  
 }
+
 #admin-username
 {
     text-align: center;
@@ -127,7 +131,7 @@ margin-bottom: 6px;
 #naccount-button
 {height: 30px;
     width: 80%;
-    background-color: green;
+    background-color: #fa9579;
     color: black; 
      margin-left: 10%;
      margin-top: 10px;
@@ -138,7 +142,8 @@ margin-bottom: 6px;
      font-family: 'Baloo 2', cursive;
      font-size: 19px;
 }
-button.user{
+
+/* button.user{
     padding:20px;
     border: none;
     background-color: #fa9579;
@@ -172,7 +177,7 @@ dialog{
     padding: 10px;
     padding-left: 30px;
     border-radius: 35px;
-}
+} */
 /* navbar */
 </style>
 </head>
@@ -189,23 +194,25 @@ dialog{
         <li class="item"><a href="index.php">Contact</a></li>
         <li class="item"><a href="index.php">Feedback</a></li>
         <li class="item "><a href="index.php">User</a>
-        <!-- <li class="item">
+        <li class="item">
            <div id="user-icon">
-            <i class="fa-solid fa-user" ></i>
-          </div> -->
+            <i class="fa-solid fa-user" onclick="AdminBox()"></i>
+          </div>
         
         </li>
-        <!-- <div id="admin-box">
-          <div id="profile-pic"></div>
+        <div id="admin-box">
+          <div id="profile-pic">
+            <!-- <img src="img/about.avif" alt="#"> -->
+          </div>
           <h1 id="admin-username">Lorem ipsum</h1>
           <button id="logout-button"><a href="admin/alogout.php">LogOut</a></button>
-          <hr>
+       
           <button id="naccount-button"><a href="alogout.php">Create New Account</a></button>
-        </div> -->
+        </div>
 
       </ul>
     </div>
-    <div id="userdetail"><span style="font-size:24px ;padding-right:20px;">Username</span><button class="user" data-open-modal ><i class="fa-solid fa-user fa-2xl" ></i></button></div>
+    <!-- <div id="userdetail"><span style="font-size:24px ;padding-right:20px;">Username</span><button class="user" data-open-modal ><i class="fa-solid fa-user fa-2xl" ></i></button></div>
   </nav>
 
   <dialog data-modal>
@@ -219,7 +226,7 @@ dialog{
     </dialog>
 
 
-  <script>
+
     const openButton = document.querySelector("[data-open-modal]")
     const closeButton = document.querySelector("[data-close-modal]")
     const modal = document.querySelector("[data-modal]")
@@ -229,15 +236,17 @@ dialog{
     })
     closeButton.addEventListener("click",() => {
         modal.close()
-    })
-    /* function AdminBox('admin-box') {
-      x = document.getElementById('admin-box');
-      if (x.style.display == "flex") {
-        x.style.display == "none";
+    }) -->
+
+     <script>
+    function AdminBox() {
+      let x = document.getElementById('admin-box');
+      if (x.style.display=="none") {
+        x.style.display="flex";
       } else {
-        x.style.display == "flex";
+        x.style.display="none";
       }
-    } */
+    } 
   </script>
 </body>
 </html>

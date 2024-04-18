@@ -10,8 +10,9 @@ session_start();
     <title>SWIFT STAY</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c5a4938a4c.js" crossorigin="anonymous"></script>
 <style>       
-.paste-button {
+/* .paste-button {
     position: relative;
     display: inline-block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,12 +22,12 @@ session_start();
     background-color:  #fa9579;
     color: #212121;
     /* padding: 10px 15px; */
-    font-size: 15px;
+    /* font-size: 15px;
     font-weight: bold;
     border: 2px solid transparent;
-    border-radius: 15px;
+    border-radius: 15px; */
     /* cursor: pointer; */
-    height: 28px;
+    /* height: 28px;
   }
   .button:hover{
     color: black;
@@ -50,7 +51,7 @@ session_start();
   .dropdown-content a {
     color: #222;
     /* padding: 8px 10px; */
-    text-decoration: none;
+    /* text-decoration: none;
     display: block;
     transition: 0.1s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -60,14 +61,14 @@ session_start();
     background-color:#fa9579;
     color:black;
     border-radius: 0px 15px 15px 15px;
-  }
+  }   */
 /*   
   .dropdown-content a:focus {
     background-color: #212121;
     color: #4CAF50;
   } */
   
-  .dropdown-content #top:hover {
+  /* .dropdown-content #top:hover {
     border-radius: 0px 13px 0px 0px;
   }
   
@@ -81,7 +82,80 @@ session_start();
   
   .paste-button:hover .dropdown-content {
     display: block;
-  }
+  } */
+
+  #user-icon
+{
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+
+}
+
+#admin-box
+{
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    height: 250px;
+    top: 80px;
+    background-color: white;
+    font-family: 'Baloo 2', cursive;
+    border: solid 2px black;
+    right: 10px;
+     display: none; 
+     flex-direction: column;
+     padding-bottom: 20px;
+     cursor: pointer;
+}
+#profile-pic
+{
+    height: 90px;
+    width: 40%;
+    border: 0.1px solid black;
+    border-radius: 50%;
+    margin: auto;
+  margin-top: 20px;
+ 
+}
+
+#admin-username
+{
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 300;
+
+}
+#logout-button
+{
+ margin-left: 29%;
+    background-color: #fa9579;
+    color: black;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 100;
+    font-size: 18px;
+width: 100px;
+margin-bottom: 6px;
+}
+#logout-button a{
+    text-decoration: none;
+    color: black;
+     font-family: 'Baloo 2', cursive;
+}
+#naccount-button
+{height: 30px;
+    width: 80%;
+    background-color: #fa9579;
+    color: black; 
+     margin-left: 10%;
+     margin-top: 10px;
+}
+#naccount-button a{
+    text-decoration: none;
+    color: black;
+     font-family: 'Baloo 2', cursive;
+     font-size: 19px;
+}
   </style>
 </head>
 <body>
@@ -102,13 +176,17 @@ session_start();
         <?php
             if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
             {
-               ?>
-              <div class="paste-button">
+               ?> <div id="user-icon">
+               <i class="fa-solid fa-user" onclick="AdminBox()"></i>
+             </div>
+           
+              <!-- <div class="paste-button">
       <button class="button"> <?php echo $_SESSION['username']; ?>&nbsp; ▼</button>
           <div class="dropdown-content">
         <a id="middle" href="logout.php">Logout</a>
       </div>
-   </div>
+   </div> -->
+
                <?php 
             }
             else{
@@ -119,6 +197,15 @@ session_start();
                 </div>";
             }
         ?></li> 
+          <div id="admin-box">
+          <div id="profile-pic">
+            <!-- <img src="img/about.avif" alt="#"> -->
+          </div>
+          <h1 id="admin-username"><?php  echo $_SESSION['username']; ?></h1>
+          <button id="logout-button"><a href="logout.php">LogOut</a></button>
+       
+          <button id="naccount-button"><a href="register.php">Create New Account</a></button>
+        </div>
           </ul>
         </div>
     </nav>
@@ -351,6 +438,14 @@ session_start();
             document.getElementById('login-popup').style.display="none";
             document.getElementById('forgot-popup').style.display="flex";
         }
+        function AdminBox() {
+      let x = document.getElementById('admin-box');
+      if (x.style.display=="none") {
+        x.style.display="flex";
+      } else {
+        x.style.display="none";
+      }
+    } 
     </script>
      
 </html>

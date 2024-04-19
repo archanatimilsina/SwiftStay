@@ -307,7 +307,7 @@ include('../connection.php'); ?>
         
 <div id="f1">
     <h2 class="room-h2"><i class="fas fa-hotel"></i> SEARCH YOUR ROOMS HERE</h2>
-         <form action="aroom1.php " method="get"> 
+         <form action="aroom.php " method="get"> 
          <table >
              <tr>
                  
@@ -340,8 +340,7 @@ include('../connection.php'); ?>
                  </td>
              </tr>
          </table> </div>
-         <?php
-        
+         <?php 
          if(isset($_GET['sub']))
          {
                 $r = $_GET['room'];
@@ -355,12 +354,11 @@ include('../connection.php'); ?>
                $qryy="SELECT * FROM `deluxac_room` WHERE status='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-               $rno=$row['room_no'];
+            //    $rno=$row['room_no'];
 
                $qry="SELECT * FROM `deluxac_room` WHERE status='available'";
                $run=mysqli_query($con,$qry);
                $row=mysqli_num_rows($run);
-
                if($r <= $row)
                {
                    ?>
@@ -369,7 +367,7 @@ include('../connection.php'); ?>
                      <p class="sectionTag">Delux A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
                      <p class="sectionsubTag ">Price per room : 1100 Rs</p>
-                     <form action="../r1.php" method="get">
+                     <form action="../deluxbook.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
                      <input type="text" name="rt" value="Delux AC" required>
@@ -377,10 +375,10 @@ include('../connection.php'); ?>
                      <input type="submit" name="submit" id="room-btn">
                      </form>
                      <br>
-                   
+                     
                      </div>
                      <div class="thumbnail">
-                         <img src="../img/delux2.jpg" alt="delux" class="imgFluid">
+                         <img src="../img/deluxroom.jpg" alt="delux" class="imgFluid">
                      </div>
                </section>
                    <?php
@@ -394,9 +392,7 @@ include('../connection.php'); ?>
                <p class="sectionsubTag r">Status :not Available </p>
                <p class="sectionsubTag r">Sorry :Please come another day</p>
             </div>
-            <!-- <div class="thumbnail">
-                <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
-            </div> -->
+           
         </section>
          <?php
                }
@@ -408,7 +404,7 @@ include('../connection.php'); ?>
                $qryy="SELECT * FROM `ac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-               $rno=$row['room_no'];
+            //    $rno=$row['room_no'];
 
                $qry="SELECT * FROM `ac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qry);
@@ -421,7 +417,7 @@ include('../connection.php'); ?>
                      <p class="sectionTag"> A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
                      <p class="sectionsubTag ">Price per room : 900 Rs</p>
-                     <form action="../r2.php" method="get">
+                     <form action="../acbook.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
                      <input type="text" name="rt" value="A.C. Room" required>
@@ -429,10 +425,10 @@ include('../connection.php'); ?>
                      <input type="submit" id="room-btn">
                      </form>
                      <br>
-                     <!-- <a href="r1.php">Book A Room</a> -->
+                     
                      </div>
                      <div class="thumbnail">
-                         <img src="../img/delux2.jpg" alt="delux" class="imgFluid">
+                         <img src="../img/deluxroom.jpg" alt="delux" class="imgFluid">
                      </div>
                </section>
                    <?php
@@ -446,9 +442,7 @@ include('../connection.php'); ?>
                <p class="sectionsubTag r">Status :not Available </p>
                <p class="sectionsubTag r">Sorry :Please come another day</p>
             </div>
-            <!-- <div class="thumbnail">
-                <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
-            </div> -->
+           
         </section>
          <?php
                }
@@ -459,7 +453,7 @@ include('../connection.php'); ?>
                $qryy="SELECT * FROM `nonac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qryy);
                $row=mysqli_fetch_assoc($run);
-               $rno=$row['room_no'];
+            //    $rno=$row['room_no'];
 
                $qry="SELECT * FROM `nonac_room` WHERE `status`='available'";
                $run=mysqli_query($con,$qry);
@@ -472,7 +466,7 @@ include('../connection.php'); ?>
                      <p class="sectionTag">Non A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
                      <p class="sectionsubTag ">Price per room : 700 Rs</p>
-                     <form action="../r3.php" method="get">
+                     <form action="../nonacbook.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
                      <input type="text" name="rt" value="Non AC" required>
@@ -480,10 +474,10 @@ include('../connection.php'); ?>
                      <input type="submit" id="room-btn">
                      </form>
                      <br>
-                     <!-- <a href="r1.php">Book A Room</a> -->
+                     
                      </div>
                      <div class="thumbnail">
-                         <img src="../img/about.avif" alt="delux" class="imgFluid">
+                         <img src="../img/deluxroom.jpg" alt="delux" class="imgFluid">
                      </div>
                </section>
                    <?php
@@ -497,19 +491,11 @@ include('../connection.php'); ?>
                <p class="sectionsubTag r">Status :not Available </p>
                <p class="sectionsubTag r">Sorry :Please come another day</p>
             </div>
-            <!-- <div class="thumbnail">
-                <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
-            </div> -->
+          
         </section>
          <?php
                }
-            ?>
-        
-
-    
-
-   <?php
-  }
-  ?>
+        }
+?>
 </body>
 </html>

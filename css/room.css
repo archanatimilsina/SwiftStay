@@ -1,0 +1,190 @@
+
+
+
+
+    .room-status{
+        display: none;
+    }
+    
+.room-h2{
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#f1
+{
+    width: 500px;
+  height: 150px;
+    margin: auto;
+    margin-bottom: 80px;
+    
+}
+#f1 form table{
+    
+   display: flex;
+   justify-content: center;
+   width: 100%;
+  border-radius: 10px;
+  height: 150px;
+  border: 1px solid red;
+}
+#f1 form{
+ 
+    width: 100%;
+    margin-top: 20px;
+    
+}
+#f1 form table tr th{
+    font-size: 17px;
+    font-weight: 700;
+}
+#f1 form table tr td input{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0px 15px;
+    
+}
+
+#check-btn{
+    padding: 4px;
+    background-color: crimson;
+    color: white;
+   border-radius: 2px;
+}
+
+#rooms-right{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   width: 90%;
+    margin:auto;
+    border: 1px solid black; 
+    margin-bottom: 100px; 
+}
+
+.paras{
+    padding: 0 40px;
+ 
+}
+.paras form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3px;
+    
+}
+.paras form input{
+    margin-top: 6px;
+    padding: 4px;
+}
+#room-btn{
+    background-color: #fa9579;
+    color: white;
+    font-size: 15px;
+}
+
+#rooms-left{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 90%;
+    margin: auto;
+    border: 1px solid black;
+    flex-direction: row-reverse;
+    
+}
+#rooms-left .paras{
+    width:40%;
+}
+
+.sectionTag{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.g{
+  
+    font-weight: 700;
+}
+.r{
+    
+    font-weight: 700;
+}
+.sectionsubTag{
+    padding-top: 10px;
+    font-size: 20px;
+}
+.font{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    color: rgb(130, 30, 245);
+}
+#rooms-left .thumbnail img{
+    width: 700px;
+}
+.price-btn{
+    width: 80%;
+    background-color: #e46262;
+    color: white;
+    margin-top: 20px;
+    padding: 6px 0;
+}
+.thumbnail img{
+    padding-right: 10px;
+    width: 700px;
+}
+.price{
+    color: green;
+    margin-top: 20px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+#room-home{
+    overflow: hidden;
+}
+#room-home figure{
+     position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite; 
+   
+}
+#room-home figure img{
+     width: 20%;
+    float: left; 
+    height: 550px;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}

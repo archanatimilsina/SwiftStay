@@ -1,8 +1,11 @@
 
 <?php
-include('inc/header.php');
 include('connection.php');
 ?>
+<?php require('inc/header.php');?>
+<link rel="stylesheet" href="css/feedback.css">
+<?php require('inc/navbar.php');?>
+
 
 <section id="feedback">
 </section>
@@ -56,3 +59,7 @@ if($data['email']!=$email)
        }
     ?>
 </section>
+
+
+    <?php require('inc/script.php');?>
+    <?php require('inc/footertag.php');?>

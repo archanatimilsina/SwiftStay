@@ -1,18 +1,18 @@
-<!-- header + navbar -->
-<?php  
-include("inc/header.php");?>
-<!-- header + navbar -->
+<?php require('inc/header.php');?>
+<link rel="stylesheet" href="css/about.css">
+<?php require('inc/navbar.php');?>
 
-<!-- about page  -->
+
+
  <section id=aboutContent>
-  <!-- slider -->
+ 
   <div class="a slider">
     <img src="img/about2.avif" width="100%"; height="100%" alt="#">
   </div>
-  <!-- slider -->
+  
 
   <p class="branchTitle">Our Branches</p>
-  <!-- Our Branches -->
+  
   
   <div class="a branches">
     <div class="b box1">
@@ -40,9 +40,9 @@ include("inc/header.php");?>
 <p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
     </div>
   </div>
-  <!-- Our Branches -->
+  
 
-  <!-- about -->
+  
   <p class="article">Our Thoughts</p>
   <div class="a about">
     <div class="c abox1">
@@ -98,29 +98,10 @@ include("inc/header.php");?>
 </div>
     </div>
   </div>
-  <!-- about -->
+  
 </section>
-    <!-- about content -->
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- footer -->
-<?php
-include("inc/footer.php");
-?>
-<!-- footer -->
+    <?php require('inc/footer.php');?>
+    <?php require('inc/script.php');?>
+    <?php require('inc/footertag.php');?>

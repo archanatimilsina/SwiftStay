@@ -1,3 +1,4 @@
+
 <section id="footer" class="section footer">
         <div class="container">
             <div class="footer-container">
@@ -11,10 +12,11 @@
                     <a href="room.php">Rooms</a>
                     <a href="contact.php">Contact Us</a>
                     <a href="feedback.php">Feedback</a>
+
                 </div>
                 <div class="footer-center">
                     <h3>CONTACT INFO</h3>
-                    <p>Sudal-9,Bhaktapur <br>+9806531378<br>www.swiftstay.com</p>
+                    <p>Sudal-9,Bhaktapur <br>9806531378<br>www.swiftstay.com</p>
                 </div>
                 <div class="footer-center">
                     <h3>OPENING HOURS</h3>
@@ -38,27 +40,3 @@
         </div>
     </section>
     
-
-
-    <script>
-        function popup(popup_name)
-        {
-             get_popup=document.getElementById(popup_name);
-             if(get_popup.style.display=="flex")
-            {
-                get_popup.style.display="none";
-            }
-            else{
-                get_popup.style.display="flex";
-            }
-        }
-
-        function forgotPopup()
-        {
-            document.getElementById('login-popup').style.display="none";
-            document.getElementById('forgot-popup').style.display="flex";
-        }
-    </script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
-</html>

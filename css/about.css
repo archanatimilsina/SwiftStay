@@ -1,0 +1,147 @@
+/* about page */
+#aboutContent
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+}
+.a
+{
+width: 1000px;
+margin: auto;
+/* border: solid 1px red; */
+margin-top: 40px;
+}
+.slider{
+    width: 100%;
+  height: 700px;
+  margin-top: 10px;
+}
+.branchTitle
+{
+    font-size: 2.6rem;
+    color: rgb(94, 69, 69);
+    margin-top: 30px;
+margin-bottom: -32px;
+margin-left: 30px;
+}
+
+.branches
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ height:400px; 
+    }
+.b{
+  width:30%;
+  border: solid black 1px;
+  height: 100%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+  
+}
+.img1
+{ 
+height: 50%;
+width: 90%;
+top: 0px;
+margin: auto;
+/* border: 1px solid green; */
+}
+.img1 img{
+  border-radius: 3%;
+}
+.location1{
+   
+width: 100%;
+height: 8%;
+/* border: 1px solid rgb(19, 20, 19); */
+background-color: #fc8260;
+color: #0a0909;
+}
+.bname{
+    text-align: center;
+width: 100%;
+height: 8%;
+background-color: #fc8260;
+color: #0a0a0a;
+/* border: 1px solid rgb(5, 5, 5); */
+/* margin: 5px; */
+
+}
+.detail1{
+width: 100%;
+height: 34%;
+
+font-size:19px;
+font-family: 'Baloo 2', cursive;
+text-align: center;
+color: #0a0a0a; 
+border: 1px solid rgb(5, 5, 5);
+}
+.about{
+height: 700px;
+display: flex;
+flex-direction: column; 
+}
+.article
+{
+font-size: 2.6rem;
+    color: rgb(94, 69, 69);
+    margin-top: 50px;
+margin-bottom: -70px;
+margin-left: 30px;
+}
+.c{
+width: 100%;
+height: 45%;
+margin-top: 10px;
+display: flex;
+flex-direction: row;
+flex:wrap;
+/* border: 1px solid skyblue; */
+}
+.d{
+border: solid 1px rgb(10, 9, 10);
+width: 30%;
+margin: 20px;
+display: flex;
+flex-direction: column;
+}
+.d a button{
+margin-left:20%;
+width: 150px;
+height: 40px;
+margin-bottom: 8px;
+background-color: #fc8260;
+}
+.e{
+width:80%;
+margin: auto;
+height: 60%;
+/* border: 1px solid indigo; */
+
+}
+.writer{
+width: 100%;
+/* border: 1px solid green; */
+height: 13%;
+font-size:20px;
+font-family: 'Baloo 2', cursive;
+text-align: center;
+}
+.f
+{
+font-size:19px;
+font-family: 'Baloo 2', cursive;
+text-align: center;
+
+}
+.bname{
+    font-size: 1.5rem;
+}
+/* about page */

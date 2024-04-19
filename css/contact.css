@@ -1,0 +1,91 @@
+
+/* contact page */
+.contact-container{
+    display: flex;
+   height: 730px;
+    width: 100%;
+    background-color: black;
+    
+}
+
+.contact1{
+    background: url('../img/adminhotel2.jpg') center center/cover no-repeat;
+    height: 90%;
+    width: 70%;
+    position: absolute;
+    border: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+    flex-basis: 75%;
+
+
+}
+.book-h1{
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+.website{
+    margin-top: 30px;
+
+}
+.website p{
+    font-size: 20px;
+}
+.contact2{
+  display: flex;
+    flex-basis: 25%;
+    margin-left: 80%;
+    flex-direction: column;
+    
+    
+}
+.contact2-h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contact-box form{
+    margin-left:-90px ;
+    height: 450px;
+    width: 300px;
+    background-color: rgb(48, 39, 39);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+.con-btn{
+    width: 60%;
+    border-radius: 20px;
+    background-color: rgb(189, 189, 236);
+    padding: 4px 0;
+    border: none;
+    outline: none;
+}
+
+.form-group-con{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.form-group-con label{
+    color: white;
+    padding-right: 10px;
+    font-size: 17px;
+}
+.form-group-con textarea{
+    resize: none;
+}

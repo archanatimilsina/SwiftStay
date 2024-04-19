@@ -1,7 +1,9 @@
 <?php 
-    include("inc/header.php");
     include('connection.php');
  ?>
+<?php require('inc/header.php');?>
+<link rel="stylesheet" href="css/contact.css">
+<?php require('inc/navbar.php');?>
 
 <div class="contact-container">
    
@@ -37,7 +39,7 @@
                 </div>
                 <div class="form-group-con">
                     <label for="name">Address:</label>
-                    <input type="phone" name="address" id="phone" placeholder="Enter Your Address">
+                    <input type="phone" name="address" id="address" placeholder="Enter Your Address">
                 </div>
                 <div class="form-group-con">
                     <label for="name">message:</label>
@@ -68,12 +70,12 @@ if($data['email']!=$email)
                    if($run)
                    {
                        ?>
+                       
                        <script>
                            alert("Thanks For Contacting Us");
                        </script>
                        <?php
                    }
-        
                   }
                   else{
                     echo "<script>
@@ -94,3 +96,6 @@ if($data['email']!=$email)
     </div>
     
 </div>
+<?php require('inc/footer.php');?>
+    <?php require('inc/script.php');?>
+    <?php require('inc/footertag.php');?>

@@ -1,108 +1,9 @@
 <?php 
-include('connection.php');
+include('connection.php');?>
+<?php require('inc/header.php');?>
+<link rel="stylesheet" href="css/room.css">
+<?php require('inc/navbar.php');?>
 
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- <link rel="stylesheet" href="css/roomstyle.css">
-</head>
-<body>
-    
-<nav class="navbar">
-        <div class="left-nav">
-            <img src="img/logo1.png" alt="logo">
-        </div>
-        <div class="right-nav mt-4">
-            <ul>
-                <li class="item"><a href="index.php">Home</a></li>
-                <li class="item"><a href="about.php">About</a></li>
-                <li class="item"><a href="room.php">Rooms</a></li>
-                <!-- <li class="item"><a href="food.php">Food</a></li> -->
-                <li class="item"><a href="contact.php">Contact</a></li>
-                <!-- <li class="item"><a href="cart.php">Cart</a></li> -->
-                <li class="item"><a href="admin.php">Admin</a></li>
-                <!-- <li class="item"><a href="bookinghall.php">Booking</a></li> -->
-                <li class="item"><a href="feedback.php">Feedback</a></li>  
-        <?php
-            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
-            {
-               ?>
-               <button class="login12"> <?php 
-               
-                   echo $_SESSION["username"].
-                 
-                   '-<a href="logout.php">Logout</a>';
-                  ?>
-                 </button>
-               <?php 
-            }
-            else{
-                echo "
-                <div class='sign-in-up'>
-                <button type='button' onclick=\"popup('login-popup')\">Login</button>
-                <button type='button' onclick=\"popup('register-popup')\">Register</button>
-                </div>
-                ";
-            }
-        ?>
-          </ul>
-        </div>
-    </nav>
-
-
-    <div class="popup-container" id="login-popup">
-        <div class=" popup">
-            <form action="login_register.php" method="POST">
-                <h2>
-                    <span>User Login</span>
-                    <button type="reset" onclick="popup('login-popup')">X</button>
-                </h2>
-                <input type="text" placeholder="E-mail or Username" name="email_username" required>
-                <input type="password" placeholder="Password" name="password" required>
-                <button type="submit" class="login-btn" name="login">Login</button>
-            </form>
-            <div class="forgot-btn">
-                <button type="button" onclick="forgotPopup()">Forgot Password</button>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="popup-container" id="register-popup">
-        <div class="register popup">
-            <form action="login_register.php" method="POST">
-                <h2>
-                    <span>User REGISTER</span>
-                    <button type="reset" onclick="popup('register-popup')">X</button>
-                </h2>
-                <input type="text" placeholder="FULL NAME"  name="fullname" required>
-                <input type="text" placeholder="User Name" name="username" required>
-                <input type="email" placeholder="E-Mail"  name="email" required>
-                <input type="password" placeholder="Password"  name="password" required>
-                <button type="submit" class="register-btn" name="register">Register</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="popup-container" id="forgot-popup">
-        <div class="forgot popup">
-            <form action="forgotpassword.php" method="POST">
-                <h2>
-                    <span>Reset Password</span>
-                    <button type="reset" onclick="popup('forgot-popup')">X</button>
-                </h2>
-                <input type="email" placeholder="E-mail" name="email">
-                
-                <button type="submit" class="reset-btn" name="send-reset-link">Send Link</button>
-            </form>
-            
-        </div>
-    </div>
-    
 <div id="room-home">
      <figure>
          <img src="img/deluxroom.jpg" alt="delux">
@@ -218,7 +119,7 @@ include('connection.php');
                if($r <= $row)
                {
                    ?>
-                   <section id="rooms-right">
+                   <section id="rooms-left">
                    <div class="paras">
                      <p class="sectionTag"> A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
@@ -303,11 +204,9 @@ include('connection.php');
                }
         }
 ?>
-  <?php
-  include('inc/footer.php')
-  ?>
-</body>
-</html>
+     <?php require('inc/footer.php');?>
+    <?php require('inc/script.php');?>
+    <?php require('inc/footertag.php');?>
 
 
     

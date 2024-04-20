@@ -224,7 +224,7 @@ font-size: 17px;
 <?php 
 $query="SELECT * FROM room_booking";
 $result=mysqli_query($con,$query);
-$i=0;
+$i=1;
 while($data=mysqli_fetch_array($result))
 {
 ?>

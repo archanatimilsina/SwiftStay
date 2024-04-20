@@ -1,5 +1,6 @@
-<?php include('aheader.php'); 
+<?php  
 include('../connection.php');
+require('inc/aheader.php'); 
 ?>
 <style>
 #feedback-data
@@ -49,6 +50,7 @@ table,
             padding: 5px;
         }
 </style>
+<?php require('inc/anavbar.php'); ?>
 
 <section id="feedback-data">
 <h1 id="feedback-head"></h1>
@@ -91,4 +93,15 @@ table,
 </div>
 </section>
 
-<?php include('afooter.php');?>
+<?php require('inc/ascript.php'); ?>
+<script>
+     function confirmBox()
+    {
+      if (confirm("Are you sure to leave this page? If you leave once, You have to login again")) {
+    window.location.href='../../adminlogin.php';
+  } else{
+    window.location.href="afeedback.php";
+  }
+    }
+</script>
+<?php require('inc/afootertag.php'); ?>

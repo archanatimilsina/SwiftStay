@@ -11,11 +11,11 @@
                 <li class="item"><a href="room.php">Rooms</a></li>
                 <li class="item"><a href="food.php">Food</a></li>
                 <li class="item"><a href="contact.php">Contact Us</a></li>
-                <li class="item"><a href="admin.php">Admin</a></li>
+                <li class="item"><a href="adminlogin.php">Admin</a></li>
                 <li class="item"><a href="feedback.php">Feedback</a></li> 
                 <li class="item">
         <?php
-            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
+            if(isset($_SESSION['user_panel']['logged_in']) && $_SESSION['user_panel']['logged_in']==true)
             {
                ?> <div id="user-icon">
                <i class="fa-solid fa-user" onclick="AdminBox()"></i>

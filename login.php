@@ -23,7 +23,7 @@ if(mysqli_num_rows($result)>=1)
     $data=mysqli_fetch_assoc($result);
 if(password_verify($password,$data['password']))
 {
-    $_SESSION['logged_in']=true;
+    $_SESSION['user_panel']['logged_in']=true;
 $_SESSION['username']=$data['username'];
 ?>
 <script>

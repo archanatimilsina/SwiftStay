@@ -17,12 +17,12 @@
 
 <?php require('inc/ascript.php'); ?>
 <script>
-       function confirmBox()
+     function confirmBox()
     {
       if (confirm("Are you sure to leave this page? If you leave once, You have to login again")) {
-    window.location.href='../../index.php';
+    window.location.href='../../adminlogin.php';
   } else{
-    window.location.href='afood.php';
+    window.location.href="admin.php";
   }
     }
 </script>

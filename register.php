@@ -15,9 +15,6 @@ $name=$_POST['fullname'];
 $username=$_POST['username'];
 $email=$_POST['email'];
 $password=$_POST['password'];
-
-
-
 $check_query="SELECT * FROM users WHERE email='$email' or username='$username'";
 $check_result=mysqli_query($con,$check_query);
 $data=mysqli_fetch_array($check_result);

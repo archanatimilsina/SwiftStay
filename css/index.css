@@ -28,20 +28,19 @@
 
 /* home page */
 /*  section rooms */
+/*  section rooms */
 #rooms-right{
     height: 500px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 90%;
-    margin:auto;
-    border: 1px solid black; 
-    margin-bottom: 100px; 
-}
-
-.paras{
-    padding: 0 40px;
+    max-width: 98%;
+    margin: auto;
+    border: 1px solid black;
     
+}
+.paras{
+    padding: 0 65px;
 }
 .paras form{
     display: flex;
@@ -55,7 +54,7 @@
     padding: 4px;
 }
 #room-btn{
-    background-color: #fa9579;
+    background-color: crimson;
     color: white;
     font-size: 15px;
 }
@@ -65,9 +64,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    max-width: 90%;
+    max-width: 98%;
     margin: auto;
-    border: 1px solid black;
     flex-direction: row-reverse;
     
 }
@@ -78,11 +76,11 @@
     margin-bottom: 10px;
 }
 .g{
-    /* color: green; */
+    color: green;
     font-weight: 700;
 }
 .r{
-    /* color: red; */
+    color: red;
     font-weight: 700;
 }
 .sectionsubTag{
@@ -90,7 +88,7 @@
     font-size: 20px;
 }
 .font{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     color: rgb(130, 30, 245);
 }
@@ -99,7 +97,7 @@
 }
 .price-btn{
     width: 80%;
-    background-color: #e46262;
+    background-color: crimson;
     color: white;
     margin-top: 20px;
     padding: 6px 0;
@@ -114,6 +112,9 @@
     font-size: 19px;
     font-weight: 600;
 }
+
+
+
 /*hall*/
 #booking-hall{
     display: flex;

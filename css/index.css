@@ -3,40 +3,28 @@
     display: flex;
     flex-direction: column;
     padding: 3px 200px;
-   justify-content: center;
-   align-items: center;
-   height: 600px;
-   margin-top: -20px;
-   
-}
-#home::before{
-    position: absolute;
-    content: "";
-height: 100%;
-    width: 100%;
-z-index: -1;
-    opacity: 0.89;
-    background: url('../img/home.jpg.jpg') center center/cover no-repeat;
-
-}
-#home .h1{
-    color: white;
-    font-size: 3rem;
-    padding: 12px;
-    text-align: center;
-}
-#home .p{
-    color: #110606;
-    font-size: 2rem;
-    padding: 12px;
-}
-.span{
-    font-weight: bold;
-    font-size: 1.53rem;
-    color: rgb(223, 247, 11);
-}
-
-
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin-bottom: 100px;
+ 
+ }
+ #home::before{
+     position: absolute;
+     content: "";
+     height: 95%;
+     width: 100%;
+     z-index: -1;
+     opacity: 0.89;
+     background: url('../img/home.jpg') center center/cover no-repeat;
+ 
+ }
+ #home .h1{
+     color: black;
+     font-size: 4rem;
+     padding: 12px;
+     text-align: center;
+ }
 
 /* home page */
 /*  section rooms */
@@ -172,7 +160,6 @@ z-index: -1;
     font-family: 'Crete Round', serif;
     text-align: center;
     margin-top: 20px;
-    
 }
 .h-secondary{
     font-size: 2.7rem;
@@ -205,4 +192,3 @@ z-index: -1;
     font-family: 'Crete Round', serif;
 }
 
-/* home page */

@@ -166,11 +166,12 @@ z-index: -1;
     
 
 /* food */
-.food-header{
+.h-primary{
     font-size: 2.8rem;
     padding: 12px;
     font-family: 'Crete Round', serif;
     text-align: center;
+    margin-top: 20px;
     
 }
 .h-secondary{
@@ -180,17 +181,17 @@ z-index: -1;
     text-align: center;
 }
 #services{
-    margin: 25px;
+    margin: 34px;
     display: flex;
     
 }
 
 #services .box{
-    border: 2px solid white;
+    border: 2px solid lavender;
     margin: 25px 6px;
     padding: 34px;
     border-radius: 28px;
-    background-color:#FA9759;
+    background-color:lavender;
     margin-bottom: 20px;
 }
 

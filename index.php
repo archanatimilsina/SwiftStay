@@ -46,28 +46,26 @@
           </div>
     </section>
 
-    <!-- -------------------------food ------------------------ -->
-    <section id="services-container">
-        <h1 class="food-header text-center">Our Speciality</h1>
+     <!-- -------------------------food ------------------------ -->
+     <section id="services-container">
+        <h1 class="h-primary center">Our Speciality</h1>
         <div id="services">
             <div class="box">
-                <a href="food.php"><img src="img/thali.avif" alt="manchurion"></a>
-               <h2 class="h-secondary center">Typical Nepali</h2>
-               <p class="center">
-               The Nepali staples consist primarily of rice, wheat, corn and lentils, in addition to fresh vegetables and meats. A typical Nepali everyday meal can be characterized by Dal (lentil soups), Bhat (steamed rice), and Tarkari (vegetable preparations), also known as “The Trinity,” supplemented by some meat preparation.
+                <a href="food.php"><img src="img/thali.jpg" alt="manchurion"></a>
+               <h2 class="h-secondary center">Typical Nepali Thali</h2>
+               <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident facere fugiat facilis qui saepe quia? Aut, repudiandae?
+                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. amet consectetur adipisicing elit. Quas nulla sit, perspiciatis temporibus unde
                </p>
             </div>
             <div class="box">
-                 <a href="food.php"><img src="img/momo.avif" alt="pasta"></a>
-                <h2 class="h-secondary center">MOMOS</h2>
-                <p class="center"> 
-                Momos are a type of steamed filled dumpling in Tibetan and Nepali cuisine that is also popular in neighbouring Bhutan and India. Momos are usually served with a sauce known as achar influenced by the spices and herbs used within many South Asian cuisines.
-                 </p>
+                 <a href="food.php"><img src="img/momos.jpg" alt="pasta"></a>
+                <h2 class="h-secondary center">Momos</h2>
+                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident facere fugiat facilis qui saepe quia? Aut, repudiandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla sit, perspiciatis temporibus unde </p>
              </div>
              <div class="box">
-             <a href="food.php"><img src="img/burger.avif" alt="maharshtrian"></a>
+             <a href="food.php"><img src="img/burger.jpg" alt="maharshtrian"></a>
                 <h2 class="h-secondary center">Burger</h2>
-                <p class="center">Some common types of burgers include beef burgers, chicken burgers, lamb burgers, fish burgers, veggie burgers, and black bean burgers. Within these categories, there are numerous variations that can be made by using different types of meats, vegetables, and seasonings</p>
+                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure mollitia aliquid labore illum ipsa aliquam ad, commodi voluptatum libero minima nesciunt autem quis minus nostrum.</p>
              </div>
         </div>
 
@@ -75,22 +73,25 @@
             <div class="box">
             <a href="food.php"><img src="img/drink.jpg" alt="panner"></a>
                <h2 class="h-secondary center">Drinks</h2>
-               <p class="center">A drink or beverage is a liquid intended for human consumption. In addition to their basic function of satisfying thirst, drinks play important roles in human culture. Common types of drinks include plain drinking water, milk, juice, smoothies and soft drinks. Traditionally warm beverages include coffee, tea, and hot chocolate. Caffeinated drinks that contain the stimulant caffeine have a long history
+               <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident facere fugiat facilis qui saepe quia? Aut, repudiandae?
+                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus reiciendis saepe error modi quo vel!
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                </p>
             </div>
             <div class="box">
             <a href="food.php"><img src="img/cake.jpg" alt="dosa"></a>
                 <h2 class="h-secondary center">Dessert</h2>
-                <p class="center">The term dessert can apply to many sweets, such as biscuits, cakes, cookies, custards, gelatins, ice creams, pastries, pies, puddings, macaroons, sweet soups, tarts, and fruit salad (fruit is commonly found in dessert courses because of its naturally occurring sweetness)</p>
+                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident facere fugiat facilis qui saepe quia? Aut, repudiandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla sit, perspiciatis temporibus unde </p>
              </div>
              <div class="box">
              <a href="food.php"><img src="img/spa.jpg" alt="faluda"></a>
                 <h2 class="h-secondary center">Snacks</h2>
-                <p class="center">A small amount of food that is eaten between meals, or a very small meal: I had a huge lunch, so I'll only need a snack for dinner. Fresh or dried fruit makes an ideal snack. Many snack foods are high in salt, sugar, and fat.</p>
+                <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, assumenda magni sequi maxime ullam magnam minima porro tempore enim sed quidem sint provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure mollitia aliquid labore illum ipsa aliquam ad, commodi voluptatum libero minima nesciunt autem quis minus nostrum.</p>
              </div>
         </div>
        
     </section>
+
 
     
     <section id="booking-hall">

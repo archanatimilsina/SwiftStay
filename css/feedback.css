@@ -8,7 +8,7 @@
     width: 100%;
     z-index: -1;
     opacity: 0.89;
-    background: url('../img/feedback.jpg') center center/cover no-repeat;
+    background: url('../img/feedback-1.jpg') center center/cover no-repeat;
 
 }
 
@@ -18,9 +18,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 400px;
-    margin-bottom: 70px;
-    background-color: #fc8260;
+    top: 800px;
+    margin-bottom: 100px;
+    background-color:lavender;
     width: 50%;
     margin: auto;
     z-index: -1;

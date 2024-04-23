@@ -78,17 +78,26 @@
      flex-direction: column;
      padding-bottom: 20px;
      cursor:pointer;
+     z-index: 1;
 }
 #profile-pic
 {
     height: 90px;
-    width: 40%;
-    border: 0.1px solid black;
+    width: 90px;
+    border: 1px solid black;
+    border-radius: 50%;
     border-radius: 50%;
     margin: auto;
   margin-top: 20px;
  
+
 }
+#profile-pic img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
 
 #admin-username
 {
@@ -127,4 +136,5 @@ margin-bottom: 6px;
      font-family: 'Baloo 2', cursive;
      font-size: 19px;
 }
+
 /* navbar */

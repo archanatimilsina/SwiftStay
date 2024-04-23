@@ -40,7 +40,7 @@
         ?></li> 
           <div id="admin-box">
           <div id="profile-pic">
-            <!-- <img src="img/about.avif" alt="#"> -->
+          <img src="<?php echo $_SESSION['user_panel']['profile']; ?>" alt="profile load error"  width="100%" height="100%">
           </div>
           <h1 id="admin-username"><?php  echo $_SESSION['username']; ?></h1>
           <button id="logout-button"><a href="logout.php">LogOut</a></button>
@@ -71,11 +71,13 @@
 
     <div class="popup-container" id="register-popup">
         <div class="register popup">
-            <form action="register.php" method="POST">
+            <form action="register.php" method="POST" enctype="multipart/form-data">
                 <h2>
                     <span>User REGISTER</span>
                     <button type="reset" onclick="popup('register-popup')">X</button>
                 </h2>
+                 <label for="image">Upload profile:</label> 
+                <input type="file" name="profile" >
                 <input type="text" placeholder="FULL NAME"  name="fullname" required>
                 <input type="text" placeholder="User Name" name="username" required>
                 <input type="email" placeholder="E-mail"  name="email" required>

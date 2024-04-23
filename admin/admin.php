@@ -5,16 +5,6 @@
 <?php require('inc/anavbar.php'); ?>
 
 
-
-
-
-
-
-
-
-
-
-
 <?php require('inc/ascript.php'); ?>
 <script>
      function confirmBox()

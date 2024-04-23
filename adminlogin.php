@@ -123,6 +123,7 @@ if(password_verify($password,$data['password']))
         
     $_SESSION['admin_panel']['logged_in']=true;
 $_SESSION['name']=$data['name'];
+$_SESSION['admin_panel']['profile']=$data['profile'];
 ?>
 <script>
 window.location.href='admin/admin.php'; 

@@ -1,7 +1,4 @@
 
-
-
-
     .room-status{
         display: none;
     }
@@ -145,6 +142,8 @@
 
 #room-home{
     overflow: hidden;
+    
+   
 }
 #room-home figure{
      position: relative;
@@ -152,7 +151,7 @@
     margin: 0;
     left: 0;
     animation: 20s slider infinite; 
-   
+ 
 }
 #room-home figure img{
      width: 20%;

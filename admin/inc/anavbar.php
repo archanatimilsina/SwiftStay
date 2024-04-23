@@ -6,7 +6,6 @@
     </div>
     <div class="right-nav mt-4">
       <ul>
-        <!-- onclick="AdminBox()" -->
         <li class="item"><a href="admin.php">Home</a></li>
         <li class="item"><a href="aroom.php">Room</a></li>
         <li class="item"><a href="afood.php">Food</a></li>
@@ -16,17 +15,17 @@
         <?php 
         if(isset($_SESSION['admin_panel']['logged_in'])&& $_SESSION['admin_panel']['logged_in']==true)
         {
-        ?>
+          ?>
         <li class="item">
            <div id="user-icon">
             <i class="fa-solid fa-user" onclick="AdminBox()"></i>
           </div>
-        
         </li>
         <div id="admin-box">
           <div id="profile-pic">
-            <!-- <img src="img/about.avif" alt="#"> -->
+              <img src="<?php echo $_SESSION['admin_panel']['profile']; ?>" alt="profile load error"  width="100%" height="100%">
           </div>
+      
           <h1 id="admin-username"><?php echo $_SESSION['name']; ?></h1>
           <button id="logout-button"><a href="alogout.php">LogOut</a></button>
        
@@ -34,9 +33,8 @@
         </div>
         <?php
  }
+
  ?>
-
-
       </ul>
     </div>
   </nav>

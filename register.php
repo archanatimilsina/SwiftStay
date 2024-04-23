@@ -11,6 +11,10 @@
 <?php 
 if(isset($_POST['register']))
 {
+$filename=$_FILES['profile']['name'];
+$tmpname=$_FILES['profile']['tmp_name'];
+$folder="uploads/".$filename;
+move_uploaded_file($tmpname,$folder);
 $name=$_POST['fullname'];
 $username=$_POST['username'];
 $email=$_POST['email'];
@@ -38,7 +42,7 @@ else{
 }
 else{
      $password=password_hash($password,PASSWORD_BCRYPT);
-     $query="INSERT INTO users (name,username,email,password) VALUES ('$name','$username','$email','$password')";
+     $query="INSERT INTO users (profile,name,username,email,password) VALUES ('$folder','$name','$username','$email','$password')";
 $result=mysqli_query($con,$query);
 if($result)
 {

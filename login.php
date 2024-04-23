@@ -25,6 +25,7 @@ if(password_verify($password,$data['password']))
 {
     $_SESSION['user_panel']['logged_in']=true;
 $_SESSION['username']=$data['username'];
+$_SESSION['user_panel']['profile']=$data['profile'];
 ?>
 <script>
 window.location.href='index.php'; 

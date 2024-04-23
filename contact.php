@@ -12,7 +12,7 @@
            <i class="fas fa-hamburger">SwiftStay</i>
         </div>
         <div class="book-h1">
-            <h1>BOOK YOUR <br> HOTEL TODAY</h1>
+            <h1>BOOK YOUR <br> ROOM TODAY</h1>
         </div>
         <div class="website">
             <p>www.swiftstay.com</p>

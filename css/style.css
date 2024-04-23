@@ -9,7 +9,7 @@
     width: 100%;
     position: sticky;
     height: 100px;
-    background-color: #fa9579;
+    background-color: lavender;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -346,4 +346,255 @@
     margin-bottom: 1rem;
 }
 /* footer */
+
+/*hall*/
+#booking-hall{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin-top: 10px; 
+    /* border: 1px solid red; */
+ }
+ #booking-hall::before{
+     position: absolute;
+     content: "";
+     height: 100%;
+     width: 100%;
+     z-index: -1;
+     opacity: 0.89;
+     background: url('../img/marriagehall.jpg') center center/cover no-repeat;
+     
+    }
+    #booking-hall .h1{
+        /* color: white; */
+        font-size: 2.8rem;
+        padding: 12px;
+        text-align: center;
+ }
+ #booking-hall .p{
+     color: white;
+     text-align: center;
+     font-size: 1.5rem;
+    }
+    .span{
+        font-weight: bold;
+        font-size: 1.53rem;
+        color: black;
+    }
+    
+
+/* room.php */
+ #room-home{
+    overflow: hidden;
+}
+#room-home figure{
+     position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite; 
+   
+}
+#room-home figure img{
+     width: 20%;
+    float: left; 
+    height: 550px;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+
+#rooms-right{
+  margin-top: 100px;
+} 
+
+.room-h2{
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+}
+#f1 form table{
+    margin-left: 50px;
+    border: 1px solid  #fc8260;
+   display: flex;
+   justify-content: center;
+   width: 38%;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Baloo 2', cursive;
+  margin: auto;
+}
+#f1 form{
+  
+    margin-top: 20px;
+    z-index: -1;
+ 
+}
+#f1 form table tr th{
+    font-size: 20px;
+    font-weight: 700;
+}
+#f1 form table tr td input{
+    font-size: 16px;
+    font-weight: 700;
+}
+#check-btn{
+    padding: 4px;
+     background-color: #fc8260; 
+    color: black;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+
+/* admin login page */
+/* .adminlogin{
+    height: 700px;
+    background-color: cornflowerblue;
+   
+}
+.admin-box{
+    height: 400px;
+    width: 600px;
+    background-color: crimson;
+    position: relative;
+    top: 150px;
+    left: 450px;
+}
+.admin-text{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+table tr td input{
+    border: none;
+    outline: none;
+   
+}
+#username , #password{
+    border-radius: 10px;
+    padding: 3px 0;
+    background-color: darkcyan;
+    width: 100%;
+    
+}
+#btn{
+ width: 30%;
+ border-radius: 6px;
+ background-color: black;
+ color: white;   
+ padding: 3px 0;
+} */
+/* room.php */
+.room-h2{
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#f1 form table{
+    margin-left: 50px;
+    border: 1px solid red;
+   display: flex;
+   justify-content: center;
+   width: 38%;
+  border-radius: 10px;
+  padding: 10px;
+}
+#f1 form{
+    /* margin-left: 50px; */
+    margin-top: 20px;
+    
+}
+#f1 form table tr th{
+    font-size: 20px;
+    font-weight: 700;
+}
+#f1 form table tr td input{
+    font-size: 16px;
+    font-weight: 700;
+}
+#check-btn{
+    padding: 4px;
+    background-color: crimson;
+    color: white;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+
+/* admin login */
+.admin_login
+{
+    height: 200px;
+    width: 70%;
+    margin: auto;
+    background-color: #d68b79;
+    border: black solid 1px;
+}
+
+/* food */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Crete Round', serif;
+    text-align: center;
+    margin-top: 20px;
+}
+.h-secondary{
+    font-size: 2.7rem;
+    padding: 12px;
+    font-family: 'Crete Round', serif;
+    text-align: center;
+}
+#services{
+    margin: 34px;
+    display: flex;
+    
+}
+
+#services .box{
+    border: 2px solid lavender;
+    margin: 25px 6px;
+    padding: 34px;
+    border-radius: 28px;
+    background-color:lavender;
+    margin-bottom: 20px;
+}
+
+#services .box img{
+    height: 160px;
+    margin: auto;
+    display: block;
+
+}
+#services .box p{
+    font-family: 'Crete Round', serif;
+}
 

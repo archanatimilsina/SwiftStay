@@ -6,11 +6,11 @@ include('connection.php');?>
 
 <div id="room-home">
      <figure>
-         <img src="img/deluxroom.jpg" alt="delux">
+     <img src="img/deluxroom1.jpg" alt="delux">
+         <img src="img/deluxe.jpg" alt="delux">
          <img src="img/delux2.jpg" alt="delux">
-         <img src="img/delux3.jpg" alt="delux">
-         <img src="img/deluxroom.jpg" alt="delux">
-         <img src="img/delux3.jpg" alt="delux">
+         <img src="img/ac.jpg" alt="delux">
+         <img src="img/de1.jpg" alt="delux">
      </figure>
 </div>
 

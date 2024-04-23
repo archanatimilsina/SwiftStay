@@ -12,9 +12,9 @@ include('connection.php');
 <section id="feedback-form">
     <p class="feedback_head">Write Your Feedback</p>
     <form action="feedback.php" method="post">
-       <input type="text" name="name" placeholder="Enter Name" required>
-       <input type="email" name="email" placeholder="Enter email" required>
-       <input type="text" name="feedback" placeholder="Enter Feedback">
+       <input type="text" name="name" placeholder="Enter  Name" required>
+       <input type="email" name="email" placeholder="Enter  email" required>
+       <input type="text" name="feedback" placeholder="Enter  Feedback">
        <input type="submit" name="submit">
     </form>
     <?php

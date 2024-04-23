@@ -2,35 +2,31 @@
 <link rel="stylesheet" href="css/index.css">
 <?php require('inc/navbar.php');?>
 
-
-    <!-- ----------  Home --------------------- -->
-    <section id="home">
+  <!-- ----------  Home --------------------- -->
+  <section id="home">
         <h1 class="h1">Welcome to SwiftStay</h1>
-        <p class="p">Create the beautiful moments with the Swift Stay.</p>
     </section>
 
- 
-    <section  id="rooms-right">
+<section id="rooms-right">
         <div class="paras">
           <p class="sectionTag">A.C Delux Room</p>
-          <p class="sectionsubTag font">We provide the best services in Room Management with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 1100rs.</p>
+          <p class="sectionsubTag font">We have the best services provider in Room Management. with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 1100rs.</p>
           <p class="price">Price per room : 1100Rs/-</p>
-          <a href="room.php"><button class="price-btn" >Book Room</button></a>
+          <a href="room.php"><button class="price-btn" >Book A Room</button></a>
           </div>
           <div class="thumbnail">
-          <img src="img/acd.avif" alt="delux" class="imgFluid">
+          <img src="img/deluxe.jpg" alt="delux" class="imgFluid">
           </div>
-    </section>
-
-    <section id="rooms-left">
+</section>
+<section id="rooms-left">
         <div class="paras">
           <p class="sectionTag">A.C. Room</p>
           <p class="sectionsubTag font">We have the best services provider in Room Management. with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 900rs.</p>
           <p class="price">Price per room : 900Rs/-</p>
-          <a href="room.php"><button class="price-btn">Book Room</button></a>
+          <a href="room.php"><button class="price-btn">Book A Room</button></a>
           </div>
           <div class="thumbnail">
-           <img src="img/acdeluxnew.avif" alt="delux">
+           <img src="img/ac.jpg" alt="delux" class="imgFluidd">
           </div>
     </section>
 
@@ -39,43 +35,40 @@
           <p class="sectionTag">Non A.C. Room</p>
           <p class="sectionsubTag font">We have the best services provider in Room Management. with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 700rs.</p>
           <p class="price">Price per room : 700Rs/-</p>
-            <a href="room.php"><button class="price-btn">Book Room</button></a>
+            <a href="room.php"><button class="price-btn">Book A Room</button></a>
           </div>
           <div class="thumbnail">
-          <img src="img/nonacnew.avif" alt="delux">
+          <img src="img/non.jpg" alt="delux" class="imgFluid">
           </div>
     </section>
 
-    <!-- -------------------------food ------------------------ -->
-    <section id="services-container">
-        <h1 class="food-header text-center">Our Speciality</h1>
+
+ <!-- -------------------------food ------------------------ -->
+ <section id="services-container">
+        <h1 class="h-primary center">Our Speciality</h1>
         <div id="services">
             <div class="box">
-                <a href="food.php"><img src="img/thali.avif" alt="manchurion"></a>
-               <h2 class="h-secondary center">Typical Nepali</h2>
-               <p class="center">
-               The Nepali staples consist primarily of rice, wheat, corn and lentils, in addition to fresh vegetables and meats. A typical Nepali everyday meal can be characterized by Dal (lentil soups), Bhat (steamed rice), and Tarkari (vegetable preparations), also known as “The Trinity,” supplemented by some meat preparation.
+                <a href="food.php"><img src="img/thali.jpg" alt="manchurion"></a>
+               <h2 class="h-secondary center">Typical Nepali Thali</h2>
+               <p class="center">The Nepali staples consist primarily of rice, wheat, corn and lentils, in addition to fresh vegetables and meats. A typical Nepali everyday meal can be characterized by Dal (lentil soups), Bhat (steamed rice), and Tarkari (vegetable preparations), also known as “The Trinity,” supplemented by some meat preparation.
                </p>
             </div>
             <div class="box">
-                 <a href="food.php"><img src="img/momo.avif" alt="pasta"></a>
-                <h2 class="h-secondary center">MOMOS</h2>
-                <p class="center"> 
-                Momos are a type of steamed filled dumpling in Tibetan and Nepali cuisine that is also popular in neighbouring Bhutan and India. Momos are usually served with a sauce known as achar influenced by the spices and herbs used within many South Asian cuisines.
-                 </p>
+                 <a href="food.php"><img src="img/momos.jpg" alt="pasta"></a>
+                <h2 class="h-secondary center">Momos</h2>
+                <p class="center"> Momos are a type of steamed filled dumpling in Tibetan and Nepali cuisine that is also popular in neighbouring Bhutan and India. Momos are usually served with a sauce known as achar influenced by the spices and herbs used within many South Asian cuisines.</p>
              </div>
              <div class="box">
-             <a href="food.php"><img src="img/burger.avif" alt="maharshtrian"></a>
+             <a href="food.php"><img src="img/burger.jpg" alt="maharshtrian"></a>
                 <h2 class="h-secondary center">Burger</h2>
                 <p class="center">Some common types of burgers include beef burgers, chicken burgers, lamb burgers, fish burgers, veggie burgers, and black bean burgers. Within these categories, there are numerous variations that can be made by using different types of meats, vegetables, and seasonings</p>
              </div>
         </div>
-
         <div id="services">
             <div class="box">
             <a href="food.php"><img src="img/drink.jpg" alt="panner"></a>
                <h2 class="h-secondary center">Drinks</h2>
-               <p class="center">A drink or beverage is a liquid intended for human consumption. In addition to their basic function of satisfying thirst, drinks play important roles in human culture. Common types of drinks include plain drinking water, milk, juice, smoothies and soft drinks. Traditionally warm beverages include coffee, tea, and hot chocolate. Caffeinated drinks that contain the stimulant caffeine have a long history
+               <p class="center">A drink is a liquid intended for consumption. The function of satisfying thirst, drinks play role in human culture. Common types of drinks include plain drinking water, milk, juice, smoothies and soft drinks. Warm beverages include coffee, tea, and hot chocolate.
                </p>
             </div>
             <div class="box">
@@ -92,7 +85,9 @@
        
     </section>
 
+
     
+
     <section id="booking-hall">
         <h1 class="h1">Party And Marriage Halls</h1>
 

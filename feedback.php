@@ -60,6 +60,6 @@ if($data['email']!=$email)
     ?>
 </section>
 
-
     <?php require('inc/script.php');?>
     <?php require('inc/footertag.php');?>
+    

@@ -17,6 +17,10 @@ session_start();
         padding: 0;
         box-sizing: border-box;
     }
+    /* body
+    {
+        background-color: lavender;
+    } */
    
 .warn{
     border: solid 1px red;
@@ -38,11 +42,18 @@ height: 550px;
 margin: auto;
 display: flex;
 flex-direction: column;
-border: solid 1px black;
+background-color: white;
 padding: 30px;
 justify-content: space-around;
 margin-top: 70px;
+border: solid 1px black;
     }
+.aregisterform:hover{
+    
+    border-radius: 10px;
+    background-color: lavender;
+}
+    
     #aregister-head
     {
         text-align: center;
@@ -56,6 +67,7 @@ margin-top: 70px;
        padding: 20px; 
        margin-top: -20px;
     }
+
     .aregisterform form label{
         font-size: 21px; 
         font-family: 'Baloo 2', cursive;
@@ -138,7 +150,7 @@ if($result)
 {
 echo" <script>
 alert('Registration successful');
-window.location.href='admin.php';
+window.location.href='../adminlogin.php';
 </script>";
 }
 else{

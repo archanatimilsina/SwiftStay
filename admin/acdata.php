@@ -235,7 +235,7 @@ table,
                 <td><?php echo $data['price']; ?></td>
                 <td><?php echo $data['status']; ?></td>
                 <td>
-                  <a href="co.php"><button value="CheckOut" id="checkout-btn">CheckOut</button></a>
+                  <a href="coac.php?rno=<?php echo $data['room_no'];?>"><button value="CheckOut" id="checkout-btn">CheckOut</button></a>
                 </td>
               </tr>
               <?php

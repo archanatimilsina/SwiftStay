@@ -5,12 +5,12 @@
    height: 730px;
     width: 100%;
     background-color: black;
-    
+flex-direction: row;
 }
 
 .contact1{
     background: url('../img/delux2.jpg') center center/cover no-repeat;
-    height: 90%;
+ height: 100%; 
     width: 70%;
     position: absolute;
     border: 20px;
@@ -18,9 +18,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 120px;
-    flex-basis: 75%;
-
+    padding-bottom: 120px; 
+    flex-basis: 75%; 
+  /* width: 100%; */
+       /* top: 90px; */
+/* z-index: -10; */
 
 }
 .book-h1{

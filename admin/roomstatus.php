@@ -150,7 +150,8 @@ include('../connection.php'); ?>
     
   }
   .book-table table th{
-    font-size=19px;
+    font-size:19px;
+    background-color: lavender;
   }
   table,
         th,

@@ -180,6 +180,7 @@ if($result1==true)
  window.location.href='index.php';
 </script>
 <?php
+
 }
 }
 ?>

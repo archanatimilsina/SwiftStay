@@ -26,10 +26,10 @@
               <img src="<?php echo $_SESSION['admin_panel']['profile']; ?>" alt="profile load error"  width="100%" height="100%">
           </div>
       
-          <h1 id="admin-username"><?php echo $_SESSION['name']; ?></h1>
+          <h1 id="admin-username"><?php echo $_SESSION['admin_panel']['name']; ?></h1>
           <button id="logout-button"><a href="alogout.php">LogOut</a></button>
        
-          <button id="naccount-button"><a href="alogout.php">Create New Account</a></button>
+          <button id="naccount-button"><a href="aregister.php">Create New Account</a></button>
         </div>
         <?php
  }

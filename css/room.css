@@ -17,19 +17,23 @@
     
 }
 #f1 form table{
-    
+    background-color: #c6c6df;
    display: flex;
    justify-content: center;
    width: 100%;
-  border-radius: 10px;
   height: 150px;
-  border: 1px solid red;
+  
 }
 #f1 form{
  
     width: 100%;
     margin-top: 20px;
-    
+
+}
+#f1 form table:hover{
+    border: 1px solid red; 
+    border-radius: 10px;
+     background-color: lavender;
 }
 #f1 form table tr th{
     font-size: 17px;
@@ -44,9 +48,10 @@
 
 #check-btn{
     padding: 4px;
-    background-color: crimson;
+    background-color: black;
     color: white;
    border-radius: 2px;
+   
 }
 
 #rooms-right{

@@ -66,6 +66,8 @@
     height: 40px;
     width: 90px;
     font-size: 1.3rem;
+    background-color: #c6c6df;
+    
 }
 #user-icon
 {
@@ -90,6 +92,10 @@
      flex-direction: column;
      padding-bottom: 20px;
      cursor: pointer;
+}
+#admin-box:hover{
+    border: 0.5px solid black;
+    border-radius: 10px;
 }
 #profile-pic
 {

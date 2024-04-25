@@ -63,6 +63,10 @@
     display: inline-block;
 
 }
+#user-icon i:hover{
+    background-color: white;
+    
+}
 #admin-box
 {
     position: absolute;
@@ -80,6 +84,10 @@
      cursor:pointer;
      z-index: 1;
 }
+#admin-box:hover{
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
 #profile-pic
 {
     height: 90px;
@@ -90,14 +98,12 @@
     margin: auto;
   margin-top: 20px;
  
-
 }
 #profile-pic img{
     width: 90px;
     height: 90px;
     border-radius: 50%;
 }
-
 
 #admin-username
 {

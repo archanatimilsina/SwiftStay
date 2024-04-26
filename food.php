@@ -3,9 +3,6 @@ include('connection.php');?>
 <?php require('inc/header.php');?>
 <link rel="stylesheet" href="css/food.css">
 <?php require('inc/navbar.php');?>
-
-
-
 <div class="container">
     <!-- ----------------------------------- BreakFast-------------------------- -->
     <h1 class="food-h">Breakfast</h1>

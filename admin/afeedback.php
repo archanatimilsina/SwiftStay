@@ -79,7 +79,7 @@ table,
                 <td><?php echo $data['email']; ?></td>
                 <td><?php echo $data['feedback']; ?></td>
                 <td>
-                  <a href="afeedback-delete.php"><button id="delete-btn">Delete</button></a>
+                  <a href="afeeddel.php?id=<?php echo $data['f_id'];?>"><button id="delete-btn">Delete</button></a>
                 </td>
 
           
@@ -97,7 +97,7 @@ table,
 <script>
      function confirmBox()
     {
-      if (confirm("Are you sure to leave this page? If you leave once, You have to login again")) {
+      if(confirm("Are you sure to leave this page? If you leave once, You have to login again")) {
     window.location.href='../../adminlogin.php';
   } else{
     window.location.href="afeedback.php";

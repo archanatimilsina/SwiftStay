@@ -241,15 +241,16 @@ window.location.href='../adminlogin.php';
 
 
 <?php require('inc/ascript.php'); ?>
+
 <script>
      function confirmBox()
     {
-      if (confirm("Are you sure to leave this page? If you leave once, You have to login again")) {
-    window.location.href='../../adminlogin.php';
+      ALERT('ARE YOU SURE TO LEAVE THIS PAGE');
+
   } else{
     window.location.href="admin.php";
   }
-    }
+    
     function confirmDelete()
     {
       if (confirm("Are you sure to delete this message")) {
@@ -259,4 +260,5 @@ window.location.href='../adminlogin.php';
   }
     }
 </script>
+
 <?php require('inc/afootertag.php'); ?>

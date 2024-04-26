@@ -63,9 +63,8 @@
     display: inline-block;
 
 }
-#user-icon i:hover{
+a.icons:hover {
     background-color: white;
-    
 }
 #admin-box
 {

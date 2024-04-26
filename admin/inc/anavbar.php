@@ -18,7 +18,7 @@
           ?>
         <li class="item">
            <div id="user-icon">
-            <i class="fa-solid fa-user" onclick="AdminBox()"></i>
+           <a class='icons'> <i class="fa-solid fa-user" onclick="AdminBox()"></i></a>
           </div>
         </li>
         <div id="admin-box">

@@ -101,8 +101,6 @@ include('../connection.php'); ?>
     font-size: 13px;
     position: absolute;
     z-index: 1;
-
-
   }
   
   .dropdown-content a {

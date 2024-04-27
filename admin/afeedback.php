@@ -31,7 +31,6 @@ font-size: 25px;
 #feedback-table table tr td{
 text-align: center;
 font-size: 19px;
-
 }
 
 #delete-btn
@@ -80,10 +79,7 @@ table,
                 <td><?php echo $data['feedback']; ?></td>
                 <td>
                   <a href="afeeddel.php?id=<?php echo $data['f_id'];?>"><button id="delete-btn">Delete</button></a>
-                </td>
-
-          
-             
+                </td>  
         </tr>
          <?php
      }

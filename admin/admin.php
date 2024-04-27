@@ -1,13 +1,27 @@
 <?php require('inc/aheader.php'); ?>
 <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 .head{
   width: 100%;
   height: 70px;
-  
+  position: relative;
 }
 .message{
-display: inline-block;
+position: absolute;
+right: 10px;
 }
+.menu-icon
+{
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+
 .message a button{
   background-color: Blue;
   color: white;
@@ -16,20 +30,15 @@ display: inline-block;
   margin: 10px 0px 0px 20px;
 
 }
-.menu-icon
-{
-  display: inline-block;
-  float: right;
-  margin:20px 15px 0px 0px ;
-  width: 40px;
-}
+
 #post-message
 {
   display: flex;
   flex-direction: column;
   width: 60%;
 height: 300px;
-  
+position: absolute;
+right: 10px;
   border: solid black 1px;
   border-radius: 10px;
   border-collapse: collapse;
@@ -174,7 +183,9 @@ width: 100%;
 <div class="message">
   <a href="message.php"><button>Leave Messages</button></a>
 </div>
-  <div class="menu-icon"><i class="fa-solid fa-user"></i>
+
+  <div class="menu-icon">
+  <a><i class="fa-solid fa-bars" onclick="hello()"></i></a>
 </div>
  
 </div>
@@ -234,22 +245,39 @@ alert('cannot run');
 window.location.href='../adminlogin.php';
 </script>";
 }
-
 ?>
 
+ <!-- main menu -->
+ <div id="menu">
+        <div class="menu-first div1" onclick="menuFirst()"></div>
+        <div class="menu-first div2"><a></a></div>
+        <div class="menu-first div3"><a></a></div>
+        <div class="menu-first div4"><a></a></div>
+    </div>
+    <!-- main menu -->
 
 
 
 <?php require('inc/ascript.php'); ?>
 
 <script>
-     function confirmBox()
-    {
-      ALERT('ARE YOU SURE TO LEAVE THIS PAGE');
-
-  } else{
-    window.location.href="admin.php";
-  }
+   function hello() {
+      let z= document.getElementById('menu');
+      if (z.style.display=="none") {
+        z.style.display="flex";
+      } else {
+        z.style.display="none";
+      }
+    } 
+    
+  function AdminBox() {
+      let x = document.getElementById('admin-box');
+      if (x.style.display=="none") {
+        x.style.display="flex";
+      } else {
+        x.style.display="none";
+      }
+    } 
     
     function confirmDelete()
     {

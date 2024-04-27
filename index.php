@@ -1,8 +1,12 @@
-<?php require('inc/header.php');?>
+<?php 
+include('connection.php');
+require('inc/header.php');?>
 <link rel="stylesheet" href="css/index.css">
 <?php require('inc/navbar.php');?>
 
   <!-- ----------  Home --------------------- -->
+
+ 
   <section id="home">
         <h1 class="h1">Welcome to SwiftStay</h1>
     </section>

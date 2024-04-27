@@ -57,11 +57,9 @@
 }
 #user-icon
 {
-
     padding: 10px;
     position: relative;
     display: inline-block;
-
 }
 a.icons:hover {
     background-color: white;
@@ -81,7 +79,7 @@ a.icons:hover {
      flex-direction: column;
      padding-bottom: 20px;
      cursor:pointer;
-     z-index: 1;
+   
 }
 #admin-box:hover{
     border: 0.5px solid black;

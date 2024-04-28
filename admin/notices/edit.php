@@ -112,7 +112,7 @@ color: white;
     $upload=move_uploaded_file($tmpname,$folder);
  $subject=$_POST['subject'];
 
-$query1="UPDATE notices SET subject='$subject' and notice='$folder' Where nid='$id'";
+$query1="UPDATE notices SET subject='$subject', notice='$folder' Where nid='$id'";
 $result1=mysqli_query($con,$query1);
 
 if($result1)

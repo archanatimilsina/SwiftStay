@@ -111,7 +111,7 @@ color: white;
     $subject=$_POST['subject'];
     $holdate=$_POST['holdate'];
 
-$query1="UPDATE holidays SET subject='$subject' and hdate='$holdate' Where hid='$id'";
+$query1="UPDATE holidays SET subject='$subject', hdate='$holdate' Where hid='$id'";
 $result1=mysqli_query($con,$query1);
 
 if($result1)

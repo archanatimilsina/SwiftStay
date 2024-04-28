@@ -15,7 +15,7 @@ require('inc/header.php');?>
         <div class="paras">
           <p class="sectionTag">A.C Delux Room</p>
           <p class="sectionsubTag font">We have the best services provider in Room Management. with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 1100rs.</p>
-          <p class="price">Price per room : 1100Rs/-</p>
+          <p class="price">Price per room :Rs 2000/-</p>
           <a href="room.php"><button class="price-btn" >Book A Room</button></a>
           </div>
           <div class="thumbnail">
@@ -26,7 +26,7 @@ require('inc/header.php');?>
         <div class="paras">
           <p class="sectionTag">A.C. Room</p>
           <p class="sectionsubTag font">We have the best services provider in Room Management. with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 900rs.</p>
-          <p class="price">Price per room : 900Rs/-</p>
+          <p class="price">Price per room :Rs 1800/-</p>
           <a href="room.php"><button class="price-btn">Book A Room</button></a>
           </div>
           <div class="thumbnail">
@@ -38,7 +38,7 @@ require('inc/header.php');?>
         <div class="paras">
           <p class="sectionTag">Non A.C. Room</p>
           <p class="sectionsubTag font">We have the best services provider in Room Management. with 24 hours room services and 24 hours check-out. We provide world class services in very low cost. i.e. 700rs.</p>
-          <p class="price">Price per room : 700Rs/-</p>
+          <p class="price">Price per room :Rs 1500/-</p>
             <a href="room.php"><button class="price-btn">Book A Room</button></a>
           </div>
           <div class="thumbnail">

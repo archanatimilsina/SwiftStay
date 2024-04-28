@@ -1,10 +1,10 @@
-<?php include('../../connection.php'); ?>
+<?php include('../../../connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Page</title>
+    <title>Create Page</title>
     <style>
         *
         {
@@ -23,7 +23,7 @@
    margin: 50px 50px;
    border-radius: 10px;
         }
-        .profile{
+         .profile{
             width: 400px;
             height: 200px;
             border: 1px solid black;
@@ -54,56 +54,50 @@
 <body>
 <section class="main">
 <div class="container">
-    <a href="create.php"><button id="tp-btn">Manage Tasks</button></a>
-  <?php 
-  if(isset($_GET['id']))
-  {
-    $id=$_GET['id'];
-    $select="SELECT * FROM feedback_img where fid='$id'";
-    $result=mysqli_query($con,$select);
-    $data=mysqli_fetch_assoc($result);
-  }
-  ?>
-  <div class="profile">
+    <a href="index.php"><button id="tp-btn">Manage Tasks</button></a>
+  
+    <div class="profile">
     <h1 class="profile-head">Upload Picture</h1>
     <form action="#" method="POST" enctype="multipart/form-data">
         <label for="image">Upload here:</label>
 <input type="file" name="uploadfile" required>
 <input type="submit" name="submit_image" value="Upload">
     </form>
-</div>  
-<?php
- if(isset($_POST['submit_image']))
- {
-   $filename=$_FILES['uploadfile']['name'];
-   $tmpname=$_FILES['uploadfile']['tmp_name'];
-   $folder="../../../uploads/".$filename;
-   $upload=move_uploaded_file($tmpname,$folder);
-$query1="UPDATE feedback_img SET feedback_img='$folder' Where fid='$id'";
-$result1=mysqli_query($con,$query1);
 
-if($result1)
-{
-   ?>
-   <script>
-alert("Data Updated Successfully");
-document.location.href='index.php';
-</script>
-<?php
-}
- else{
-   ?>
-   <script>
-alert("Cannot Run!!!");
-document.location.href='edit.php';
-</script>
-<?php
- }
-
- }
-?>
-
+  </div>  
 </div>
     </section>
 </body>
 </html>
+<?php
+  if(isset($_POST['submit_image']))
+  {
+    $filename=$_FILES['uploadfile']['name'];
+    $tmpname=$_FILES['uploadfile']['tmp_name'];
+    $folder="../../../uploads/".$filename;
+    $upload=move_uploaded_file($tmpname,$folder);
+
+$query="INSERT INTO logo_img (logo_img) VALUES ('$folder')";
+$result=mysqli_query($con,$query);
+
+if($result)
+{
+    ?>
+    <script>
+ alert("Data added Successfully");
+ document.location.href='index.php';
+</script>
+<?php
+}
+  else{
+    ?>
+    <script>
+ alert("Cannot Run!!!");
+ document.location.href='create.php';
+</script>
+<?php
+  }
+
+  }
+  ?> 
+   

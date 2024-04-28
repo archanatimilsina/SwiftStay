@@ -34,13 +34,13 @@ box-sizing: border-box;
      if(isset($_GET['id']))
      {
         $id=$_GET['id'];
-$select="SELECT * FROM feedback_img where fid='$id'";
+$select="SELECT * FROM notices where nid='$id'";
 $result=mysqli_query($con,$select);
 $data=mysqli_fetch_assoc($result);
      }
 ?>
   <div class="thumbnail">
-          <img src="<?php echo $data['feedback_img'];?>" alt="feedback img" class="imgFluid">
+          <img src="<?php echo $data['notice'];?>" alt="notice" class="imgFluid">
           </div>
 
 </body>

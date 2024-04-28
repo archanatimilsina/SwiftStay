@@ -1,4 +1,4 @@
-<?php include('../../connection.php'); ?>
+<?php include('../../../connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +11,11 @@
      if(isset($_GET['id']))
      {
        $id=$_GET['id'];
-       $select="SELECT * FROM notices where nid='$id'";
+       $select="SELECT * FROM logo_img where l='$id'";
        $result=mysqli_query($con,$select);
        $data=mysqli_fetch_assoc($result);
 
-       $query="DELETE FROM notices WHERE nid='$id'";
+       $query="DELETE FROM logo_img WHERE lid='$id'";
        $result=mysqli_query($con,$query);
        header('location:index.php');
      }

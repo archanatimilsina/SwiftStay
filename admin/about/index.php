@@ -76,6 +76,10 @@ table,
             background-color: yellow;
             
         }
+        .post-btn{
+            background-color: blue;
+            
+        }
 
     </style>
 </head>
@@ -95,7 +99,7 @@ table,
         <tbody>
             <tr>
 <?php 
-$query="SELECT * FROM iac_img";
+$query="SELECT * FROM about_img";
 $result=mysqli_query($con,$query);
 $i=1;
 while($data=mysqli_fetch_array($result))
@@ -104,13 +108,14 @@ while($data=mysqli_fetch_array($result))
 <td scope="row"><?php echo $i++; ?></td>
 <td scope="row">
 <div class="display">
-    <img src="<?php echo $data['ac_img']?>" alt="#" width="100%" height="100%">
+    <img src="<?php echo $data['about_img']?>" alt="#" width="100%" height="100%">
   </div>
 </td>
 <td scope="row">
 <a href="edit.php?id=<?php echo $data['aid'];?>"><button class="actn-btn edit-btn">Edit</button></a>
 <a href="show.php?id=<?php echo $data['aid'];?>"><button class="actn-btn show-btn">Show</button></a>
 <a href="delete.php?id=<?php echo $data['aid'];?>"><button class="actn-btn del-btn">Delete</button></a>
+<a href="index.php?id=<?php echo $data['aid'];?>"><button class="actn-btn post-btn">Post</button></a>
 
 </td>
 </tr>

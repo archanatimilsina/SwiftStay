@@ -1,4 +1,4 @@
-<?php include('../../connection.php'); ?>
+<?php include('../../../connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +59,7 @@
   if(isset($_GET['id']))
   {
     $id=$_GET['id'];
-    $select="SELECT * FROM feedback_img where fid='$id'";
+    $select="SELECT * FROM logo_img where lid='$id'";
     $result=mysqli_query($con,$select);
     $data=mysqli_fetch_assoc($result);
   }
@@ -79,7 +79,7 @@
    $tmpname=$_FILES['uploadfile']['tmp_name'];
    $folder="../../../uploads/".$filename;
    $upload=move_uploaded_file($tmpname,$folder);
-$query1="UPDATE feedback_img SET feedback_img='$folder' Where fid='$id'";
+$query1="UPDATE logo_img SET logo_img='$folder' Where lid='$id'";
 $result1=mysqli_query($con,$query1);
 
 if($result1)

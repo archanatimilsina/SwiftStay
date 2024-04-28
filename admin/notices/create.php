@@ -83,18 +83,16 @@ color: white;
 <body>
 <section class="main">
 <div class="container">
-    <a href="index.php"><button id="tp-btn">Manage Holidays</button></a>
+    <a href="index.php"><button id="tp-btn">Manage Notices</button></a>
   
     <!-- form -->
     <div class="aregisterform">
-<h1 id="aregister-head">Holiday Update</h1>
+<h1 id="aregister-head">Notices Update</h1>
 <form action="#" method="POST" enctype="multipart/form-data">
-
+<label for="image">Upload here:</label>
+<input type="file" name="notice">
 <label for="subject">Subject</label>
 <input type="text" name="subject" height="30px" required>
-<label for="holiday date">Holiday Date</label>
-<input type="date" name="holdate" height="30px" required>
-
 <input type="submit" name="submit" value="submit" id="submit-btn">
  </form>
 </div>
@@ -106,10 +104,14 @@ color: white;
 <?php
   if(isset($_POST['submit']))
   {
+    $filename=$_FILES['notice']['name'];
+    $tmpname=$_FILES['notice']['tmp_name'];
+    $folder="../../uploads/".$filename;
+    $upload=move_uploaded_file($tmpname,$folder);
  $subject=$_POST['subject'];
- $holdate=$_POST['holdate'];
 
-$query="INSERT INTO holidays (subject,hdate) VALUES ('$subject','$holdate')";
+
+$query="INSERT INTO notices (subject,notice) VALUES ('$subject','$folder')";
 $result=mysqli_query($con,$query);
 
 if($result)

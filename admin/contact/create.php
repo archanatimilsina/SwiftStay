@@ -1,4 +1,4 @@
-<?php include('../../../connection.php'); ?>
+<?php include('../../connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +77,7 @@
     $folder="../../../uploads/".$filename;
     $upload=move_uploaded_file($tmpname,$folder);
 
-$query="INSERT INTO iac_img (ac_img) VALUES ('$folder')";
+$query="INSERT INTO contact_img (contact_img) VALUES ('$folder')";
 $result=mysqli_query($con,$query);
 
 if($result)

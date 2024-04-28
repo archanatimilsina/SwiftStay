@@ -1,13 +1,73 @@
 <?php 
 include('connection.php');?>
 <?php require('inc/header.php');?>
-<link rel="stylesheet" href="css/food.css">
+<style>
+/* Food.php */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+     width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.food-h{
+    text-align: center;
+    font-size: 40px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+   
+}
+.col-lg-3{
+    border: 1px solid black;
+    background-color: lavender;
+    margin: 30px;
+    height: 330px;
+    width: 30%;
+    border-radius: 50px;
+    text-align: center;
+    
+
+}
+.card img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.card-title{
+    font-size: 20px;
+    padding-top: 5px;
+}
+.card-text{
+    color: green;
+    font-size: 18px;
+    padding-top: 5px;
+}
+.box1-p{
+    padding: 4px;
+}
+ul{
+    list-style-position: inside;
+}
+li{
+    text-align: left;
+    padding-left: 75px;
+}
+</style>
 <?php require('inc/navbar.php');?>
-<div class="container">
+<div class="fcontainer">
     <!-- ----------------------------------- BreakFast-------------------------- -->
     <h1 class="food-h">Breakfast</h1>
     <div class="row" id="south">
-    
         <div class="col-lg-3">
         <form action="manage_cart.php" method="POST">
             <div class="card">

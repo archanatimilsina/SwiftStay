@@ -211,7 +211,7 @@ include('../connection.php'); ?>
       </div>
    </div>
             <li class="item"><a href="roomstatus.php">Status</a></li>
-            <li class="item"><a href="../admin.php">Admin Panel</a></li>
+            <li class="item"><a href="admin.php">Admin Panel</a></li>
           </ul>
         </div>
     </nav>
@@ -251,7 +251,7 @@ include('../connection.php'); ?>
           $rtype=$_POST['type'];
           $price=$_POST['price'];
          
-          $qry="INSERT INTO `ac_room`(`room_no`, `room_type`, `price`) VALUES ('$rno','$rtype','$price')";
+          $qry="INSERT INTO ac_room(room_no, room_type, price) VALUES ('$rno','$rtype','$price')";
           $run=mysqli_query($con,$qry);
           if($run==true)
           {

@@ -46,7 +46,7 @@
     font-size: 21px;
     font-weight: 400;
     position: relative;
-   
+   margin: 10px;
     }
 .right-nav ul li a:hover{
     color: black;

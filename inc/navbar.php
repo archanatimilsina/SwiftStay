@@ -45,7 +45,7 @@
           <h1 id="admin-username"><?php  echo $_SESSION['username']; ?></h1>
           <button id="logout-button"><a href="logout.php">LogOut</a></button>
        
-          <button id="naccount-button"><a href="register.php">Create New Account</a></button>
+          <button id="naccount-button"><a href="../register.php">Create New Account</a></button>
         </div>
           </ul>
         </div>
@@ -71,7 +71,7 @@
 
     <div class="popup-container" id="register-popup">
         <div class="register popup">
-            <form action="register.php" method="POST" enctype="multipart/form-data">
+            <form action="register1.php" method="POST" enctype="multipart/form-data">
                 <h2>
                     <span>User REGISTER</span>
                     <button type="reset" onclick="popup('register-popup')">X</button>

@@ -206,6 +206,14 @@ include('connection.php');?>
 ?>
      <?php require('inc/footer.php');?>
     <?php require('inc/script.php');?>
+    <script>
+        // JavaScript code to set minimum date to today's date
+window.onload = function() {
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById('ci-input').setAttribute('min', today);
+    document.getElementById('co-input').setAttribute('min', today);
+};
+    </script>
     <?php require('inc/footertag.php');?>
 
 

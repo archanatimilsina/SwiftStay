@@ -26,7 +26,6 @@ session_start();
      display: flex;
      flex-direction: column;
 }
-
 .message form #textarea{
    width: 300px;
    height: 400px;

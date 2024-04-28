@@ -6,7 +6,7 @@ $qry="UPDATE ac_room SET status='available' WHERE room_no='$rno'";
 $result=mysqli_query($con,$qry);
 if($result)
 {
- header('location:roomstatus.php');
+ header('location:acdata.php');
 }
 
 ?>

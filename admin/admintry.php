@@ -431,17 +431,8 @@ window.location.href='../adminlogin.php';
     }
     } 
 
-    // function menuSecond() {
-    //   let x = document.getElementById('reg-check');
-    //   if(x.style.display=="none") {
-    //     x.style.display="flex";
-    //   } else {
-    //     x.style.display="none";
-    //   }
-    // } 
-
     function menuFirst() {
-      // let x = document.getElementById('reg-check');
+      
       let y=document.getElementById('sec-menu');
 
     if(y.style.display=="none")
@@ -450,7 +441,7 @@ window.location.href='../adminlogin.php';
     }
     else{
         y.style.display="none";
-        // x.style.display="none"; 
+         
     }
     } 
     

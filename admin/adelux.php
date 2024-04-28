@@ -252,7 +252,7 @@ include('../connection.php'); ?>
           $rtype=$_POST['type'];
           $price=$_POST['price'];
          
-          $qry="INSERT INTO 'deluxac_room'('room_no', 'room_type', 'price') VALUES ('$rno','$rtype','$price')";
+          $qry="INSERT INTO deluxac_room(room_no, room_type, price) VALUES ('$rno','$rtype','$price')";
           $run=mysqli_query($con,$qry);
           if($run==true)
           {

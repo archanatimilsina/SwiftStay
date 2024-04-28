@@ -2,7 +2,7 @@
 $server_name="localhost";
 $user_name="root";
 $password="";
-$db_name="swiftstay very new";
+$db_name="swiftstay";
 
 $con=new mysqli($server_name,$user_name,$password,$db_name);
 

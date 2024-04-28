@@ -34,18 +34,25 @@
   margin: 10px 0px 0px 20px;
 
 }
-
+.containeer
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 #post-message
 {
   display: flex;
   flex-direction: column;
   width: 60%;
 height: 300px;
-position: absolute;
+position: relative;
   border: solid black 1px;
   border-radius: 10px;
   border-collapse: collapse;
-  
+  margin: auto;
+  margin-top: 40px;
+  z-index: -1;
 }
 #message-header
 {
@@ -182,7 +189,7 @@ width: 100%;
   <a href="message.php"><button>Leave Messages</button></a>
 </div>
 
-<section>
+<div class="containeer">
 <?php 
 $query="SELECT * FROM messages";
 $result=mysqli_query($con,$query);
@@ -225,8 +232,8 @@ $result=mysqli_query($con,$query);
 <?php
 $n++;
   }
-
+   
 ?> 
-</section>
+</div>
 </body>
 </html>

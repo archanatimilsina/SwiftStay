@@ -5,6 +5,33 @@ $x=0;
  $ci=$_GET['ci'];
  $co=$_GET['co'];
  $rt=$_GET['rt'];
+ 
+session_start();
+
+if(isset($_SESSION["username"]))
+{
+    if(isset($_SESSION['user_panel']['logged_in']) && $_SESSION['user_panel']['logged_in']==true)
+    {
+        ?>
+        <script>
+   alert("Login First");
+     window.location.href='index.php';
+    </script>
+    <?php
+    }else{
+        $useremail=$_SESSION["user"];
+    }
+}else{
+    ?>
+    <script>
+ alert(" Please Login First");
+ window.location.href='index.php';
+</script>
+<?php
+
+}
+if(isset($_SESSION["username"]))
+?>
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -109,11 +136,11 @@ AC Room
                 </tr>
                 <tr>
                     <td>Check In Date</td>
-                    <td><input type="date" name="cin" value="<?php echo $ci; ?>" required></td>
+                    <td><input type="date" name="cin" id="date" value="<?php echo $ci; ?>" required></td>
                 </tr>
                 <tr>
-                    <td>Chech Out Date</td>
-                    <td><input type="date" name="cout" value="<?php echo $co; ?>" required><td>
+                    <td>Check Out Date</td>
+                    <td><input type="date" name="cout" id="date2"value="<?php echo $co; ?>" required><td>
                 </tr>
                 <tr>
                     <td>Members</td>
@@ -188,5 +215,29 @@ if($result1==true)
 }
 
 ?>
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the date input element
+        var dateInput = document.getElementById("date");
+        
+
+        // Get the current date
+        var currentDate = new Date();
+        currentDate.setHours(0, 0, 0, 0); // Set the time to 00:00:00
+
+        // Set the minimum date to today
+        dateInput.min = currentDate.toISOString().slice(0, 10);
+
+        // Set the time options to only allow selection between 10 AM and 4 PM
+        timeInput.addEventListener("input", function () {
+            var selectedTime = new Date("1970-01-01T" + timeInput.value + ":00");
+
+            var minTime = new Date("1970-01-01T10:00:00");
+            var maxTime = new Date("1970-01-01T16:00:00");
+
+        });
+    });
+</script>
 </body>
 </html>

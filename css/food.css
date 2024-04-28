@@ -1,7 +1,16 @@
 /* Food.php */
-.container{
-    /* width: 100%; */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.fcontainer{
+     width: 100%;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    
 }
 .food-h{
     text-align: center;
@@ -10,8 +19,7 @@
 .row{
     display: flex;
     flex-wrap: wrap;
-    /* width: 100%; */
-    justify-content: center;
+   justify-content: center;
    
 }
 .col-lg-3{
@@ -19,9 +27,10 @@
     background-color: lavender;
     margin: 30px;
     height: 330px;
-    width: 250px;
+    width: 30%;
     border-radius: 50px;
     text-align: center;
+    font-family: 'Baloo 2', cursive;
 
 }
 .card img{
@@ -33,19 +42,25 @@
 .card-title{
     font-size: 20px;
     padding-top: 5px;
+    font-family: 'Baloo 2', cursive;
 }
 .card-text{
     color: green;
     font-size: 18px;
     padding-top: 5px;
+    font-family: 'Baloo 2', cursive;
 }
 .box1-p{
     padding: 4px;
+    font-family: 'Baloo 2', cursive;
 }
-ul{
-    list-style-position: inside;
+.card-body .box1-p ul{
+    list-style-type: none;
 }
-li{
+.card-body .box1-p ul li{
     text-align: left;
-    padding-left: 75px;
+    /* padding-left: 75px; */
+    font-family: 'Baloo 2', cursive;
+    font-size: 15px;
+
 }

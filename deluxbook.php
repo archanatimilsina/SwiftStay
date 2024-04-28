@@ -5,6 +5,31 @@ $x=0;
  $ci=$_GET['ci'];
  $co=$_GET['co'];
  $rt=$_GET['rt'];
+session_start();
+
+if(isset($_SESSION["username"]) ||isset($_SESSION["admin_panel"]["name"]) )
+{
+    if(isset($_SESSION['user_panel']['logged_in']) && $_SESSION['user_panel']['logged_in']==true)
+    {
+        ?>
+        <script>
+   alert("Login First");
+     window.location.href='index.php';
+    </script>
+    <?php
+    }
+}else{
+    ?>
+    <script>
+ alert(" Please Login First");
+ window.location.href='index.php';
+</script>
+<?php
+
+}
+
+
+?>
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,6 +95,7 @@ $x=0;
     </style>
 </head>
 <body>
+
     <h1 class="head">Please fill up the form first</h1>
 <section id="delux-book">
     <h1 class="box-head">

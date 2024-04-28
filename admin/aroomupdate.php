@@ -160,7 +160,7 @@ include('../connection.php'); ?>
       </div>
    </div>
                  <li class="item"><a href="roomstatus.php">Status</a></li>
-                 <li class="item"><a href="../admin.php">Admin Panel</a></li>
+                 <li class="item"><a href="admin.php">Admin Panel</a></li>
           </ul>
         </div>
     </nav>

@@ -202,7 +202,7 @@ table,
       </div>
    </div>
                  <li class="item"><a href="roomstatus.php">Booked</a></li>
-                 <li class="item"><a href="../admin.php">Admin Panel</a></li>
+                 <li class="item"><a href="admin.php">Admin Panel</a></li>
           </ul>
         </div>
     </nav>
@@ -243,8 +243,6 @@ table,
             ?>
           </tbody>
         </table>
-
-
       </div>
     </section>
 </body>

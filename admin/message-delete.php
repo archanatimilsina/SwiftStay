@@ -15,7 +15,7 @@ if(isset($_GET['id']))
     $id=$_GET["id"];
     $query="DELETE FROM messages WHERE m_id='$id'";
     $result=mysqli_query($con,$query);
-    header('location:admintry.php');
+    header('location:message-panel.php');
 }
 
 ?>

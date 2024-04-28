@@ -315,8 +315,8 @@ include('../connection.php'); ?>
                  <td rowspan="2" width="17%"><input type="submit" name="sub" id="check-btn" value="Check"  ></td>
              </tr>
              <tr>
-                <td width="26%" height="50px"><input type="date" name="ci" required></td>
-                 <td width="30%" height="50px"><input type="date" name="co" required></td>
+                <td width="26%" height="50px"><input type="date" name="ci" id="ci-input" required></td>
+                 <td width="30%" height="50px"><input type="date" name="co" id="co-input" required></td>
                  <td width="25%" height="50px">
                      <select name="room">
                          <option >1</option>
@@ -495,5 +495,13 @@ include('../connection.php'); ?>
                }
         }
 ?>
+  <script>
+        // JavaScript code to set minimum date to today's date
+window.onload = function() {
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById('ci-input').setAttribute('min', today);
+    document.getElementById('co-input').setAttribute('min', today);
+};
+    </script>
 </body>
 </html>

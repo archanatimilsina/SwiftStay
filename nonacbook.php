@@ -5,6 +5,33 @@ $x=0;
  $ci=$_GET['ci'];
  $co=$_GET['co'];
  $rt=$_GET['rt'];
+ 
+session_start();
+
+if(isset($_SESSION["username"]))
+{
+    if(isset($_SESSION['user_panel']['logged_in']) && $_SESSION['user_panel']['logged_in']==true)
+    {
+        ?>
+        <script>
+   alert("Login First");
+     window.location.href='index.php';
+    </script>
+    <?php
+    }else{
+        $useremail=$_SESSION["user"];
+    }
+}else{
+    ?>
+    <script>
+ alert(" Please Login First");
+ window.location.href='index.php';
+</script>
+<?php
+
+}
+
+?>
  ?>
 <!DOCTYPE html>
 <html lang="en">

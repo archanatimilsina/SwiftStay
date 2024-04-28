@@ -54,10 +54,10 @@
     padding: 4px;
     font-family: 'Baloo 2', cursive;
 }
-.card-body .box1-p ul{
+.box1-p ul{
     list-style-type: none;
 }
-.card-body .box1-p ul li{
+.box1-p ul li{
     text-align: left;
     /* padding-left: 75px; */
     font-family: 'Baloo 2', cursive;

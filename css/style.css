@@ -35,7 +35,7 @@
 }
 .right-nav ul li{
    list-style: none;
-   margin: 2px;
+   /* margin: 2px; */
   
 }
 .right-nav ul li a{
@@ -43,10 +43,10 @@
     color: #222;
     font-family: 'Baloo 2', cursive;
     padding: 0px 10px;
-    font-size: 21px;
+    font-size: 15px;
     font-weight: 400;
     position: relative;
-   margin: 10px;
+ 
     }
 .right-nav ul li a:hover{
     color: black;

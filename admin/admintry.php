@@ -116,10 +116,7 @@ flex-direction: column;
     font-size: 20px;
     font-weight: 400;
     color: black;
-
 }
-
-
 .menu-first a{
   display: inline-block;
   text-decoration: none;
@@ -128,10 +125,8 @@ flex-direction: column;
     font-size: 26px;
     font-weight: 400;
     color: black;
-
 }
 /* menu icon */
-
 .message a button{
   background-color: Blue;
   color: white;
@@ -300,7 +295,6 @@ width: 100%;
 
 
 <?php 
-
 $query="SELECT * FROM messages";
 $result=mysqli_query($con,$query);
 
@@ -459,5 +453,7 @@ window.location.href='../adminlogin.php';
         // x.style.display="none"; 
     }
     } 
+    
+</script>
 
 </script>

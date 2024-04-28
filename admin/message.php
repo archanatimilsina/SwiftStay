@@ -72,13 +72,13 @@ if($result)
 {
     echo" <script>
 alert('Message Posted!!');
-window.location.href='admin.php';
+window.location.href='messagepanel.php';
 </script>";
 }
 else{
     echo" <script>
 alert('Cannot post!!');
-window.location.href='admin.php';
+window.location.href='messagepanel.php';
 </script>";
 }
    }

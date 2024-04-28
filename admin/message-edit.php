@@ -86,13 +86,13 @@ if($result1)
 {
     echo" <script>
 alert('Message Updated!!');
-window.location.href='admin.php';
+window.location.href='admintry.php';
 </script>";
 }
 else{
     echo" <script>
 alert('Cannot update!!');
-window.location.href='admin.php';
+window.location.href='admintry.php';
 </script>";
 }
    }
@@ -100,7 +100,7 @@ window.location.href='admin.php';
 else{
     echo" <script>
     alert('Cannot run!!');
-    window.location.href='admin.php';
+    window.location.href='admintry.php';
     </script>";
 }
 }

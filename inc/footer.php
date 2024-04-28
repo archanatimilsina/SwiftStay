@@ -9,6 +9,7 @@
                 <div class="footer-center">
                     <h3>USEFUL LINKS</h3>
                     <a href="index.php">Home</a>
+                    <a href="food.php">Food</a>
                     <a href="room.php">Rooms</a>
                     <a href="contact.php">Contact Us</a>
                     <a href="feedback.php">Feedback</a>

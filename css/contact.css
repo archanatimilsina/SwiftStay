@@ -19,11 +19,7 @@ flex-direction: row;
     justify-content: center;
     align-items: center;
     padding-bottom: 120px; 
-    flex-basis: 75%; 
-  /* width: 100%; */
-       /* top: 90px; */
-/* z-index: -10; */
-
+    
 }
 .book-h1{
     font-size: 30px;

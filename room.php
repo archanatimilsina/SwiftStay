@@ -73,7 +73,7 @@ include('connection.php');?>
                    <div class="paras">
                      <p class="sectionTag">Delux A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
-                     <p class="sectionsubTag ">Price per room : 1100 Rs</p>
+                     <p class="sectionsubTag ">Price per room :Rs 2000</p>
                      <form action="deluxbook.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
@@ -85,7 +85,7 @@ include('connection.php');?>
                      
                      </div>
                      <div class="thumbnail">
-                         <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+                         <img src="img/deluxe.jpg" alt="delux" class="imgFluid">
                      </div>
                </section>
                    <?php
@@ -123,7 +123,7 @@ include('connection.php');?>
                    <div class="paras">
                      <p class="sectionTag"> A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
-                     <p class="sectionsubTag ">Price per room : 900 Rs</p>
+                     <p class="sectionsubTag ">Price per room : Rs 1800</p>
                      <form action="acbook.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
@@ -135,7 +135,7 @@ include('connection.php');?>
                      
                      </div>
                      <div class="thumbnail">
-                         <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+                         <img src="img/ac.jpg" alt="delux" class="imgFluid">
                      </div>
                </section>
                    <?php
@@ -172,7 +172,7 @@ include('connection.php');?>
                    <div class="paras">
                      <p class="sectionTag">Non A.C. Room</p>
                      <p class="sectionsubTag g">Status :Available </p>
-                     <p class="sectionsubTag ">Price per room : 700 Rs</p>
+                     <p class="sectionsubTag ">Price per room : Rs 1500</p>
                      <form action="nonacbook.php" method="get">
                      <input type="date" name="ci"  value="<?php echo $ci; ?>" required>
                      <input type="date" name="co"  value="<?php echo $co; ?>" required>
@@ -184,7 +184,7 @@ include('connection.php');?>
                      
                      </div>
                      <div class="thumbnail">
-                         <img src="img/deluxroom.jpg" alt="delux" class="imgFluid">
+                         <img src="img/non.jpg" alt="delux" class="imgFluid">
                      </div>
                </section>
                    <?php

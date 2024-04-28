@@ -17,7 +17,7 @@ $x=0;
             text-align: center;
             font-size: 30px;
             font-weight: 200;
-             color: #fa9579 ;
+             color:black;
         }
         #delux-book{
             width: 50%;
@@ -25,7 +25,7 @@ $x=0;
             border: solid 1px black;
             margin: auto;
             margin-top: 10px; 
-            background-color:#fa9579 ;
+            background-color:lavender;
         }
         .box-head{
             text-align: center;

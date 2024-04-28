@@ -19,25 +19,25 @@
 <div class="img1">
   <img src="img/about11.avif" width="100%" height="100%" alt="">
 </div>
-<p class="f bname">Hada Cafe</p>
+<p class="f bname">Hotel Pearl</p>
 <p class="f location">Location: Suryabinayak, Bhaktapur</p>
-<p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
+<p class="detail1">Hotel building that provides lodging, meals, and other services to the traveling public on a commercial basis. </p>
     </div>
     <div class="b box2">
     <div class="img1">
     <img src="img/about12.avif" width="100%" height="100%" alt="">
     </div> 
-    <p class="f bname">Luffy</p>
-    <p class="f location">Location: One_piece, Japan</p>
-<p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
+    <p class="f bname">Luffy Hall</p>
+    <p class="f location">Location: Damuli,Tanahu</p>
+<p class="detail1">A hall is a special purpose room, or a building, used for hosting large social and business events. </p>
     </div>
     <div class="b box3">
     <div class="img1">
-    <img src="img/about13.avif" width="100%" height="100%" alt="">
+    <img src="img/paris.jpg" width="100%" height="100%" alt="">
     </div>
-    <p class="f bname">Usopp</p>
-    <p class="f location">Location: One_piece, Japan</p>
-<p class="detail1">Lorem ipsum dollit.m quisquam obcemporibus maxime quas excepturi consequatur, pariatur ratione. Perspiciatis, pra</p>
+    <p class="f bname">Cafe Joy</p>
+    <p class="f location">Location: NewRoad,Pokhara</p>
+<p class="detail1">A cafe is a small restaurant focusing on caffeinated drinks such as classic drip coffee, cappuccinos, espresso, and tea. </p></p>
     </div>
   </div>
   

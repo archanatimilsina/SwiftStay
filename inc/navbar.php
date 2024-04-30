@@ -71,7 +71,7 @@
 
     <div class="popup-container" id="register-popup">
         <div class="register popup">
-            <form action="register1.php" method="POST" enctype="multipart/form-data">
+            <form action="register.php" method="POST" enctype="multipart/form-data">
                 <h2>
                     <span>User REGISTER</span>
                     <button type="reset" onclick="popup('register-popup')">X</button>

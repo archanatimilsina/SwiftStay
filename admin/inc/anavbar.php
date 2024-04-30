@@ -77,7 +77,7 @@
       <ul>
         <li class="item"><a href="admin.php">Home</a></li>
         <li class="item"><a href="aroom.php">Room</a></li>
-        <li class="item"><a href="afood.php">Food</a></li>
+       
         <li class="item"><a href="acontact.php">Contact</a></li>
         <li class="item"><a href="afeedback.php">Feedback</a></li>
         <div class="paste-button">

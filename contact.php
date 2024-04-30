@@ -65,7 +65,7 @@
                    {
 if($data['email']!=$email)
 {      
-            $qry="INSERT INTO contacts(name, email, phone, address, message) VALUES ('$name','$email','$mobile','$address','$message')";
+            $qry="INSERT INTO contacts(name, email, phone, address, message) VALUES ('$name','$email','$phone','$address','$message')";
                    $run=mysqli_query($con,$qry);
                    if($run)
                    {

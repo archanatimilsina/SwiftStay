@@ -99,7 +99,7 @@
           </li>
           <div id="admin-box">
             <div id="profile-pic">
-              <img src="<?php echo $_SESSION['admin_panel']['profile']; ?>" alt="profile load error" width="100%"
+              <img src="<?php echo $_SESSION['admin_panel']['profile']; ?>" alt="" width="100%"
                 height="100%">
             </div>
 

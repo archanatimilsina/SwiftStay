@@ -103,8 +103,8 @@ Non AC Room
                     <td><input type="text"  name="rt" value="<?php echo $rt;?>"></td>
                 </tr>
                 <tr>
-                    <td>Name</td>
-                    <td><input type="text" name="name" required></td>
+                    <td>Full Name</td>
+                    <td><input type="text" name="name" required pattern="(^[a-zA-Z]{1,20} [a-zA-Z]{1,20}$)"  title="FirstName <space> LastName"></td>
                 </tr>
                 <tr>
                     <td>Address</td>
@@ -116,18 +116,18 @@ Non AC Room
                 </tr>
                 <tr>
                     <td>Phone</td>
-                    <td><input type="text" name="phone" required></td>
+                    <td><input type="text" name="phone" required maxlength="12"></td>
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td><input type="text" name="email" required></td>
+                    <td><input type="text" name="email" required pattern=".+@gmail\.com"></td>
                 </tr>
                 <tr>
                     <td>Check In Date</td>
                     <td><input type="date" name="cin" value="<?php echo $ci; ?>" required></td>
                 </tr>
                 <tr>
-                    <td>Chech Out Date</td>
+                    <td>Check Out Date</td>
                     <td><input type="date" name="cout" value="<?php echo $co; ?>" required><td>
                 </tr>
                 <tr>

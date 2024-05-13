@@ -28,10 +28,12 @@
             height: 150px;
             /* border: 1px solid black; */
             margin: 10px auto;
+            position: relative;
         }
 .display img{
        width: 150px;
-       height: 150px; 
+       height: 150px;
+position:absolute;
  }
 table{
 width: 80%;
@@ -115,7 +117,7 @@ while($data=mysqli_fetch_array($result))
 <a href="edit.php?id=<?php echo $data['aid'];?>"><button class="actn-btn edit-btn">Edit</button></a>
 <a href="show.php?id=<?php echo $data['aid'];?>"><button class="actn-btn show-btn">Show</button></a>
 <a href="delete.php?id=<?php echo $data['aid'];?>"><button class="actn-btn del-btn">Delete</button></a>
-<a href="index.php?id=<?php echo $data['aid'];?>"><button class="actn-btn post-btn">Post</button></a>
+
 
 </td>
 </tr>

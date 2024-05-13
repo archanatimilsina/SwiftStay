@@ -78,7 +78,7 @@ session_start();?>
     }
 
   }
-  
+  print_r($_FILES);
   ?>
   <div class="display">
     <img src="<?php echo $_SESSION['admin_panel']['profile'];?>" alt="#" width="100%" height="100%">

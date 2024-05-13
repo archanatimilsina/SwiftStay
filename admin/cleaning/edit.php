@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Page</title>
+    <title>cleaning Edit Page</title>
     <style>
         *
         {
@@ -23,63 +23,86 @@
    margin: 50px 50px;
    border-radius: 10px;
         }
-        .profile{
+        
+        .form-data{
             width: 400px;
-            height: 200px;
+            height: 520px;
             border: 1px solid black;
             margin: auto;
-            margin-top: 80px;
+            margin-top: 20px;
+            margin-bottom: 50px;
         }
-        .profile-head{
+        .form-head{
             margin-top: 20px;
             text-align: center;
             font-size: 22px;
              font-family: 'Baloo 2', cursive;
         }
-       .profile form label{
+       .form-data form label{
             display: inline;
             font-size: 18px;
              font-family: 'Baloo 2', cursive;
-             margin-left: 10px;
+             margin-left: 37px;
+             margin-top: 13px;
         }
-        .profile form{
+        .form-data form{
             display: flex;
            flex-direction: column;
         }
-        .profile form input{
-            margin: 8px;
+        .form-data form input{
+        margin: auto;
+            width: 80%;
+            height: 40px;
+            margin-top: 15px;
+            font-size: 18px;
+             font-family: 'Baloo 2', cursive;
+
         }
+        .submit-btn{
+            background-color: green;
+            font-size: 20px;
+            color: white;
+        }
+    
     </style>
 </head>
 <body>
 <section class="main">
 <div class="container">
-    <a href="create.php"><button id="tp-btn">Manage Tasks</button></a>
+    <a href="create.php"><button id="tp-btn">Manage Data</button></a>
+    <div class="form-data">
+  <h1 class="form-head">Update data</h1>
+  <form action="#" method="POST">
+        <label for="Name">Name</label>
+        <input type="text" required name="name">
+        <label for="address">Address</label>
+        <input type="address" required name="address">
+        <label for="Phone">Phone Number</label>
+        <input type="Text" required name="phone">
+        <label for="Email">Email</label>
+        <input type="email" required name="email">
+      <input type="submit" name="submit" class="submit-btn" value="submit">
+    </form>
+  </div>
   <?php 
   if(isset($_GET['id']))
   {
     $id=$_GET['id'];
-    $select="SELECT * FROM iac_img where aid='$id'";
+    $select="SELECT * FROM cleaning where cid='$id'";
     $result=mysqli_query($con,$select);
     $data=mysqli_fetch_assoc($result);
   }
   ?>
-  <div class="profile">
-    <h1 class="profile-head">Upload Picture</h1>
-    <form action="#" method="POST" enctype="multipart/form-data">
-        <label for="image">Upload here:</label>
-<input type="file" name="uploadfile" required>
-<input type="submit" name="submit_image" value="Upload">
-    </form>
-</div>  
+ 
 <?php
- if(isset($_POST['submit_image']))
+ if(isset($_POST['submit']))
  {
-   $filename=$_FILES['uploadfile']['name'];
-   $tmpname=$_FILES['uploadfile']['tmp_name'];
-   $folder="../../../uploads/".$filename;
-   $upload=move_uploaded_file($tmpname,$folder);
-$query1="UPDATE iac_img SET ac_img='$folder' Where aid='$id'";
+    $name=$_POST['name'];
+    $address=$_POST['address'];
+    $email=$_POST['email'];
+    $phone=$_POST['phone'];
+
+$query1="UPDATE cleaning SET name='$name',address='$address',phone='$phone',email='$email' Where cid='$id'";
 $result1=mysqli_query($con,$query1);
 
 if($result1)

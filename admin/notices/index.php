@@ -86,14 +86,15 @@ table,
 <body>
     <section class="main">
 <div class="container">
-    <a href="create.php"><button id="tp-btn">Add Holiday</button></a>
+    <a href="create.php"><button id="tp-btn">Add Notices</button></a>
   
     <table>
         <thead>
             <tr>
                 <th scope="col" width="10%">S.N</th>
                 <th scope="col" width="60%">Subject</th>
-                <th scope="col" width="60%">holdate</th>
+                <th scope="col" width="60%">Notice</th>
+                <th scope="col" width="60%">Published Date</th>
                 <th scope="col" width="30%">Action</th>
             </tr>
         </thead>
@@ -118,7 +119,7 @@ while($data=mysqli_fetch_array($result))
 <a href="edit.php?id=<?php echo $data['nid'];?>"><button class="actn-btn edit-btn">Edit</button></a>
 <a href="show.php?id=<?php echo $data['nid'];?>"><button class="actn-btn show-btn">Show</button></a>
 <a href="delete.php?id=<?php echo $data['nid'];?>"><button class="actn-btn del-btn">Delete</button></a>
-<a href="admin.php?id=<?php echo $data['nid'];?>"><button class="actn-btn post-btn">Post</button></a>
+
 
 </td>
 </tr>

@@ -27,15 +27,16 @@ include('connection.php');?>
    
 }
 .col-lg-3{
-    border: 1px solid black;
+   
     background-color: lavender;
     margin: 30px;
     height: 330px;
-    width: 30%;
-    border-radius: 50px;
+    width: 20%;
     text-align: center;
-    
-
+}
+.col-lg-3:hover{
+     border: 1px solid black;
+     border-radius: 10px;
 }
 .card img{
     height: 150px;
@@ -55,12 +56,16 @@ include('connection.php');?>
 .box1-p{
     padding: 4px;
 }
-ul{
-    list-style-position: inside;
+.box1-p ul{
+    list-style-type: none;
 }
-li{
+.box1-li{
     text-align: left;
     padding-left: 75px;
+    list-style-type: none;
+font-size: 20px;
+font-weight: 300;
+
 }
 </style>
 <?php require('inc/navbar.php');?>

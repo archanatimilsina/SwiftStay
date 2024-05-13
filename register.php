@@ -1,4 +1,4 @@
-<?php require('connection1.php');?>
+<?php require('connection.php');?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+
 <?php 
 if(isset($_POST['register']))
 {
@@ -24,6 +25,7 @@ $check_result=mysqli_query($con,$check_query);
 $data=mysqli_fetch_array($check_result);
 if($check_result)
 {
+    
 if(mysqli_num_rows($check_result)>0)
 {
 if($_POST['username']=$data['username'])
@@ -46,12 +48,14 @@ else{
 $result=mysqli_query($con,$query);
 if($result)
 {
+  
 echo" <script>
 alert('Registration successful');
 window.location.href='index.php';
 </script>";
 }
 else{
+    
     echo "<script>
     alert('Cannot Run!');
      window.location.href='index.php';
@@ -68,9 +72,9 @@ else{
 }
 }
 ?>
+
 </body>
 </html>
-
 
 
 

@@ -11,11 +11,11 @@
      if(isset($_GET['id']))
      {
        $id=$_GET['id'];
-       $select="SELECT * FROM iac_img where aid='$id'";
+       $select="SELECT * FROM cleaning where cid='$id'";
        $result=mysqli_query($con,$select);
        $data=mysqli_fetch_assoc($result);
 
-       $query="DELETE FROM iac_img WHERE aid='$id'";
+       $query="DELETE FROM cleaning WHERE cid='$id'";
        $result=mysqli_query($con,$query);
        header('location:index.php');
      }

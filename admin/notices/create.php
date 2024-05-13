@@ -106,7 +106,7 @@ color: white;
   {
     $filename=$_FILES['notice']['name'];
     $tmpname=$_FILES['notice']['tmp_name'];
-    $folder="../../uploads/".$filename;
+    $folder="uploads/".$filename;
     $upload=move_uploaded_file($tmpname,$folder);
  $subject=$_POST['subject'];
 

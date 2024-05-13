@@ -77,7 +77,7 @@
  {
    $filename=$_FILES['uploadfile']['name'];
    $tmpname=$_FILES['uploadfile']['tmp_name'];
-   $folder="../../../uploads/".$filename;
+   $folder="uploads/".$filename;
    $upload=move_uploaded_file($tmpname,$folder);
 $query1="UPDATE inonac_img SET nonac_img='$folder' where nid='$id'";
 $result1=mysqli_query($con,$query1);

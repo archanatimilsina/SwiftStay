@@ -74,7 +74,7 @@
   {
     $filename=$_FILES['uploadfile']['name'];
     $tmpname=$_FILES['uploadfile']['tmp_name'];
-    $folder="../../../uploads/".$filename;
+    $folder="uploads/".$filename;
     $upload=move_uploaded_file($tmpname,$folder);
 
 $query="INSERT INTO ihall_img (hall_img) VALUES ('$folder')";

@@ -292,44 +292,6 @@
 }
 /* footer */
 
-/*hall*/
-#booking-hall{
-    display: flex;
-    flex-direction: column;
-    padding: 3px 200px;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    margin-top: 10px; 
-    /* border: 1px solid red; */
- }
- #booking-hall::before{
-     position: absolute;
-     content: "";
-     height: 100%;
-     width: 100%;
-     z-index: -1;
-     opacity: 0.89;
-     background: url('../img/marriagehall.jpg') center center/cover no-repeat;
-     
-    }
-    #booking-hall .h1{
-        /* color: white; */
-        font-size: 2.8rem;
-        padding: 12px;
-        text-align: center;
- }
- #booking-hall .p{
-     color: white;
-     text-align: center;
-     font-size: 1.5rem;
-    }
-    .span{
-        font-weight: bold;
-        font-size: 1.53rem;
-        color: black;
-    }
-    
 
 /* room.php */
  #room-home{

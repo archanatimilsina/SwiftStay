@@ -101,14 +101,14 @@ color: white;
 <form action="#" method="POST" enctype="multipart/form-data">
 <label for="image">Upload here:</label>
 <input type="file" name="profile">
-<label for="name">Name</label>
-<input type="text" name="name" height="30px"  required>
+<label for="name">Full Name</label>
+<input type="text" name="name" height="30px" pattern="(^[a-zA-Z]{1,20} [a-zA-Z]{1,20}$)"  title="FirstName <space> LastName" required>
 <label for="name">Email</label>
-<input type="email" name="email" required >
+<input type="email" name="email" required title="Please Enter Valid Email" >
 <label for="name">Password</label>
-<input type="password" name="password" required >
+<input type="password" name="password" required  maxlength="8"  title="8 character in maximum">
 <label for="name">Secret Code</label>
-<input type="text" name="scode" required >
+<input type="text" name="scode" required maxlength="6" title="6 character in maximum">
 <input type="submit" name="register" value="submit" id="submit-btn">
  </form>
 </div>

@@ -1,4 +1,4 @@
-<?php require('connection1.php'); 
+<?php require('connection.php'); 
 session_start();?>
 
 <!DOCTYPE html>

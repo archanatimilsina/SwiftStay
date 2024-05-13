@@ -23,22 +23,13 @@
    margin: 50px 50px;
    border-radius: 10px;
         }
-.display{
-            width: 150px;
-            height: 150px;
-            /* border: 1px solid black; */
-            margin: 10px auto;
-        }
-.display img{
-       width: 150px;
-       height: 150px; 
- }
+
 table{
-width: 80%;
-margin: auto;
+    width: 100%;
 }
 table th{
 font-size: 25px;
+background-color: lavender;
 }
 table tr{
   height: 150px;
@@ -72,50 +63,56 @@ table,
         .del-btn{
             background-color: red; 
         }
-        .show-btn{
-            background-color: yellow;
-            
+        #tp-btn1
+        {
+            background-color:white;
+            color: black;
+            font-size: 16px; 
+        font-family: 'Baloo 2', cursive;
+        width: 150px;
+        height: 40px;
+  margin-top: 50px;
+  margin-left:20%;
+   border-radius: 10px;
         }
-        .post-btn{
-            background-color: blue;
-            
-        }
-
+     
     </style>
 </head>
 <body>
     <section class="main">
 <div class="container">
-    <a href="create.php"><button id="tp-btn">Add Image</button></a>
-  
+    <a href="create.php"><button id="tp-btn">Add Data</button></a>
+    <a href="show.php"><button id="tp-btn1">Show data</button></a>
     <table>
         <thead>
-            <tr>
+        <tr>
                 <th scope="col" width="10%">S.N</th>
-                <th scope="col" width="60%">Image</th>
-                <th scope="col" width="30%">Action</th>
+                <th scope="col" width="15%">Name</th>
+                <th scope="col" width="15%">Address</th>
+                <th scope="col" width="15%">Phone Number</th>
+                <th scope="col" width="20%">Email</th>
+                <th scope="col" width="25%">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr>
 <?php 
-$query="SELECT * FROM iac_img";
+$query="SELECT * FROM cleaning";
 $result=mysqli_query($con,$query);
 $i=1;
 while($data=mysqli_fetch_array($result))
 {
     ?>
 <td scope="row"><?php echo $i++; ?></td>
+<td scope="row"><?php echo $data['name']; ?></td>
+<td scope="row"><?php echo $data['address']; ?></td>
+<td scope="row"><?php echo $data['phone']; ?></td>
+<td scope="row"><?php echo $data['email']; ?></td>
 <td scope="row">
-<div class="display">
-    <img src="<?php echo $data['ac_img']?>" alt="#" width="100%" height="100%">
-  </div>
-</td>
-<td scope="row">
-<a href="edit.php?id=<?php echo $data['aid'];?>"><button class="actn-btn edit-btn">Edit</button></a>
-<a href="show.php?id=<?php echo $data['aid'];?>"><button class="actn-btn show-btn">Show</button></a>
-<a href="delete.php?id=<?php echo $data['aid'];?>"><button class="actn-btn del-btn">Delete</button></a>
-<a href="index.php?id=<?php echo $data['aid'];?>"><button class="actn-btn post-btn">Post</button></a>
+<a href="edit.php?id=<?php echo $data['cid'];?>"><button class="actn-btn edit-btn">Edit</button></a>
+<a href="delete.php?id=<?php echo $data['cid'];?>"><button class="actn-btn del-btn">Delete</button></a>
+
+
 </td>
 </tr>
     <?php

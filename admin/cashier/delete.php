@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Page</title>
+    <title>Cashier Delete Page</title>
 </head>
 <body>
     <?php 
      if(isset($_GET['id']))
      {
        $id=$_GET['id'];
-       $select="SELECT * FROM iac_img where aid='$id'";
+       $select="SELECT * FROM cashiers where cid='$id'";
        $result=mysqli_query($con,$select);
        $data=mysqli_fetch_assoc($result);
 
-       $query="DELETE FROM iac_img WHERE aid='$id'";
+       $query="DELETE FROM cashiers WHERE cid='$id'";
        $result=mysqli_query($con,$query);
        header('location:index.php');
      }

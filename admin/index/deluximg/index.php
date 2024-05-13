@@ -115,7 +115,7 @@ while($data=mysqli_fetch_array($result))
 <a href="edit.php?id=<?php echo $data['did'];?>"><button class="actn-btn edit-btn">Edit</button></a>
 <a href="show.php?id=<?php echo $data['did'];?>"><button class="actn-btn show-btn">Show</button></a>
 <a href="delete.php?id=<?php echo $data['did'];?>"><button class="actn-btn del-btn">Delete</button></a>
-<a href="index.php?id=<?php echo $data['did'];?>"><button class="actn-btn post-btn">Post</button></a>
+
 </td>
 </tr>
     <?php

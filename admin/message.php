@@ -9,8 +9,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message</title>
     <style>
-        .message {}
-
         .message-head {
             text-align: center;
             font-size: 25px;
@@ -65,7 +63,7 @@ session_start();
         $email = $_SESSION['admin_panel']['email'];
         $message = $_POST['message'];
 
-        $query = "INSERT INTO messages(profile,name,email,account_type,message) VALUES('$profile','$name','$email','Admin','$message')";
+        $query = "INSERT INTO messages(profile,name,email,account_type,message) VALUES ('$profile','$name','$email','Admin','$message')";
         $result = mysqli_query($con, $query);
 
         if ($result) {
@@ -81,6 +79,7 @@ window.location.href='messagepanel.php';
         }
     }
     ?>
+    
 </body>
 
 </html>

@@ -77,7 +77,7 @@
  {
    $filename=$_FILES['uploadfile']['name'];
    $tmpname=$_FILES['uploadfile']['tmp_name'];
-   $folder="../../../uploads/".$filename;
+   $folder="uploads/".$filename;
    $upload=move_uploaded_file($tmpname,$folder);
 $query1="UPDATE ihall_img SET hall_img='$folder' where hid='$id'";
 $result1=mysqli_query($con,$query1);

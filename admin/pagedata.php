@@ -173,27 +173,27 @@ flex-direction: column;
 <!-- Div 1 Ko Secondary menu -->
 <div id="sec-menu">
 <div class="menu-second div11">
-<a href="roomservice">Room Services</a>
+<a href="roomservice/index.php">Room Services</a>
 <i class="fa-solid fa-folder" style="color: #000000;"></i>
 </div>
 <div class="menu-second div12">
-<a href="admin">Admin</a>
+<a href="admindata/index.php">Admin</a>
 <i class="fa-solid fa-folder" style="color: #000000;"></i>
 </div>
 <div class="menu-second div13">
-<a href="reception">Reception</a>
+<a href="reception/index.php">Reception</a>
 <i class="fa-solid fa-folder" style="color: #000000;"></i>
 </div>
 <div class="menu-second div14">
-<a href="cleaning">Cleaning service</a>
+<a href="cleaning/index.php">Cleaning service</a>
 <i class="fa-solid fa-folder" style="color: #000000;"></i>
 </div>
 <div class="menu-second div15">
-<a href="cashier">Cashier</a>
+<a href="cashier/index.php">Cashier</a>
 <i class="fa-solid fa-folder" style="color: #000000;"></i>
 </div>
 <div class="menu-second div16">
-<a href="food">Kitchen service</a>
+<a href="kitchen/index.php">Kitchen service</a>
 <i class="fa-solid fa-folder" style="color: #000000;"></i>
 </div>
 </div> 

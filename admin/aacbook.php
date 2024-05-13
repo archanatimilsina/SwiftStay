@@ -8,12 +8,12 @@ $x=0;
  
 session_start();
 
-if(!isset($_SESSION["username"])  )
+if(!isset($_SESSION['admin_panel']["name"])  )
 {
     ?>
     <script>
  alert(" Please Login First");
- window.location.href='index.php';
+ window.location.href='../adminlogin.php';
 </script>
 <?php
 
@@ -102,8 +102,8 @@ AC Room
                     <td><input type="text"  name="rt" value="<?php echo $rt; ?>"></td>
                 </tr>
                 <tr>
-                    <td>Name</td>
-                    <td><input type="text" name="name" required></td>
+                    <td>Full Name</td>
+                    <td><input type="text" name="name" required pattern="(^[a-zA-Z]{1,20} [a-zA-Z]{1,20}$)"  title="FirstName <space> LastName"></td>
                 </tr>
                 <tr>
                     <td>Address</td>
@@ -115,11 +115,11 @@ AC Room
                 </tr>
                 <tr>
                     <td>Phone</td>
-                    <td><input type="text" name="phone" required></td>
+                    <td><input type="text" name="phone" required maxlength="12"></td>
                 </tr>
                 <tr>
                     <td>Email</td>
-                    <td><input type="text" name="email" required></td>
+                    <td><input type="text" name="email" required pattern=".+@gmail\.com"></td>
                 </tr>
                 <tr>
                     <td>Check In Date</td>

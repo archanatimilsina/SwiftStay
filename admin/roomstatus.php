@@ -223,28 +223,38 @@ font-size: 17px;
   </thead>
   <tbody>
 <?php 
+
+
 $query="SELECT * FROM room_booking";
 $result=mysqli_query($con,$query);
 $i=1;
 while($data=mysqli_fetch_array($result))
 {
+  $n=1;
+  $nr=$data['no_of_room'];
+  while($n<=$nr)
+  {
 ?>
 <tr>
-  <td scope="row"><?php echo $i++; ?></td>
+  <td scope="row" rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $i++; ?></td>
   <td scope="row"><?php echo $data['room_no']; ?></td>
-  <td scope="row"><?php echo $data['name']; ?></td>
-  <td scope="row"><?php echo $data['address']; ?></td>
-  <td scope="row"><?php echo $data['city']; ?></td>
-  <td scope="row"><?php echo $data['phone']; ?></td>
-  <td scope="row"><?php echo $data['email']; ?></td>
-  <td scope="row"><?php echo $data['cin']; ?></td>
-  <td scope="row"><?php echo $data['cout']; ?></td>
-  <td scope="row"><?php echo $data['members']; ?></td>
-  <td scope="row"><?php echo $data['room_type']; ?></td>
-  <td scope="row"><?php echo $data['no_of_room']; ?></td>
-  <td scope="row"><?php echo $data['time']; ?></td>
+  <td scope="row" rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['name']; ?></td>
+  <td scope="row" rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['address']; ?></td>
+  <td scope="row" rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['city']; ?></td>
+  <td scope="row" rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['phone']; ?></td>
+  <td scope="row"  rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['email']; ?></td>
+  <td scope="row"  rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['cin']; ?></td>
+  <td scope="row"  rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['cout']; ?></td>
+  <td scope="row"  rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['members']; ?></td>
+  <td scope="row"  rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['room_type']; ?></td>
+  <td scope="row"  rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['no_of_room']; ?></td>
+  <td scope="row"  rowspan="<?php echo $data['no_of_room']; ?>"><?php echo $data['time']; ?></td>
 </tr>
-<?php
+ 
+<?php 
+$n++;
+}
+$i++;
 }
 ?>
   </tbody>

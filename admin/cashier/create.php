@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Page</title>
+    <title>Cashier Create</title>
     <style>
         *
         {
@@ -23,61 +23,78 @@
    margin: 50px 50px;
    border-radius: 10px;
         }
-         .profile{
+        .form-data{
             width: 400px;
-            height: 200px;
+            height: 520px;
             border: 1px solid black;
             margin: auto;
-            margin-top: 80px;
+            margin-top: 20px;
+            margin-bottom: 50px;
         }
-        .profile-head{
+        .form-head{
             margin-top: 20px;
             text-align: center;
             font-size: 22px;
              font-family: 'Baloo 2', cursive;
         }
-       .profile form label{
+       .form-data form label{
             display: inline;
             font-size: 18px;
              font-family: 'Baloo 2', cursive;
-             margin-left: 10px;
+             margin-left: 37px;
+             margin-top: 13px;
         }
-        .profile form{
+        .form-data form{
             display: flex;
            flex-direction: column;
         }
-        .profile form input{
-            margin: 8px;
+        .form-data form input{
+        margin: auto;
+            width: 80%;
+            height: 40px;
+            margin-top: 15px;
+            font-size: 18px;
+             font-family: 'Baloo 2', cursive;
+
         }
+        .submit-btn{
+            background-color: green;
+            font-size: 20px;
+            color: white;
+        }
+    
     </style>
 </head>
 <body>
 <section class="main">
 <div class="container">
-    <a href="index.php"><button id="tp-btn">Manage Tasks</button></a>
-  
-    <div class="profile">
-    <h1 class="profile-head">Upload Picture</h1>
-    <form action="#" method="POST" enctype="multipart/form-data">
-        <label for="image">Upload here:</label>
-<input type="file" name="uploadfile" required>
-<input type="submit" name="submit_image" value="Upload">
+    <a href="index.php"><button id="tp-btn">Manage Data</button></a>
+  <div class="form-data">
+  <h1 class="form-head">Enter data</h1>
+    <form action="#" method="POST">
+        <label for="Name">Name</label>
+        <input type="text" required name="name">
+        <label for="address">Address</label>
+        <input type="address" required name="address">
+        <label for="Phone">Phone Number</label>
+        <input type="Text" required name="phone">
+        <label for="Email">Email</label>
+        <input type="email" required name="email">
+      <input type="submit" name="submit" class="submit-btn" value="submit">
     </form>
-
-  </div>  
+  </div>
 </div>
     </section>
 </body>
 </html>
 <?php
-  if(isset($_POST['submit_image']))
+  if(isset($_POST['submit']))
   {
-    $filename=$_FILES['uploadfile']['name'];
-    $tmpname=$_FILES['uploadfile']['tmp_name'];
-    $folder="../../../uploads/".$filename;
-    $upload=move_uploaded_file($tmpname,$folder);
-
-$query="INSERT INTO iac_img (ac_img) VALUES ('$folder')";
+$name=$_POST['name'];
+$address=$_POST['address'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$query="INSERT INTO cashiers (name,address,phone,email) VALUES ('$name','$address','$phone','$email')";
 $result=mysqli_query($con,$query);
 
 if($result)

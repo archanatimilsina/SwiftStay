@@ -181,12 +181,18 @@ width: 100%;
     border-radius: 50%;
     position: absolute;
 }
+.leavemsgbtn
+{
+  position: absolute;
+    right: 10px;
+    z-index: 10; 
+}
     </style>
 </head>
 <body>
 
 <div class="message">
-  <a href="message.php"><button>Leave Messages</button></a>
+  <a href="message.php" class="leavemsgbtn"><button>Leave Messages</button></a>
 </div>
 
 <div class="containeer">
